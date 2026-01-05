@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavicki - Experience Design & AI</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-circle"></div>
+
+    <nav class="navbar">
+        <div class="logo"><img src="assets/logokavicki.png" alt="Kavicki"></div>
+        <button class="menu-toggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="menu-items">
+            <a href="#servicos">Expertise</a>
+            <a href="#ia">AI Approach</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato" class="btn-talk">Contato</a>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-section">
+        <div class="hero-carousel-bg">
+            <div class="hero-carousel-track">
+                <span class="hero-carousel-text">kavicki.com</span>
+                <span class="hero-carousel-text">kavicki.com</span>
+                <span class="hero-carousel-text">kavicki.com</span>
+                <span class="hero-carousel-text">kavicki.com</span>
+                <span class="hero-carousel-text">kavicki.com</span>
+                <span class="hero-carousel-text">kavicki.com</span>
+                <span class="hero-carousel-text">kavicki.com</span>
+                <span class="hero-carousel-text">kavicki.com</span>
+            </div>
+        </div>
+        <div class="container relative-box">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="block-reveal">Especialistas em projetos</span>
+                    <span class="block-reveal italic-accent">pensados para pessoas.</span>
+                </h1>
+                <p class="hero-sub fade-in">Soluções criativas e tecnológicas para ajudar você e a sua marca a liderar o futuro.</p>
+                <div class="hero-cta fade-in">
+                    <a href="#contato" class="btn-primary">Fale com a gente</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="marquee-container">
+            <div class="marquee-track">
+                <img src="assets/agrobeelogo.png" alt="Agrobee" class="marquee-logo">
+                <img src="assets/batavologo.png" alt="Batavo" class="marquee-logo">
+                <img src="assets/castrolandalogo.png" alt="Castrolanda" class="marquee-logo">
+                <img src="assets/celenalogo.png" alt="Celena" class="marquee-logo">
+                <img src="assets/frisialogo.png" alt="Frisia" class="marquee-logo">
+                <img src="assets/propolislogo.png" alt="Propolis" class="marquee-logo">
+                <img src="assets/samsunglogo.png" alt="Samsung" class="marquee-logo">
+                <img src="assets/verdelumelogo.png" alt="Verdelume" class="marquee-logo">
+                <img src="assets/vivologo.png" alt="Vivo" class="marquee-logo">
+                <img src="assets/agrobeelogo.png" alt="Agrobee" class="marquee-logo">
+                <img src="assets/batavologo.png" alt="Batavo" class="marquee-logo">
+                <img src="assets/castrolandalogo.png" alt="Castrolanda" class="marquee-logo">
+                <img src="assets/celenalogo.png" alt="Celena" class="marquee-logo">
+                <img src="assets/frisialogo.png" alt="Frisia" class="marquee-logo">
+                <img src="assets/propolislogo.png" alt="Propolis" class="marquee-logo">
+                <img src="assets/samsunglogo.png" alt="Samsung" class="marquee-logo">
+                <img src="assets/verdelumelogo.png" alt="Verdelume" class="marquee-logo">
+                <img src="assets/vivologo.png" alt="Vivo" class="marquee-logo">
+            </div>
+        </div>
+    </header>
+
+    <section class="section-padding intro-section">
+        <div class="container">
+            <h2 class="big-title fade-in">
+                USABILIDADE <span class="serif">&</span><br>
+                EXPERIÊNCIA <span class="serif">&</span><br>
+                INTERFACE.
+            </h2>
+            <div class="intro-grid">
+                <div class="intro-label fade-in">
+                    TRANSFORMAMOS IDEIAS EM <br> EXPERIÊNCIAS INCRÍVEIS.
+                </div>
+                <div class="intro-text fade-in">
+                    <p>Ajudamos pessoas e empresas a construírem o novo. Unimos a visão de futuro com metodologias ágeis e design centrado no usuário para criar soluções de alto impacto.</p>
+                    <a href="#servicos" class="link-arrow">Saiba como atuamos <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="section-padding bg-darker">
+        <div class="container services-layout">
+            <div class="services-left sticky-col">
+                <span class="label-purple">O que fazemos</span>
+                <h3 class="section-subtitle">Expertise</h3>
+                <p class="text-gray">Do diagnóstico à execução, cobrimos toda a jornada digital.</p>
+            </div>
+            
+            <div class="services-right">
+                <div class="service-card fade-in-up">
+                    <div class="card-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                    <h4>UX Design</h4>
+                    <p>Arquitetura de informação, fluxos de navegação e wireframes focados na jornada do usuário.</p>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="card-icon"><i class="fa-solid fa-palette"></i></div>
+                    <h4>UI Design</h4>
+                    <p>Interfaces visuais pixel-perfect, Design Systems escaláveis e protótipos de alta fidelidade.</p>
+                </div>
+
+                <div class="service-card fade-in-up">
+                    <div class="card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <h4>UX Research</h4>
+                    <p>Testes de usabilidade, entrevistas com usuários e análise de dados para decisões assertivas.</p>
+                </div>
+
+                <div class="service-card fade-in-up">
+                    <div class="card-icon"><i class="fa-solid fa-film"></i></div>
+                    <h4>Motion Design</h4>
+                    <p>Microinterações e animações que dão vida ao produto e aumentam o engajamento.</p>
+                </div>
+
+                <div class="service-card fade-in-up">
+                    <div class="card-icon"><i class="fa-solid fa-fingerprint"></i></div>
+                    <h4>Branding e Marca</h4>
+                    <p>Estratégia visual, tom de voz e posicionamento de marca para o mundo digital.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ia" class="section-padding ai-section">
+        <div class="container ai-grid">
+            <div class="ai-content fade-in">
+                <span class="label-purple">Inovação & Tech</span>
+                <h2 class="ai-title">Abordagem com <br> <span class="text-gradient">Inteligência Artificial</span></h2>
+                <p class="ai-desc">Não apenas desenhamos, aceleramos. Utilizamos o poder da IA generativa e automações inteligentes para otimizar processos, gerar insights rápidos e garantir precisão máxima em cada entrega.</p>
+                <ul class="ai-list">
+                    <li><i class="fa-solid fa-check"></i> Automação de Design Ops</li>
+                    <li><i class="fa-solid fa-check"></i> Prototipagem Acelerada</li>
+                    <li><i class="fa-solid fa-check"></i> Análise de Dados Preditiva</li>
+                </ul>
+            </div>
+            <div class="ai-visual fade-in">
+                <div class="glow-effect"></div>
+                <div class="ai-card-glass">
+                    <i class="fa-solid fa-robot icon-ai"></i>
+                    <span>AI-Driven Workflow</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section-padding">
+        <div class="container">
+            <div class="portfolio-header">
+                <h3 class="section-subtitle">Nossos projetos</h3>
+                <span class="scroll-hint">(Explore)</span>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-col col-down">
+                    <div class="project-item">
+                        <div class="media-box"><img src="https://images.unsplash.com/photo-1481487484168-9b930d5b7d9d?auto=format&fit=crop&w=800&q=80" alt="App"></div>
+                        <div class="project-info"><h4>Agrobee</h4><span>App Mobile</span></div>
+                    </div>
+                    <div class="project-item">
+                        <div class="media-box"><img src="https://images.unsplash.com/photo-1481487484168-9b930d5b7d9d?auto=format&fit=crop&w=800&q=80" alt="App"></div>
+                        <div class="project-info"><h4>o1 Percent</h4><span>App Mobile</span></div>
+                    </div>
+                     <div class="project-item">
+                        <div class="media-box"><img src="https://images.unsplash.com/photo-1481487484168-9b930d5b7d9d?auto=format&fit=crop&w=800&q=80" alt="App"></div>
+                        <div class="project-info"><h4>Farmnote</h4><span>App Mobile</span></div>
+                    </div>
+                </div>
+
+                <div class="portfolio-col col-up">
+                    <div class="project-item">
+                        <div class="media-box"><img src="https://images.unsplash.com/photo-1551650992-ee4fd47df41f?auto=format&fit=crop&w=800&q=80" alt="Web"></div>
+                        <div class="project-info"><h4>Led Telecom</h4><span>App Mobile</span></div>
+                    </div>
+                    <div class="project-item">
+                        <div class="media-box"><img src="https://images.unsplash.com/photo-1555421689-491a97ff2011?auto=format&fit=crop&w=800&q=80" alt="SaaS"></div>
+                        <div class="project-info"><h4>Wall to All</h4><span>App Mobile</span></div>
+                    </div>
+                    <div class="project-item">
+                        <div class="media-box"><img src="https://images.unsplash.com/photo-1555421689-491a97ff2011?auto=format&fit=crop&w=800&q=80" alt="SaaS"></div>
+                        <div class="project-info"><h4>Clube do KW</h4><span>App Mobile</span></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-gradient">
+        <div class="container">
+            <h3 class="section-subtitle mb-large">A gente te ajuda a:</h3>
+            <div class="steps-grid">
+                <div class="step-item fade-in">
+                    <div class="step-line"></div>
+                    <h3>Diagnosticar</h3>
+                    <p>Entendemos o seu negócio, seus gargalos e oportunidades para criar o melhor cenário.</p>
+                </div>
+                <div class="step-item fade-in">
+                    <div class="step-line"></div>
+                    <h3>Planejar</h3>
+                    <p>Definimos o plano de ação, roadmap e tecnologias ideais para o seu projeto.</p>
+                </div>
+                <div class="step-item fade-in">
+                    <div class="step-line"></div>
+                    <h3>Executar</h3>
+                    <p>Desenvolvemos e entregamos a solução com qualidade, testes e acompanhamento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container international-layout">
+            <div class="int-content">
+                <span class="label-purple">Presença Internacional</span>
+                <h2 class="big-title">Não existem <br> <span class="serif">fronteiras.</span></h2>
+                <p class="text-gray mt-small">Atendemos clientes no <strong>Brasil</strong>, <strong>EUA</strong>, <strong>Portugal</strong>, <strong>Argentina</strong>,<strong>França, <strong>Colômbia</strong>, levando excelência global.</p>
+                <a href="#contato" class="btn-outline mt-small">Fale com a gente</a>
+            </div>
+            <div class="int-visual">
+                <div class="globe-container">
+                    <canvas id="globe-canvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="section-padding bg-darker">
+        <div class="container">
+            <h3 class="section-subtitle center-text mb-large">Nossa Equipe</h3>
+            <div class="team-grid">
+                <div class="team-card"><img src="assets/team/JorgeKavicki.png" alt="Jorge Kavicki"><h4>Jorge Kavicki</h4><span>Founder</span></div>
+                <div class="team-card"><img src="assets/team/AllanAlves.png" alt="Allan Alves"><h4>Allan Alves</h4><span>Product Lead</span></div>
+                <div class="team-card"><img src="assets/team/JulianeRocha.png" alt="Juliane Rocha"><h4>Juliane Rocha</h4><span>UX Research</span></div>
+                <div class="team-card"><img src="assets/team/ErnandesCamara.png" alt="Ernandes Camara"><h4>Ernandes Camara</h4><span>Full Stack</span></div>
+                <div class="team-card"><img src="assets/team/CleytonCarvalho.png" alt="Cleyton Carvalho"><h4>Cleyton Carvalho</h4><span>Dev Senior</span></div>
+                <div class="team-card"><img src="assets/team/MiguelSilva.png" alt="Miguel Silva"><h4>Miguel Silva</h4><span>UI Design</span></div>
+                <div class="team-card"><img src="assets/team/VictorFigueroa.png" alt="Victor Figueroa"><h4>Victor Figueroa</h4><span>Operations</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding border-y">
+        <div class="container">
+             <p class="center-text label-purple mb-large">Mais de 8 anos de trajetória</p>
+             <p class="center-text text-gray mb-large" style="max-width: 800px; margin-left: auto; margin-right: auto;">Temos o orgulho de poder ter ajudado marcas a surgirem, se reinventarem e aumentarem seu faturamento com design e estratégias voltadas para o cliente no centro de tudo.</p>
+             <div class="stats-flex">
+                <div class="stat-box">
+                    <span class="counter" data-target="250">0</span>
+                    <span class="stat-label">Marcas atendidas</span>
+                </div>
+                <div class="stat-box">
+                    <span class="counter" data-target="10">0</span>
+                    <span class="stat-label">Mais de 8 anos de atuação</span>
+                </div>
+                <div class="stat-box">
+                    <span class="counter" data-target="750">0</span>
+                    <span class="stat-label">Projetos realizados</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container infra-layout">
+            <div class="infra-info">
+                <h3 class="section-subtitle">Infraestrutura completa e os melhores padrões da indústria</h3>
+                <p class="text-gray">Hospedagem própria com suporte integral e adequado à Lei
+                    Geral de Proteção de Dados, mais de 20 tipos de aplicações
+                    diferentes com setup simples e interface intuitiva</p>
+                <div class="infra-badges">
+                    <span><i class="fa-solid fa-shield-halved"></i> Segurança</span>
+                    <span><i class="fa-solid fa-lock"></i> Privacidade</span>
+                </div>
+                <a href="#contato" class="btn-primary mt-small">Saiba mais</a>
+            </div>
+            <div class="infra-img">
+                <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=800&q=80" alt="Infraestrutura">
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-darker">
+        <div class="container">
+            <h3 class="section-subtitle center-text mb-large">O que nossos clientes pensam de nós</h3>
+            <div class="testimonials-carousel-wrapper">
+                <div class="testimonials-carousel">
+                    <div class="review-box">
+                        <div class="stars">★★★★★</div>
+                        <p>"Excelência na jornada, além de prazos, a qualidade da entrega foi surpreendente."</p>
+                        <div class="author">
+                            <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Isabela">
+                            <div><strong>Isabela Santos</strong><span>Marketing Director</span></div>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <div class="stars">★★★★★</div>
+                        <p>"Equipe extremamente técnica e criativa. Resolveram problemas complexos com facilidade."</p>
+                        <div class="author">
+                            <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Lucas">
+                            <div><strong>Lucas Costa</strong><span>CTO @ TechStartup</span></div>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <div class="stars">★★★★★</div>
+                        <p>"Profissionalismo e atenção aos detalhes. O resultado superou todas as expectativas."</p>
+                        <div class="author">
+                            <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Ana">
+                            <div><strong>Ana Paula</strong><span>Product Manager</span></div>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <div class="stars">★★★★★</div>
+                        <p>"Design moderno e funcional. A experiência do usuário melhorou significativamente."</p>
+                        <div class="author">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Roberto">
+                            <div><strong>Roberto Silva</strong><span>CEO @ StartupX</span></div>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <div class="stars">★★★★★</div>
+                        <p>"Comunicação clara e entregas sempre no prazo. Recomendo sem hesitação."</p>
+                        <div class="author">
+                            <img src="https://randomuser.me/api/portraits/women/35.jpg" alt="Mariana">
+                            <div><strong>Mariana Oliveira</strong><span>UX Lead</span></div>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <div class="stars">★★★★★</div>
+                        <p>"Transformaram nossa visão em realidade. O processo foi colaborativo e eficiente."</p>
+                        <div class="author">
+                            <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Carlos">
+                            <div><strong>Carlos Mendes</strong><span>Founder</span></div>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <div class="stars">★★★★★</div>
+                        <p>"Estratégia bem definida e execução impecável. Resultados mensuráveis desde o início."</p>
+                        <div class="author">
+                            <img src="https://randomuser.me/api/portraits/women/42.jpg" alt="Patricia">
+                            <div><strong>Patricia Lima</strong><span>CMO</span></div>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <div class="stars">★★★★★</div>
+                        <p>"Equipe proativa e inovadora. Trouxeram soluções que não havíamos considerado."</p>
+                        <div class="author">
+                            <img src="https://randomuser.me/api/portraits/men/38.jpg" alt="Fernando">
+                            <div><strong>Fernando Costa</strong><span>Tech Director</span></div>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <div class="stars">★★★★★</div>
+                        <p>"Qualidade excepcional em cada etapa do projeto. Parceiros de confiança."</p>
+                        <div class="author">
+                            <img src="https://randomuser.me/api/portraits/women/19.jpg" alt="Juliana">
+                            <div><strong>Juliana Ferreira</strong><span>Brand Manager</span></div>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <div class="stars">★★★★★</div>
+                        <p>"Metodologia ágil e resultados rápidos. O investimento valeu cada centavo."</p>
+                        <div class="author">
+                            <img src="https://randomuser.me/api/portraits/men/29.jpg" alt="Ricardo">
+                            <div><strong>Ricardo Alves</strong><span>Operations Manager</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev-btn" aria-label="Anterior">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next-btn" aria-label="Próximo">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="carousel-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="main-footer">
+        <div class="container">
+            <div class="footer-header">
+                <h4>Kavicki.</h4>
+                <p class="text-gray">Fale sobre o seu projeto e vamos construir algo incrível juntos.</p>
+            </div>
+
+            <div class="footer-layout">
+                <div class="footer-form">
+                    <form>
+                        <input type="text" placeholder="Nome" class="input-field" required>
+                        <input type="email" placeholder="Email" class="input-field" required>
+                        <input type="text" placeholder="Como podemos ajudar?" class="input-field" required>
+                        <textarea placeholder="Mensagem" rows="4" class="input-field"></textarea>
+                        <button type="submit" class="btn-submit">Enviar <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Conecte-se</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    </div>
+                    <div class="footer-copy">
+                        <p class="address">São Paulo, SP - Brasil</p>
+                        <p class="mail-contact">design@kavicki.com</p>
+                        <p class="copyright">© 2026 Kavicki. Todos os direitos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
