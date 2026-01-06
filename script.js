@@ -128,7 +128,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 email: 'Email',
                 help: 'Como podemos ajudar?',
                 message: 'Mensagem',
-                submit: 'Enviar'
+                submit: 'Enviar',
+                sending: 'Enviando...',
+                success: 'Mensagem enviada com sucesso! Entraremos em contato em breve.',
+                error: 'Erro ao enviar mensagem. Por favor, tente novamente ou entre em contato diretamente por email.',
+                validationError: 'Por favor, preencha todos os campos obrigatórios.',
+                emailError: 'Por favor, insira um email válido.',
+                emailjsError: 'EmailJS não está carregado. Por favor, verifique a conexão com a internet.'
             },
             footer: {
                 subtitle: 'Fale sobre o seu projeto e vamos construir algo incrível juntos.',
@@ -259,7 +265,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 email: 'Email',
                 help: 'How can we help?',
                 message: 'Message',
-                submit: 'Send'
+                submit: 'Send',
+                sending: 'Sending...',
+                success: 'Message sent successfully! We will contact you soon.',
+                error: 'Error sending message. Please try again or contact us directly by email.',
+                validationError: 'Please fill in all required fields.',
+                emailError: 'Please enter a valid email address.',
+                emailjsError: 'EmailJS is not loaded. Please check your internet connection.'
             },
             footer: {
                 subtitle: 'Tell us about your project and let\'s build something amazing together.',
@@ -941,4 +953,142 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Executa uma vez ao carregar
     updateExpertiseParallax();
+
+    
+
+    // ============================================
+    // FORMULÁRIO DE CONTATO COM EMAILJS
+    // ============================================
+    
+    // CONFIGURAÇÃO NECESSÁRIA:
+    // 1. Criar conta gratuita em https://www.emailjs.com/
+    // 2. Criar um serviço de email (Gmail, Outlook, etc.)
+    // 3. Criar um template de email com as variáveis: {{to_email}}, {{from_name}}, {{from_email}}, {{subject}}, {{message}}
+    // 4. Atualizar as credenciais abaixo:
+    const EMAILJS_CONFIG = {
+        SERVICE_ID: 'service_c57rm9y',        // Substituir pelo Service ID do EmailJS
+        TEMPLATE_ID: 'template_m6iy2oh',      // Substituir pelo Template ID do EmailJS
+        PUBLIC_KEY: 'hMLKX6IzN3SvJM-DV'         // Substituir pela Public Key do EmailJS
+    };
+    
+    const contactForm = document.getElementById('contactForm');
+    const formFeedback = document.getElementById('formMessageFeedback');
+    
+    // Função para inicializar EmailJS
+    function initEmailJS() {
+        if (typeof emailjs !== 'undefined' && EMAILJS_CONFIG.PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
+            emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+            return true;
+        }
+        return false;
+    }
+    
+    // Tentar inicializar quando o script carregar
+    if (typeof emailjs !== 'undefined') {
+        initEmailJS();
+    } else {
+        // Aguardar o EmailJS carregar
+        window.addEventListener('load', () => {
+            if (typeof emailjs !== 'undefined') {
+                initEmailJS();
+            }
+        });
+    }
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Coletar dados do formulário
+            const formData = {
+                from_name: document.getElementById('formName').value.trim(),
+                from_email: document.getElementById('formEmail').value.trim(),
+                subject: document.getElementById('formSubject').value.trim(),
+                message: document.getElementById('formMessage').value.trim()
+            };
+
+            // Obter idioma atual para mensagens
+            const currentLang = getCurrentLanguage();
+            const t = translations[currentLang]?.form || translations.pt.form;
+
+            // Validação básica
+            if (!formData.from_name || !formData.from_email || !formData.subject) {
+                showFormFeedback(t.validationError, 'error');
+                return;
+            }
+
+            // Validação de email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(formData.from_email)) {
+                showFormFeedback(t.emailError, 'error');
+                return;
+            }
+
+            // Desabilitar botão durante o envio
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.disabled = true;
+            const sendingText = getCurrentLanguage() === 'pt' ? 'Enviando...' : 'Sending...';
+            submitButton.innerHTML = `<span data-i18n="form.sending">${sendingText}</span> <i class="fa-solid fa-spinner fa-spin"></i>`;
+
+            try {
+                // Verificar se EmailJS está disponível
+                if (typeof emailjs === 'undefined') {
+                    throw new Error(t.emailjsError);
+                }
+
+                // Verificar se as credenciais foram configuradas
+                if (EMAILJS_CONFIG.SERVICE_ID === 'YOUR_SERVICE_ID' || 
+                    EMAILJS_CONFIG.TEMPLATE_ID === 'YOUR_TEMPLATE_ID' || 
+                    EMAILJS_CONFIG.PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
+                    throw new Error('EmailJS não configurado. Por favor, configure as credenciais no código.');
+                }
+
+                // Inicializar EmailJS se ainda não foi inicializado
+                initEmailJS();
+
+                // Preparar dados para o template
+                const templateParams = {
+                    to_email: 'jorge@kavicki.com',
+                    from_name: formData.from_name,
+                    from_email: formData.from_email,
+                    subject: formData.subject,
+                    message: formData.message || '(Sem mensagem adicional)'
+                };
+
+                // Enviar email
+                await emailjs.send(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, templateParams);
+
+                // Sucesso
+                showFormFeedback(t.success, 'success');
+                contactForm.reset();
+
+            } catch (error) {
+                console.error('Erro ao enviar email:', error);
+                showFormFeedback(t.error, 'error');
+            } finally {
+                // Reabilitar botão
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+            }
+        });
+    }
+
+    function showFormFeedback(message, type) {
+        if (!formFeedback) return;
+
+        formFeedback.textContent = message;
+        formFeedback.className = `form-feedback ${type}`;
+        formFeedback.style.display = 'block';
+
+        // Scroll suave até o feedback
+        formFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+        // Esconder feedback após 5 segundos para mensagens de sucesso
+        if (type === 'success') {
+            setTimeout(() => {
+                formFeedback.style.display = 'none';
+            }, 5000);
+        }
+    }
 });
