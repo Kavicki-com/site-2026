@@ -1,5 +1,434 @@
 document.addEventListener('DOMContentLoaded', () => {
     
+    // ============================================
+    // SISTEMA DE TRADUÇÃO PT/EN
+    // ============================================
+    
+    const translations = {
+        pt: {
+            nav: {
+                expertise: 'Expertise',
+                ai: 'AI Approach',
+                portfolio: 'Portfólio',
+                about: 'Sobre',
+                contact: 'Contato',
+                menu: 'Menu',
+                theme: 'Alternar tema',
+                language: 'Alternar idioma'
+            },
+            hero: {
+                title1: 'Especialistas em projetos',
+                title2: 'pensados para pessoas.',
+                subtitle: 'Soluções criativas e tecnológicas para ajudar você e a sua marca a liderar o futuro.',
+                cta: 'Fale com a gente'
+            },
+            intro: {
+                title1: 'USABILIDADE',
+                title2: 'EXPERIÊNCIA',
+                title3: 'INTERFACE.',
+                label: 'TRANSFORMAMOS IDEIAS EM \n EXPERIÊNCIAS INCRÍVEIS.',
+                text: 'Ajudamos pessoas e empresas a construírem o novo. Unimos a visão de futuro com metodologias ágeis e design centrado no usuário para criar soluções de alto impacto.',
+                link: 'Saiba como atuamos'
+            },
+            services: {
+                label: 'O que fazemos',
+                title: 'Expertise',
+                subtitle: 'Do diagnóstico à execução, cobrimos toda a jornada digital.',
+                ux: {
+                    title: 'UX Design',
+                    desc: 'Arquitetura de informação, fluxos de navegação e wireframes focados na jornada do usuário.'
+                },
+                ui: {
+                    title: 'UI Design',
+                    desc: 'Interfaces visuais pixel-perfect, Design Systems escaláveis e protótipos de alta fidelidade.'
+                },
+                research: {
+                    title: 'UX Research',
+                    desc: 'Testes de usabilidade, entrevistas com usuários e análise de dados para decisões assertivas.'
+                },
+                motion: {
+                    title: 'Motion Design',
+                    desc: 'Microinterações e animações que dão vida ao produto e aumentam o engajamento.'
+                },
+                branding: {
+                    title: 'Branding e Marca',
+                    desc: 'Estratégia visual, tom de voz e posicionamento de marca para o mundo digital.'
+                }
+            },
+            ai: {
+                label: 'Inovação & Tech',
+                title1: 'Abordagem com',
+                title2: 'Inteligência Artificial',
+                desc: 'Não apenas desenhamos, aceleramos. Utilizamos o poder da IA generativa e automações inteligentes para otimizar processos, gerar insights rápidos e garantir precisão máxima em cada entrega.',
+                item1: 'Automação de Design Ops',
+                item2: 'Prototipagem Acelerada',
+                item3: 'Análise de Dados Preditiva',
+                workflow: 'AI-Driven Workflow'
+            },
+            portfolio: {
+                title: 'Nossos projetos',
+                hint: '(Explore)'
+            },
+            steps: {
+                title: 'A gente te ajuda a:',
+                diagnose: {
+                    title: 'Diagnosticar',
+                    desc: 'Entendemos o seu negócio, seus gargalos e oportunidades para criar o melhor cenário.'
+                },
+                plan: {
+                    title: 'Planejar',
+                    desc: 'Definimos o plano de ação, roadmap e tecnologias ideais para o seu projeto.'
+                },
+                execute: {
+                    title: 'Executar',
+                    desc: 'Desenvolvemos e entregamos a solução com qualidade, testes e acompanhamento.'
+                }
+            },
+            international: {
+                label: 'Presença Internacional',
+                title1: 'Não existem',
+                title2: 'fronteiras.',
+                text: 'Atendemos clientes no Brasil, EUA, Portugal, Argentina, França, Colômbia, levando excelência global.',
+                cta: 'Fale com a gente'
+            },
+            team: {
+                title: 'Nossa Equipe'
+            },
+            stats: {
+                label: 'Mais de 10 anos de trajetória',
+                text: 'Temos o orgulho de poder ter ajudado marcas a surgirem, se reinventarem e aumentarem seu faturamento com design e estratégias voltadas para o cliente no centro de tudo.',
+                brands: 'Marcas atendidas',
+                years: 'Mais de 10 anos de atuação',
+                projects: 'Projetos realizados'
+            },
+            infra: {
+                title: 'Infraestrutura completa e os melhores padrões da indústria',
+                desc: 'Hospedagem própria com suporte integral e adequado à Lei Geral de Proteção de Dados, mais de 20 tipos de aplicações diferentes com setup simples e interface intuitiva',
+                security: 'Segurança',
+                privacy: 'Privacidade',
+                cta: 'Saiba mais'
+            },
+            testimonials: {
+                title: 'O que nossos clientes pensam de nós',
+                prev: 'Anterior',
+                next: 'Próximo',
+                review1: '"Excelência na jornada, além de prazos, a qualidade da entrega foi surpreendente."',
+                review2: '"Equipe extremamente técnica e criativa. Resolveram problemas complexos com facilidade."',
+                review3: '"Profissionalismo e atenção aos detalhes. O resultado superou todas as expectativas."',
+                review4: '"Design moderno e funcional. A experiência do usuário melhorou significativamente."',
+                review5: '"Comunicação clara e entregas sempre no prazo. Recomendo sem hesitação."',
+                review6: '"Transformaram nossa visão em realidade. O processo foi colaborativo e eficiente."',
+                review7: '"Estratégia bem definida e execução impecável. Resultados mensuráveis desde o início."',
+                review8: '"Equipe muito bem capacitada e competente! Trouxeram soluções que não havíamos considerado."',
+                review9: '"Qualidade excepcional em cada etapa do projeto. Parceiros de confiança."',
+                review10: '"Metodologia ágil e resultados rápidos. O investimento valeu cada centavo."'
+            },
+            form: {
+                name: 'Nome',
+                email: 'Email',
+                help: 'Como podemos ajudar?',
+                message: 'Mensagem',
+                submit: 'Enviar'
+            },
+            footer: {
+                subtitle: 'Fale sobre o seu projeto e vamos construir algo incrível juntos.',
+                connect: 'Conecte-se',
+                copyright: '© 2026 Kavicki. Todos os direitos reservados.'
+            }
+        },
+        en: {
+            nav: {
+                expertise: 'Expertise',
+                ai: 'AI Approach',
+                portfolio: 'Portfolio',
+                about: 'About',
+                contact: 'Contact',
+                menu: 'Menu',
+                theme: 'Toggle theme',
+                language: 'Toggle language'
+            },
+            hero: {
+                title1: 'Experts in projects',
+                title2: 'designed for people.',
+                subtitle: 'Creative and technological solutions to help you and your brand lead the future.',
+                cta: 'Talk to us'
+            },
+            intro: {
+                title1: 'USABILITY',
+                title2: 'EXPERIENCE',
+                title3: 'INTERFACE.',
+                label: 'WE TRANSFORM IDEAS INTO \n AMAZING EXPERIENCES.',
+                text: 'We help people and companies build the new. We combine future vision with agile methodologies and user-centered design to create high-impact solutions.',
+                link: 'Learn how we work'
+            },
+            services: {
+                label: 'What we do',
+                title: 'Expertise',
+                subtitle: 'From diagnosis to execution, we cover the entire digital journey.',
+                ux: {
+                    title: 'UX Design',
+                    desc: 'Information architecture, navigation flows and wireframes focused on the user journey.'
+                },
+                ui: {
+                    title: 'UI Design',
+                    desc: 'Pixel-perfect visual interfaces, scalable Design Systems and high-fidelity prototypes.'
+                },
+                research: {
+                    title: 'UX Research',
+                    desc: 'Usability testing, user interviews and data analysis for assertive decisions.'
+                },
+                motion: {
+                    title: 'Motion Design',
+                    desc: 'Micro-interactions and animations that bring the product to life and increase engagement.'
+                },
+                branding: {
+                    title: 'Branding & Brand',
+                    desc: 'Visual strategy, tone of voice and brand positioning for the digital world.'
+                }
+            },
+            ai: {
+                label: 'Innovation & Tech',
+                title1: 'Approach with',
+                title2: 'Artificial Intelligence',
+                desc: 'We don\'t just design, we accelerate. We use the power of generative AI and intelligent automations to optimize processes, generate quick insights and ensure maximum precision in every delivery.',
+                item1: 'Design Ops Automation',
+                item2: 'Accelerated Prototyping',
+                item3: 'Predictive Data Analysis',
+                workflow: 'AI-Driven Workflow'
+            },
+            portfolio: {
+                title: 'Our projects',
+                hint: '(Explore)'
+            },
+            steps: {
+                title: 'We help you to:',
+                diagnose: {
+                    title: 'Diagnose',
+                    desc: 'We understand your business, your bottlenecks and opportunities to create the best scenario.'
+                },
+                plan: {
+                    title: 'Plan',
+                    desc: 'We define the action plan, roadmap and ideal technologies for your project.'
+                },
+                execute: {
+                    title: 'Execute',
+                    desc: 'We develop and deliver the solution with quality, testing and follow-up.'
+                }
+            },
+            international: {
+                label: 'International Presence',
+                title1: 'There are no',
+                title2: 'borders.',
+                text: 'We serve clients in Brazil, USA, Portugal, Argentina, France, Colombia, delivering global excellence.',
+                cta: 'Talk to us'
+            },
+            team: {
+                title: 'Our Team'
+            },
+            stats: {
+                label: 'More than 10 years of journey',
+                text: 'We are proud to have helped brands emerge, reinvent themselves and increase their revenue with design and strategies focused on the customer at the center of everything.',
+                brands: 'Brands served',
+                years: 'More than 10 years of operation',
+                projects: 'Projects completed'
+            },
+            infra: {
+                title: 'Complete infrastructure and industry best practices',
+                desc: 'Own hosting with full support and compliant with the General Data Protection Law, more than 20 different types of applications with simple setup and intuitive interface',
+                security: 'Security',
+                privacy: 'Privacy',
+                cta: 'Learn more'
+            },
+            testimonials: {
+                title: 'What our clients think about us',
+                prev: 'Previous',
+                next: 'Next',
+                review1: '"Excellence in the journey, beyond deadlines, the quality of delivery was surprising."',
+                review2: '"Extremely technical and creative team. They solved complex problems with ease."',
+                review3: '"Professionalism and attention to detail. The result exceeded all expectations."',
+                review4: '"Modern and functional design. The user experience improved significantly."',
+                review5: '"Clear communication and always on-time deliveries. I recommend without hesitation."',
+                review6: '"They transformed our vision into reality. The process was collaborative and efficient."',
+                review7: '"Well-defined strategy and impeccable execution. Measurable results from the start."',
+                review8: '"Very well-trained and competent team! They brought solutions we hadn\'t considered."',
+                review9: '"Exceptional quality at every stage of the project. Trusted partners."',
+                review10: '"Agile methodology and fast results. The investment was worth every penny."'
+            },
+            form: {
+                name: 'Name',
+                email: 'Email',
+                help: 'How can we help?',
+                message: 'Message',
+                submit: 'Send'
+            },
+            footer: {
+                subtitle: 'Tell us about your project and let\'s build something amazing together.',
+                connect: 'Connect',
+                copyright: '© 2026 Kavicki. All rights reserved.'
+            }
+        }
+    };
+
+    // Função para obter valor aninhado do objeto de traduções
+    function getTranslationValue(obj, path) {
+        return path.split('.').reduce((current, key) => current?.[key], obj);
+    }
+
+    // Função para definir o idioma
+    function setLanguage(lang) {
+        if (!translations[lang]) {
+            console.warn(`Idioma "${lang}" não encontrado. Usando "pt" como padrão.`);
+            lang = 'pt';
+        }
+
+        const t = translations[lang];
+        
+        // Atualizar atributo lang do HTML
+        document.documentElement.setAttribute('lang', lang === 'pt' ? 'pt-BR' : 'en');
+        
+        // Atualizar elementos com data-i18n
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            const value = getTranslationValue(t, key);
+            
+            if (value !== undefined) {
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = value;
+                } else if (element.tagName === 'SPAN') {
+                    // Para spans, sempre atualizar o texto diretamente
+                    element.textContent = value.includes('\\n') 
+                        ? value.replace(/\\n/g, ' ') 
+                        : value;
+                } else if (element.children.length > 0) {
+                    // Elemento tem filhos (como ícones), preservar e atualizar apenas o texto
+                    // Procurar por span filho com data-i18n primeiro
+                    const childSpan = element.querySelector('span[data-i18n]');
+                    if (childSpan) {
+                        // Se há um span filho com data-i18n, ele será processado separadamente
+                        return;
+                    }
+                    
+                    // Procurar nós de texto existentes
+                    const textNodes = Array.from(element.childNodes).filter(node => 
+                        node.nodeType === Node.TEXT_NODE && node.textContent.trim()
+                    );
+                    
+                    if (textNodes.length > 0) {
+                        // Atualizar primeiro nó de texto
+                        textNodes[0].textContent = value.includes('\\n') 
+                            ? value.replace(/\\n/g, ' ') 
+                            : value + ' ';
+                    } else {
+                        // Se não há nó de texto, inserir antes do primeiro filho
+                        const textNode = document.createTextNode(
+                            (value.includes('\\n') ? value.replace(/\\n/g, ' ') : value) + ' '
+                        );
+                        element.insertBefore(textNode, element.firstChild);
+                    }
+                } else {
+                    // Elemento sem filhos, atualizar conteúdo
+                    if (value.includes('\\n')) {
+                        element.innerHTML = value.split('\\n').join('<br>');
+                    } else {
+                        element.textContent = value;
+                    }
+                }
+            }
+        });
+
+        // Atualizar placeholders
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+            const key = element.getAttribute('data-i18n-placeholder');
+            const value = getTranslationValue(t, key);
+            if (value !== undefined) {
+                element.placeholder = value;
+            }
+        });
+
+        // Atualizar aria-labels
+        document.querySelectorAll('[data-i18n-aria-label]').forEach(element => {
+            const key = element.getAttribute('data-i18n-aria-label');
+            const value = getTranslationValue(t, key);
+            if (value !== undefined) {
+                element.setAttribute('aria-label', value);
+            }
+        });
+
+        // Atualizar bandeira do idioma
+        const languageFlag = document.getElementById('languageFlag');
+        if (languageFlag) {
+            languageFlag.src = lang === 'pt' 
+                ? 'assets/flags/Flag_of_Brazil.svg' 
+                : 'assets/flags/Flag_of_the_United_States.svg';
+            languageFlag.alt = lang === 'pt' ? 'Português' : 'English';
+        }
+
+        // Salvar preferência
+        localStorage.setItem('language', lang);
+    }
+
+    // Função para obter idioma atual
+    function getCurrentLanguage() {
+        return localStorage.getItem('language') || 'pt';
+    }
+
+    // Inicializar idioma
+    const currentLang = getCurrentLanguage();
+    setLanguage(currentLang);
+
+    // Event listener para toggle de idioma
+    const languageToggle = document.getElementById('languageToggle');
+    if (languageToggle) {
+        languageToggle.addEventListener('click', () => {
+            const currentLang = getCurrentLanguage();
+            const newLang = currentLang === 'pt' ? 'en' : 'pt';
+            setLanguage(newLang);
+        });
+    }
+
+    // ============================================
+    // FIM DO SISTEMA DE TRADUÇÃO
+    // ============================================
+    
+    // 0. Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const htmlElement = document.documentElement;
+    
+    // Função para aplicar o tema
+    const logoImg = document.getElementById('logoImg');
+    
+    function applyTheme(theme) {
+        htmlElement.setAttribute('data-theme', theme);
+        if (theme === 'light') {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+            if (logoImg) {
+                logoImg.src = 'assets/logokavickilight.png';
+            }
+        } else {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+            if (logoImg) {
+                logoImg.src = 'assets/logokavicki.png';
+            }
+        }
+        localStorage.setItem('theme', theme);
+    }
+    
+    // Carregar tema salvo ou usar dark como padrão
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    applyTheme(savedTheme);
+    
+    // Alternar tema ao clicar no botão
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            applyTheme(newTheme);
+        });
+    }
+    
     // 0. Menu Hambúrguer
     const menuToggle = document.querySelector('.menu-toggle');
     const menuItems = document.querySelector('.menu-items');
@@ -42,7 +471,6 @@ document.addEventListener('DOMContentLoaded', () => {
         el.addEventListener('mouseenter', () => document.body.classList.add('hovered'));
         el.addEventListener('mouseleave', () => document.body.classList.remove('hovered'));
     });
-
 
     // 2. Reveal Animations (Fade In)
     const observer = new IntersectionObserver((entries) => {
@@ -435,4 +863,82 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 250);
         });
     }
+
+    // 6. Parallax Effect - Seção Expertise (Serviços)
+    let parallaxTicking = false;
+    const parallaxOffsets = new Map(); // Armazena os offsets de parallax por card
+
+    function updateExpertiseParallax() {
+        const servicesSection = document.querySelector('#servicos');
+        if (!servicesSection) {
+            parallaxTicking = false;
+            return;
+        }
+
+        const rect = servicesSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        // Verifica se a seção está visível na tela
+        const isVisible = rect.bottom > 0 && rect.top < windowHeight;
+        
+        if (isVisible) {
+            // Calcula a posição relativa da seção em relação à viewport
+            const sectionTop = rect.top;
+            const sectionHeight = rect.height;
+            const scrollProgress = Math.max(0, Math.min(1, (windowHeight - sectionTop) / (windowHeight + sectionHeight)));
+            
+            // Aplica parallax apenas nos service-cards
+            const serviceCards = document.querySelectorAll('#servicos .service-card');
+            serviceCards.forEach((card, index) => {
+                // Cada card se move com uma velocidade diferente baseada no seu índice
+                const speed = (index + 1) * 0.12; // Velocidades diferentes: 0.12, 0.24, 0.36, 0.48, 0.60
+                const offset = scrollProgress * 80 * speed;
+                
+                // Armazena o offset para uso no hover
+                parallaxOffsets.set(card, offset);
+                
+                // Aplica o movimento apenas quando o card está visível
+                const cardRect = card.getBoundingClientRect();
+                const cardVisible = cardRect.top < windowHeight && cardRect.bottom > 0;
+                
+                if (cardVisible && !card.matches(':hover')) {
+                    card.style.transform = `translateY(${offset}px)`;
+                }
+            });
+        }
+
+        parallaxTicking = false;
+    }
+
+    function requestExpertiseParallaxTick() {
+        if (!parallaxTicking) {
+            window.requestAnimationFrame(updateExpertiseParallax);
+            parallaxTicking = true;
+        }
+    }
+
+    // Mantém o efeito hover preservando o parallax
+    const serviceCards = document.querySelectorAll('#servicos .service-card');
+    serviceCards.forEach(card => {
+        card.style.transition = 'transform 0.3s ease-out, border-color 0.3s, background-color 0.3s';
+        card.style.willChange = 'transform';
+        
+        // Adiciona efeito hover com parallax
+        card.addEventListener('mouseenter', function() {
+            const offset = parallaxOffsets.get(this) || 0;
+            this.style.transform = `translateY(${offset}px) translateX(10px)`;
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            const offset = parallaxOffsets.get(this) || 0;
+            this.style.transform = `translateY(${offset}px)`;
+        });
+    });
+
+    // Adiciona o evento de scroll
+    window.addEventListener('scroll', requestExpertiseParallaxTick);
+    window.addEventListener('resize', requestExpertiseParallaxTick);
+    
+    // Executa uma vez ao carregar
+    updateExpertiseParallax();
 });

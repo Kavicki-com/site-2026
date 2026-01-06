@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kavicki - Experience Design & AI</title>
     
+    <script>
+        // Aplicar tema e idioma antes do carregamento completo para evitar flash
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            // Aplicar logo correto baseado no tema
+            const logoImg = document.getElementById('logoImg');
+            if (logoImg) {
+                logoImg.src = savedTheme === 'light' ? 'assets/logokavickilight.png' : 'assets/logokavicki.png';
+            }
+            // Aplicar idioma salvo
+            const savedLanguage = localStorage.getItem('language') || 'pt';
+            document.documentElement.setAttribute('lang', savedLanguage === 'pt' ? 'pt-BR' : 'en');
+            // Aplicar bandeira correta baseado no idioma
+            const languageFlag = document.getElementById('languageFlag');
+            if (languageFlag) {
+                languageFlag.src = savedLanguage === 'pt' 
+                    ? 'assets/flags/Flag_of_Brazil.svg' 
+                    : 'assets/flags/Flag_of_the_United_States.svg';
+                languageFlag.alt = savedLanguage === 'pt' ? 'Português' : 'English';
+            }
+        })();
+    </script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -18,18 +42,26 @@
     <div class="cursor-circle"></div>
 
     <nav class="navbar">
-        <div class="logo"><img src="assets/logokavicki.png" alt="Kavicki"></div>
-        <button class="menu-toggle" aria-label="Menu">
+        <div class="logo"><img src="assets/logokavicki.png" alt="Kavicki" id="logoImg"></div>
+        <button class="menu-toggle" aria-label="Menu" data-i18n-aria-label="nav.menu">
             <span></span>
             <span></span>
             <span></span>
         </button>
         <div class="menu-items">
-            <a href="#servicos">Expertise</a>
-            <a href="#ia">AI Approach</a>
-            <a href="#portfolio">Portfólio</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contato" class="btn-talk">Contato</a>
+            <a href="#servicos" data-i18n="nav.expertise">Expertise</a>
+            <a href="#ia" data-i18n="nav.ai">AI Approach</a>
+            <a href="#portfolio" data-i18n="nav.portfolio">Portfólio</a>
+            <a href="#sobre" data-i18n="nav.about">Sobre</a>
+            <a href="#contato" class="btn-talk" data-i18n="nav.contact">Contato</a>
+        </div>
+        <div class="navbar-controls">
+            <button class="language-toggle" aria-label="Alternar idioma" id="languageToggle" data-i18n-aria-label="nav.language">
+                <img id="languageFlag" src="assets/flags/Flag_of_Brazil.svg" alt="Idioma">
+            </button>
+            <button class="theme-toggle" aria-label="Alternar tema" id="themeToggle" data-i18n-aria-label="nav.theme">
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
+            </button>
         </div>
     </nav>
 
@@ -49,12 +81,12 @@
         <div class="container relative-box">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    <span class="block-reveal">Especialistas em projetos</span>
-                    <span class="block-reveal italic-accent">pensados para pessoas.</span>
+                    <span class="block-reveal" data-i18n="hero.title1">Especialistas em projetos</span>
+                    <span class="block-reveal italic-accent" data-i18n="hero.title2">pensados para pessoas.</span>
                 </h1>
-                <p class="hero-sub fade-in">Soluções criativas e tecnológicas para ajudar você e a sua marca a liderar o futuro.</p>
+                <p class="hero-sub fade-in" data-i18n="hero.subtitle">Soluções criativas e tecnológicas para ajudar você e a sua marca a liderar o futuro.</p>
                 <div class="hero-cta fade-in">
-                    <a href="#contato" class="btn-primary">Fale com a gente</a>
+                    <a href="#contato" class="btn-primary" data-i18n="hero.cta">Fale com a gente</a>
                 </div>
             </div>
         </div>
@@ -86,17 +118,17 @@
     <section class="section-padding intro-section">
         <div class="container">
             <h2 class="big-title fade-in">
-                USABILIDADE <span class="serif">&</span><br>
-                EXPERIÊNCIA <span class="serif">&</span><br>
-                INTERFACE.
+                <span data-i18n="intro.title1">USABILIDADE</span> <span class="serif">&</span><br>
+                <span data-i18n="intro.title2">EXPERIÊNCIA</span> <span class="serif">&</span><br>
+                <span data-i18n="intro.title3">INTERFACE.</span>
             </h2>
             <div class="intro-grid">
-                <div class="intro-label fade-in">
+                <div class="intro-label fade-in" data-i18n="intro.label">
                     TRANSFORMAMOS IDEIAS EM <br> EXPERIÊNCIAS INCRÍVEIS.
                 </div>
                 <div class="intro-text fade-in">
-                    <p>Ajudamos pessoas e empresas a construírem o novo. Unimos a visão de futuro com metodologias ágeis e design centrado no usuário para criar soluções de alto impacto.</p>
-                    <a href="#servicos" class="link-arrow">Saiba como atuamos <i class="fa-solid fa-arrow-right"></i></a>
+                    <p data-i18n="intro.text">Ajudamos pessoas e empresas a construírem o novo. Unimos a visão de futuro com metodologias ágeis e design centrado no usuário para criar soluções de alto impacto.</p>
+                    <a href="#servicos" class="link-arrow"><span data-i18n="intro.link">Saiba como atuamos</span> <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -105,40 +137,40 @@
     <section id="servicos" class="section-padding bg-darker">
         <div class="container services-layout">
             <div class="services-left sticky-col">
-                <span class="label-purple">O que fazemos</span>
-                <h3 class="section-subtitle">Expertise</h3>
-                <p class="text-gray">Do diagnóstico à execução, cobrimos toda a jornada digital.</p>
+                <span class="label-purple" data-i18n="services.label">O que fazemos</span>
+                <h3 class="section-subtitle" data-i18n="services.title">Expertise</h3>
+                <p class="text-gray" data-i18n="services.subtitle">Do diagnóstico à execução, cobrimos toda a jornada digital.</p>
             </div>
             
             <div class="services-right">
                 <div class="service-card fade-in-up">
                     <div class="card-icon"><i class="fa-solid fa-pen-ruler"></i></div>
-                    <h4>UX Design</h4>
-                    <p>Arquitetura de informação, fluxos de navegação e wireframes focados na jornada do usuário.</p>
+                    <h4 data-i18n="services.ux.title">UX Design</h4>
+                    <p data-i18n="services.ux.desc">Arquitetura de informação, fluxos de navegação e wireframes focados na jornada do usuário.</p>
                 </div>
                 
                 <div class="service-card fade-in-up">
                     <div class="card-icon"><i class="fa-solid fa-palette"></i></div>
-                    <h4>UI Design</h4>
-                    <p>Interfaces visuais pixel-perfect, Design Systems escaláveis e protótipos de alta fidelidade.</p>
+                    <h4 data-i18n="services.ui.title">UI Design</h4>
+                    <p data-i18n="services.ui.desc">Interfaces visuais pixel-perfect, Design Systems escaláveis e protótipos de alta fidelidade.</p>
                 </div>
 
                 <div class="service-card fade-in-up">
                     <div class="card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-                    <h4>UX Research</h4>
-                    <p>Testes de usabilidade, entrevistas com usuários e análise de dados para decisões assertivas.</p>
+                    <h4 data-i18n="services.research.title">UX Research</h4>
+                    <p data-i18n="services.research.desc">Testes de usabilidade, entrevistas com usuários e análise de dados para decisões assertivas.</p>
                 </div>
 
                 <div class="service-card fade-in-up">
                     <div class="card-icon"><i class="fa-solid fa-film"></i></div>
-                    <h4>Motion Design</h4>
-                    <p>Microinterações e animações que dão vida ao produto e aumentam o engajamento.</p>
+                    <h4 data-i18n="services.motion.title">Motion Design</h4>
+                    <p data-i18n="services.motion.desc">Microinterações e animações que dão vida ao produto e aumentam o engajamento.</p>
                 </div>
 
                 <div class="service-card fade-in-up">
                     <div class="card-icon"><i class="fa-solid fa-fingerprint"></i></div>
-                    <h4>Branding e Marca</h4>
-                    <p>Estratégia visual, tom de voz e posicionamento de marca para o mundo digital.</p>
+                    <h4 data-i18n="services.branding.title">Branding e Marca</h4>
+                    <p data-i18n="services.branding.desc">Estratégia visual, tom de voz e posicionamento de marca para o mundo digital.</p>
                 </div>
             </div>
         </div>
@@ -147,20 +179,20 @@
     <section id="ia" class="section-padding ai-section">
         <div class="container ai-grid">
             <div class="ai-content fade-in">
-                <span class="label-purple">Inovação & Tech</span>
-                <h2 class="ai-title">Abordagem com <br> <span class="text-gradient">Inteligência Artificial</span></h2>
-                <p class="ai-desc">Não apenas desenhamos, aceleramos. Utilizamos o poder da IA generativa e automações inteligentes para otimizar processos, gerar insights rápidos e garantir precisão máxima em cada entrega.</p>
+                <span class="label-purple" data-i18n="ai.label">Inovação & Tech</span>
+                <h2 class="ai-title"><span data-i18n="ai.title1">Abordagem com</span> <br> <span class="text-gradient" data-i18n="ai.title2">Inteligência Artificial</span></h2>
+                <p class="ai-desc" data-i18n="ai.desc">Não apenas desenhamos, aceleramos. Utilizamos o poder da IA generativa e automações inteligentes para otimizar processos, gerar insights rápidos e garantir precisão máxima em cada entrega.</p>
                 <ul class="ai-list">
-                    <li><i class="fa-solid fa-check"></i> Automação de Design Ops</li>
-                    <li><i class="fa-solid fa-check"></i> Prototipagem Acelerada</li>
-                    <li><i class="fa-solid fa-check"></i> Análise de Dados Preditiva</li>
+                    <li><i class="fa-solid fa-check"></i> <span data-i18n="ai.item1">Automação de Design Ops</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span data-i18n="ai.item2">Prototipagem Acelerada</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span data-i18n="ai.item3">Análise de Dados Preditiva</span></li>
                 </ul>
             </div>
             <div class="ai-visual fade-in">
                 <div class="glow-effect"></div>
                 <div class="ai-card-glass">
                     <i class="fa-solid fa-robot icon-ai"></i>
-                    <span>AI-Driven Workflow</span>
+                    <span data-i18n="ai.workflow">AI-Driven Workflow</span>
                 </div>
             </div>
         </div>
@@ -169,37 +201,37 @@
     <section id="portfolio" class="section-padding">
         <div class="container">
             <div class="portfolio-header">
-                <h3 class="section-subtitle">Nossos projetos</h3>
-                <span class="scroll-hint">(Explore)</span>
+                <h3 class="section-subtitle" data-i18n="portfolio.title">Nossos projetos</h3>
+                <span class="scroll-hint" data-i18n="portfolio.hint">(Explore)</span>
             </div>
 
             <div class="portfolio-grid">
                 <div class="portfolio-col col-down">
                     <div class="project-item">
-                        <div class="media-box"><img src="https://images.unsplash.com/photo-1481487484168-9b930d5b7d9d?auto=format&fit=crop&w=800&q=80" alt="App"></div>
+                        <div class="media-box"><img src="C:\Users\aluga.com\Desktop\site-kavicki-2026\assets\portfolio\agrobee.png" alt="Agrobee"></div>
                         <div class="project-info"><h4>Agrobee</h4><span>App Mobile</span></div>
                     </div>
                     <div class="project-item">
-                        <div class="media-box"><img src="https://images.unsplash.com/photo-1481487484168-9b930d5b7d9d?auto=format&fit=crop&w=800&q=80" alt="App"></div>
+                        <div class="media-box"><img src="C:\Users\aluga.com\Desktop\site-kavicki-2026\assets\portfolio\o1.png" alt="o1 Percent"></div>
                         <div class="project-info"><h4>o1 Percent</h4><span>App Mobile</span></div>
                     </div>
                      <div class="project-item">
-                        <div class="media-box"><img src="https://images.unsplash.com/photo-1481487484168-9b930d5b7d9d?auto=format&fit=crop&w=800&q=80" alt="App"></div>
+                        <div class="media-box"><img src="C:\Users\aluga.com\Desktop\site-kavicki-2026\assets\portfolio\farmnote.png" alt="Farmnote"></div>
                         <div class="project-info"><h4>Farmnote</h4><span>App Mobile</span></div>
                     </div>
                 </div>
 
                 <div class="portfolio-col col-up">
                     <div class="project-item">
-                        <div class="media-box"><img src="https://images.unsplash.com/photo-1551650992-ee4fd47df41f?auto=format&fit=crop&w=800&q=80" alt="Web"></div>
+                        <div class="media-box"><img src="C:\Users\aluga.com\Desktop\site-kavicki-2026\assets\portfolio\led.png" alt="Led Telecom"></div>
                         <div class="project-info"><h4>Led Telecom</h4><span>App Mobile</span></div>
                     </div>
                     <div class="project-item">
-                        <div class="media-box"><img src="https://images.unsplash.com/photo-1555421689-491a97ff2011?auto=format&fit=crop&w=800&q=80" alt="SaaS"></div>
+                        <div class="media-box"><img src="C:\Users\aluga.com\Desktop\site-kavicki-2026\assets\portfolio\walltoall.png" alt="Wall to all"></div>
                         <div class="project-info"><h4>Wall to All</h4><span>App Mobile</span></div>
                     </div>
                     <div class="project-item">
-                        <div class="media-box"><img src="https://images.unsplash.com/photo-1555421689-491a97ff2011?auto=format&fit=crop&w=800&q=80" alt="SaaS"></div>
+                        <div class="media-box"><img src="C:\Users\aluga.com\Desktop\site-kavicki-2026\assets\portfolio\kw.png" alt="Clube do KW"></div>
                         <div class="project-info"><h4>Clube do KW</h4><span>App Mobile</span></div>
                     </div>
                     
@@ -210,22 +242,22 @@
 
     <section class="section-padding bg-gradient">
         <div class="container">
-            <h3 class="section-subtitle mb-large">A gente te ajuda a:</h3>
+            <h3 class="section-subtitle mb-large" data-i18n="steps.title">A gente te ajuda a:</h3>
             <div class="steps-grid">
                 <div class="step-item fade-in">
                     <div class="step-line"></div>
-                    <h3>Diagnosticar</h3>
-                    <p>Entendemos o seu negócio, seus gargalos e oportunidades para criar o melhor cenário.</p>
+                    <h3 data-i18n="steps.diagnose.title">Diagnosticar</h3>
+                    <p data-i18n="steps.diagnose.desc">Entendemos o seu negócio, seus gargalos e oportunidades para criar o melhor cenário.</p>
                 </div>
                 <div class="step-item fade-in">
                     <div class="step-line"></div>
-                    <h3>Planejar</h3>
-                    <p>Definimos o plano de ação, roadmap e tecnologias ideais para o seu projeto.</p>
+                    <h3 data-i18n="steps.plan.title">Planejar</h3>
+                    <p data-i18n="steps.plan.desc">Definimos o plano de ação, roadmap e tecnologias ideais para o seu projeto.</p>
                 </div>
                 <div class="step-item fade-in">
                     <div class="step-line"></div>
-                    <h3>Executar</h3>
-                    <p>Desenvolvemos e entregamos a solução com qualidade, testes e acompanhamento.</p>
+                    <h3 data-i18n="steps.execute.title">Executar</h3>
+                    <p data-i18n="steps.execute.desc">Desenvolvemos e entregamos a solução com qualidade, testes e acompanhamento.</p>
                 </div>
             </div>
         </div>
@@ -234,10 +266,10 @@
     <section class="section-padding">
         <div class="container international-layout">
             <div class="int-content">
-                <span class="label-purple">Presença Internacional</span>
-                <h2 class="big-title">Não existem <br> <span class="serif">fronteiras.</span></h2>
-                <p class="text-gray mt-small">Atendemos clientes no <strong>Brasil</strong>, <strong>EUA</strong>, <strong>Portugal</strong>, <strong>Argentina</strong>,<strong>França, <strong>Colômbia</strong>, levando excelência global.</p>
-                <a href="#contato" class="btn-outline mt-small">Fale com a gente</a>
+                <span class="label-purple" data-i18n="international.label">Presença Internacional</span>
+                <h2 class="big-title"><span data-i18n="international.title1">Não existem</span> <br> <span class="serif" data-i18n="international.title2">fronteiras.</span></h2>
+                <p class="text-gray mt-small" data-i18n="international.text">Atendemos clientes no <strong>Brasil</strong>, <strong>EUA</strong>, <strong>Portugal</strong>, <strong>Argentina</strong>,<strong>França, <strong>Colômbia</strong>, levando excelência global.</p>
+                <a href="#contato" class="btn-outline mt-small" data-i18n="international.cta">Fale com a gente</a>
             </div>
             <div class="int-visual">
                 <div class="globe-container">
@@ -249,35 +281,35 @@
 
     <section id="sobre" class="section-padding bg-darker">
         <div class="container">
-            <h3 class="section-subtitle center-text mb-large">Nossa Equipe</h3>
+            <h3 class="section-subtitle center-text mb-large" data-i18n="team.title">Nossa Equipe</h3>
             <div class="team-grid">
-                <div class="team-card"><img src="assets/team/JorgeKavicki.png" alt="Jorge Kavicki"><h4>Jorge Kavicki</h4><span>Founder</span></div>
-                <div class="team-card"><img src="assets/team/AllanAlves.png" alt="Allan Alves"><h4>Allan Alves</h4><span>Product Lead</span></div>
+                <div class="team-card"><img src="assets/team/JorgeKavicki.png" alt="Jorge Kavicki"><h4>Jorge Kavicki</h4><span>Product Designer/Founder</span></div>
+                <div class="team-card"><img src="assets/team/AllanAlves.png" alt="Allan Alves"><h4>Allan Alves</h4><span>Product Designer</span></div>
                 <div class="team-card"><img src="assets/team/JulianeRocha.png" alt="Juliane Rocha"><h4>Juliane Rocha</h4><span>UX Research</span></div>
-                <div class="team-card"><img src="assets/team/ErnandesCamara.png" alt="Ernandes Camara"><h4>Ernandes Camara</h4><span>Full Stack</span></div>
-                <div class="team-card"><img src="assets/team/CleytonCarvalho.png" alt="Cleyton Carvalho"><h4>Cleyton Carvalho</h4><span>Dev Senior</span></div>
-                <div class="team-card"><img src="assets/team/MiguelSilva.png" alt="Miguel Silva"><h4>Miguel Silva</h4><span>UI Design</span></div>
-                <div class="team-card"><img src="assets/team/VictorFigueroa.png" alt="Victor Figueroa"><h4>Victor Figueroa</h4><span>Operations</span></div>
+                <div class="team-card"><img src="assets/team/ErnandesCamara.png" alt="Ernandes Camara"><h4>Ernandes Camara</h4><span>UI/UX Designer Jr</span></div>
+                <div class="team-card"><img src="assets/team/CleytonCarvalho.png" alt="Cleyton Carvalho"><h4>Cleyton Carvalho</h4><span>Gestor de Marketing</span></div>
+                <div class="team-card"><img src="assets/team/MiguelSilva.png" alt="Miguel Silva"><h4>Miguel Silva</h4><span>Full Stack Developer</span></div>
+                <div class="team-card"><img src="assets/team/VictorFigueroa.png" alt="Victor Figueroa"><h4>Victor Figueroa</h4><span>Diretor de Arte</span></div>
             </div>
         </div>
     </section>
 
     <section class="section-padding border-y">
         <div class="container">
-             <p class="center-text label-purple mb-large">Mais de 8 anos de trajetória</p>
-             <p class="center-text text-gray mb-large" style="max-width: 800px; margin-left: auto; margin-right: auto;">Temos o orgulho de poder ter ajudado marcas a surgirem, se reinventarem e aumentarem seu faturamento com design e estratégias voltadas para o cliente no centro de tudo.</p>
+             <p class="center-text label-purple mb-large" data-i18n="stats.label">Mais de 10 anos de trajetória</p>
+             <p class="center-text text-gray mb-large" style="max-width: 800px; margin-left: auto; margin-right: auto;" data-i18n="stats.text">Temos o orgulho de poder ter ajudado marcas a surgirem, se reinventarem e aumentarem seu faturamento com design e estratégias voltadas para o cliente no centro de tudo.</p>
              <div class="stats-flex">
                 <div class="stat-box">
                     <span class="counter" data-target="250">0</span>
-                    <span class="stat-label">Marcas atendidas</span>
+                    <span class="stat-label" data-i18n="stats.brands">Marcas atendidas</span>
                 </div>
                 <div class="stat-box">
                     <span class="counter" data-target="10">0</span>
-                    <span class="stat-label">Mais de 8 anos de atuação</span>
+                    <span class="stat-label" data-i18n="stats.years">Mais de 10 anos de atuação</span>
                 </div>
                 <div class="stat-box">
                     <span class="counter" data-target="750">0</span>
-                    <span class="stat-label">Projetos realizados</span>
+                    <span class="stat-label" data-i18n="stats.projects">Projetos realizados</span>
                 </div>
             </div>
         </div>
@@ -286,15 +318,15 @@
     <section class="section-padding">
         <div class="container infra-layout">
             <div class="infra-info">
-                <h3 class="section-subtitle">Infraestrutura completa e os melhores padrões da indústria</h3>
-                <p class="text-gray">Hospedagem própria com suporte integral e adequado à Lei
+                <h3 class="section-subtitle" data-i18n="infra.title">Infraestrutura completa e os melhores padrões da indústria</h3>
+                <p class="text-gray" data-i18n="infra.desc">Hospedagem própria com suporte integral e adequado à Lei
                     Geral de Proteção de Dados, mais de 20 tipos de aplicações
                     diferentes com setup simples e interface intuitiva</p>
                 <div class="infra-badges">
-                    <span><i class="fa-solid fa-shield-halved"></i> Segurança</span>
-                    <span><i class="fa-solid fa-lock"></i> Privacidade</span>
+                    <span><i class="fa-solid fa-shield-halved"></i> <span data-i18n="infra.security">Segurança</span></span>
+                    <span><i class="fa-solid fa-lock"></i> <span data-i18n="infra.privacy">Privacidade</span></span>
                 </div>
-                <a href="#contato" class="btn-primary mt-small">Saiba mais</a>
+                <a href="#contato" class="btn-primary mt-small" data-i18n="infra.cta">Saiba mais</a>
             </div>
             <div class="infra-img">
                 <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=800&q=80" alt="Infraestrutura">
@@ -304,76 +336,76 @@
 
     <section class="section-padding bg-darker">
         <div class="container">
-            <h3 class="section-subtitle center-text mb-large">O que nossos clientes pensam de nós</h3>
+            <h3 class="section-subtitle center-text mb-large" data-i18n="testimonials.title">O que nossos clientes pensam de nós</h3>
             <div class="testimonials-carousel-wrapper">
                 <div class="testimonials-carousel">
                     <div class="review-box">
                         <div class="stars">★★★★★</div>
-                        <p>"Excelência na jornada, além de prazos, a qualidade da entrega foi surpreendente."</p>
+                        <p data-i18n="testimonials.review1">"Ótimos com os prazos e design incrível."</p>
                         <div class="author">
-                            <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Isabela">
-                            <div><strong>Isabela Santos</strong><span>Marketing Director</span></div>
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjU1poGwJY2YMvGt3jlG7dMVyPVtBzcreFDLPcVxR3EuEegQBoW2=w72-h72-p-rp-mo-br100" alt="Ana">
+                            <div><strong> Ana Laura de Souza</strong><span>Founder Meowccino</span></div>
                         </div>
                     </div>
                     <div class="review-box">
                         <div class="stars">★★★★★</div>
-                        <p>"Equipe extremamente técnica e criativa. Resolveram problemas complexos com facilidade."</p>
+                        <p data-i18n="testimonials.review2">"Excelentes profissionais, muito feliz com os resultados!"</p>
                         <div class="author">
-                            <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Lucas">
-                            <div><strong>Lucas Costa</strong><span>CTO @ TechStartup</span></div>
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjUYRNiEQuuvqfhdwhGAvdvyvW4zKMtw9n8XtHq1xITEZFEzM_3Nvw=w72-h72-p-rp-mo-ba3-br100" alt="Mírian">
+                            <div><strong>Mírian Fonseca</strong><span>CEO Photosolar Energia</span></div>
                         </div>
                     </div>
                     <div class="review-box">
                         <div class="stars">★★★★★</div>
-                        <p>"Profissionalismo e atenção aos detalhes. O resultado superou todas as expectativas."</p>
+                        <p data-i18n="testimonials.review3">"Excepcional profissional e uma grande pessoa."</p>
                         <div class="author">
-                            <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Ana">
-                            <div><strong>Ana Paula</strong><span>Product Manager</span></div>
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjV5yPxS4pRW-th4vO4EDbdAuhTyN5IcOEyO7ocq4tu1Y7h2QiM4=w72-h72-p-rp-mo-ba2-br100" alt="Guilherme">
+                            <div><strong>Guilherme Souza</strong><span>CEO Agrobee</span></div>
                         </div>
                     </div>
                     <div class="review-box">
                         <div class="stars">★★★★★</div>
-                        <p>"Design moderno e funcional. A experiência do usuário melhorou significativamente."</p>
+                        <p data-i18n="testimonials.review4">"Design moderno e funcional. A experiência do usuário melhorou significativamente."</p>
                         <div class="author">
-                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Roberto">
-                            <div><strong>Roberto Silva</strong><span>CEO @ StartupX</span></div>
+                            <img src="https://media.licdn.com/dms/image/v2/D4D03AQH0ci8Lhy9UvA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1710718233635?e=1769040000&v=beta&t=0A6UcMOYt0Ezb-IPhk6vheglpntE-jnsskI6ZHM9Ki0" alt="Roberto">
+                            <div><strong>Romualdo Júnior</strong><span>CRM Coordinator Frísia</span></div>
                         </div>
                     </div>
                     <div class="review-box">
                         <div class="stars">★★★★★</div>
-                        <p>"Comunicação clara e entregas sempre no prazo. Recomendo sem hesitação."</p>
+                        <p data-i18n="testimonials.review5">"Comunicação clara e entregas sempre no prazo. Recomendo sem hesitação."</p>
                         <div class="author">
-                            <img src="https://randomuser.me/api/portraits/women/35.jpg" alt="Mariana">
-                            <div><strong>Mariana Oliveira</strong><span>UX Lead</span></div>
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjXcTsSog0hS5wk3PKO_c4f_cOuEK1ALajMt5N_Gp6nabEp0Zio=w72-h72-p-rp-mo-br100" alt="Marcelo">
+                            <div><strong>Marcelo Tonet</strong><span>Founder Mão Na Web</span></div>
                         </div>
                     </div>
                     <div class="review-box">
                         <div class="stars">★★★★★</div>
-                        <p>"Transformaram nossa visão em realidade. O processo foi colaborativo e eficiente."</p>
+                        <p data-i18n="testimonials.review6">"Transformaram nossa visão em realidade. O processo foi colaborativo e eficiente."</p>
                         <div class="author">
-                            <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Carlos">
-                            <div><strong>Carlos Mendes</strong><span>Founder</span></div>
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjX2dL6kqEx3NTb-kb9j3KDWoXuMsSl2DMzKqnSWfTblU7DYIqY72Q=w72-h72-p-rp-mo-ba2-br100" alt="Rodrigo">
+                            <div><strong>Rodrigo Menezes</strong><span>Founder RM Sistemas</span></div>
                         </div>
                     </div>
                     <div class="review-box">
                         <div class="stars">★★★★★</div>
-                        <p>"Estratégia bem definida e execução impecável. Resultados mensuráveis desde o início."</p>
+                        <p data-i18n="testimonials.review7">"Estratégia bem definida e execução impecável. Resultados mensuráveis desde o início."</p>
                         <div class="author">
-                            <img src="https://randomuser.me/api/portraits/women/42.jpg" alt="Patricia">
-                            <div><strong>Patricia Lima</strong><span>CMO</span></div>
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjVPnQlAXQlp5FD-_9b3HlVugOySFLqImGMHpWKvWL2lQDN61D7E=w72-h72-p-rp-mo-br100" alt="Isabela">
+                            <div><strong>isabela Santiago</strong><span>CEO HomeyCleaning</span></div>
                         </div>
                     </div>
                     <div class="review-box">
                         <div class="stars">★★★★★</div>
-                        <p>"Equipe proativa e inovadora. Trouxeram soluções que não havíamos considerado."</p>
+                        <p data-i18n="testimonials.review8">"Equipe muito bem capacitada e competente! Trouxeram soluções que não havíamos considerado."</p>
                         <div class="author">
-                            <img src="https://randomuser.me/api/portraits/men/38.jpg" alt="Fernando">
-                            <div><strong>Fernando Costa</strong><span>Tech Director</span></div>
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjWkHFLJqnqrzUIHiRv4l9y9Q2HtuvpbAyJVY4IsPnzvuuIQs8Yw=w72-h72-p-rp-mo-br100" alt="Rivaldo">
+                            <div><strong>Rivaldo Mecenas</strong><span>Tech Lead Dasa</span></div>
                         </div>
                     </div>
                     <div class="review-box">
                         <div class="stars">★★★★★</div>
-                        <p>"Qualidade excepcional em cada etapa do projeto. Parceiros de confiança."</p>
+                        <p data-i18n="testimonials.review9">"Qualidade excepcional em cada etapa do projeto. Parceiros de confiança."</p>
                         <div class="author">
                             <img src="https://randomuser.me/api/portraits/women/19.jpg" alt="Juliana">
                             <div><strong>Juliana Ferreira</strong><span>Brand Manager</span></div>
@@ -381,7 +413,7 @@
                     </div>
                     <div class="review-box">
                         <div class="stars">★★★★★</div>
-                        <p>"Metodologia ágil e resultados rápidos. O investimento valeu cada centavo."</p>
+                        <p data-i18n="testimonials.review10">"Metodologia ágil e resultados rápidos. O investimento valeu cada centavo."</p>
                         <div class="author">
                             <img src="https://randomuser.me/api/portraits/men/29.jpg" alt="Ricardo">
                             <div><strong>Ricardo Alves</strong><span>Operations Manager</span></div>
@@ -389,10 +421,10 @@
                     </div>
                 </div>
                 <div class="carousel-controls">
-                    <button class="carousel-btn prev-btn" aria-label="Anterior">
+                    <button class="carousel-btn prev-btn" aria-label="Anterior" data-i18n-aria-label="testimonials.prev">
                         <i class="fa-solid fa-chevron-left"></i>
                     </button>
-                    <button class="carousel-btn next-btn" aria-label="Próximo">
+                    <button class="carousel-btn next-btn" aria-label="Próximo" data-i18n-aria-label="testimonials.next">
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
                 </div>
@@ -405,22 +437,22 @@
         <div class="container">
             <div class="footer-header">
                 <h4>Kavicki.</h4>
-                <p class="text-gray">Fale sobre o seu projeto e vamos construir algo incrível juntos.</p>
+                <p class="text-gray" data-i18n="footer.subtitle">Fale sobre o seu projeto e vamos construir algo incrível juntos.</p>
             </div>
 
             <div class="footer-layout">
                 <div class="footer-form">
                     <form>
-                        <input type="text" placeholder="Nome" class="input-field" required>
-                        <input type="email" placeholder="Email" class="input-field" required>
-                        <input type="text" placeholder="Como podemos ajudar?" class="input-field" required>
-                        <textarea placeholder="Mensagem" rows="4" class="input-field"></textarea>
-                        <button type="submit" class="btn-submit">Enviar <i class="fa-solid fa-paper-plane"></i></button>
+                        <input type="text" placeholder="Nome" class="input-field" data-i18n-placeholder="form.name" required>
+                        <input type="email" placeholder="Email" class="input-field" data-i18n-placeholder="form.email" required>
+                        <input type="text" placeholder="Como podemos ajudar?" class="input-field" data-i18n-placeholder="form.help" required>
+                        <textarea placeholder="Mensagem" rows="4" class="input-field" data-i18n-placeholder="form.message"></textarea>
+                        <button type="submit" class="btn-submit"><span data-i18n="form.submit">Enviar</span> <i class="fa-solid fa-paper-plane"></i></button>
                     </form>
                 </div>
 
                 <div class="footer-social">
-                    <h4>Conecte-se</h4>
+                    <h4 data-i18n="footer.connect">Conecte-se</h4>
                     <div class="social-links">
                         <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
                         <a href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
@@ -429,7 +461,7 @@
                     <div class="footer-copy">
                         <p class="address">São Paulo, SP - Brasil</p>
                         <p class="mail-contact">design@kavicki.com</p>
-                        <p class="copyright">© 2026 Kavicki. Todos os direitos reservados.</p>
+                        <p class="copyright" data-i18n="footer.copyright">© 2026 Kavicki. Todos os direitos reservados.</p>
                     </div>
                 </div>
             </div>
