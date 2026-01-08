@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavicki - Host & Infraestrutura</title>
+    <link rel="icon" type="image/png" href="assets/favicon.ico.png">
+    
+    <script>
+        // Aplicar tema e idioma antes do carregamento completo para evitar flash
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            // Aplicar logo correto baseado no tema
+            const logoImg = document.getElementById('logoImg');
+            if (logoImg) {
+                logoImg.src = savedTheme === 'light' ? 'assets/logokavickilight.png' : 'assets/logokavicki.png';
+            }
+            // Aplicar idioma salvo
+            const savedLanguage = localStorage.getItem('language') || 'pt';
+            document.documentElement.setAttribute('lang', savedLanguage === 'pt' ? 'pt-BR' : 'en');
+            // Aplicar bandeira correta baseado no idioma
+            const languageFlag = document.getElementById('languageFlag');
+            if (languageFlag) {
+                languageFlag.src = savedLanguage === 'pt' 
+                    ? 'assets/flags/Flag_of_Brazil.svg' 
+                    : 'assets/flags/Flag_of_the_United_States.svg';
+                languageFlag.alt = savedLanguage === 'pt' ? 'Português' : 'English';
+            }
+        })();
+    </script>
+
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W4MXZPZ');</script>
+    <!-- End Google Tag Manager -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W4MXZPZ');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4MXZPZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-circle"></div>
+
+    <nav class="navbar">
+        <div class="logo"><a href="index.html" style="text-decoration: none; display: flex; align-items: center;"><img src="assets/logokavicki.png" alt="Kavicki" id="logoImg"></a></div>
+        <button class="menu-toggle" aria-label="Menu" data-i18n-aria-label="nav.menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="menu-items">
+            <a href="index.html#servicos" data-i18n="nav.expertise">Expertise</a>
+            <a href="index.html#ia" data-i18n="nav.ai">AI Approach</a>
+            <a href="index.html#portfolio" data-i18n="nav.portfolio">Portfólio</a>
+            <a href="index.html#sobre" data-i18n="nav.about">Sobre</a>
+            <a href="index.html#contato" class="btn-talk" data-i18n="nav.contact">Contato</a>
+        </div>
+        <div class="navbar-controls">
+            <button class="language-toggle" aria-label="Alternar idioma" id="languageToggle" data-i18n-aria-label="nav.language">
+                <img id="languageFlag" src="assets/flags/Flag_of_Brazil.svg" alt="Idioma">
+            </button>
+            <button class="theme-toggle" aria-label="Alternar tema" id="themeToggle" data-i18n-aria-label="nav.theme">
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="host-hero-section">
+        <div class="container">
+            <div class="host-hero-layout">
+                <div class="host-hero-content fade-in">
+                    <h1 class="host-hero-title">
+                        <span class="host-title-part1" data-i18n="host.hero.title1">Infraestrutura</span> <span class="host-title-part2 text-purple" data-i18n="host.hero.title2">de ponta de</span> <span class="host-title-part3" data-i18n="host.hero.title3">forma simples</span>
+                    </h1>
+                    <p class="host-hero-subtitle" data-i18n="host.hero.subtitle">Host completo com email em um cloud dedicado para o seu negócio</p>
+                    <a href="https://api.whatsapp.com/send/?phone=553195826780&text=Oi%2C+tudo+bem%3F+Quero+fazer+um+or%C3%A7amento.&type=phone_number&app_absent=0" class="btn-primary host-hero-cta" data-i18n="host.hero.cta">FALE COM A GENTE</a>
+                    
+                </div>
+                <div class="host-hero-visual fade-in">
+                    <img src="assets/host/hero.png" alt="Host & Infraestrutura" data-i18n-alt="host.hero.alt">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Applications Grid Section -->
+    <section class="section-padding host-apps-section">
+        <div class="container">
+            <div class="host-apps-header center-text fade-in">
+                <span class="label-purple" data-i18n="host.apps.label">VERSATILIDADE E SIMPLICIDADE</span>
+                <h2 class="section-subtitle" data-i18n="host.apps.title">Construa o que precisar</h2>
+                <p class="text-gray" data-i18n="host.apps.subtitle">23 tipos de aplicações com plug and play e configuração automática</p>
+            </div>
+            <div class="host-apps-grid">
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/wordpress.f7961c09.svg.png" alt="Wordpress" class="product-icon-dark">
+                        <img src="assets/products/lightmode/wordpress.f7961c09.svg.png" alt="Wordpress" class="product-icon-light">
+                    </div>
+                    <h4>Wordpress</h4>
+                    <p data-i18n="host.apps.wordpress.desc">Plataforma de gerenciamento de conteúdo mais popular do mundo</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/mautic6.0a3d980a.svg.png" alt="Mautic 6" class="product-icon-dark">
+                        <img src="assets/products/lightmode/mautic6.0a3d980a.svg.png" alt="Mautic 6" class="product-icon-light">
+                    </div>
+                    <h4>Mautic 6</h4>
+                    <p data-i18n="host.apps.mautic.desc">Automação de marketing e email marketing profissional</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/woocommerce.3be94200.svg.png" alt="WooCommerce" class="product-icon-dark">
+                        <img src="assets/products/lightmode/woocommerce.3be94200.svg.png" alt="WooCommerce" class="product-icon-light">
+                    </div>
+                    <h4>WooCommerce</h4>
+                    <p data-i18n="host.apps.woocommerce.desc">E-commerce completo integrado ao Wordpress</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/joomla.4172f124.svg.png" alt="Joomla" class="product-icon-dark">
+                        <img src="assets/products/lightmode/joomla.4172f124.svg.png" alt="Joomla" class="product-icon-light">
+                    </div>
+                    <h4>Joomla</h4>
+                    <p data-i18n="host.apps.joomla.desc">Sistema de gerenciamento de conteúdo flexível e poderoso</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/php.441295dc.svg.png" alt="PHP" class="product-icon-dark">
+                        <img src="assets/products/lightmode/php.441295dc.svg.png" alt="PHP" class="product-icon-light">
+                    </div>
+                    <h4>php</h4>
+                    <p data-i18n="host.apps.php.desc">Ambiente PHP completo para suas aplicações</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/jenkins.18b2a1e4.svg.png" alt="Jenkins" class="product-icon-dark">
+                        <img src="assets/products/lightmode/jenkins.18b2a1e4.svg fill.png" alt="Jenkins" class="product-icon-light">
+                    </div>
+                    <h4>Jenkins</h4>
+                    <p data-i18n="host.apps.jenkins.desc">Automação de CI/CD para desenvolvimento</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/opencart.c81ec7b7.svg.png" alt="Opencart" class="product-icon-dark">
+                        <img src="assets/products/lightmode/opencart.c81ec7b7.svg.png" alt="Opencart" class="product-icon-light">
+                    </div>
+                    <h4>Opencart</h4>
+                    <p data-i18n="host.apps.opencart.desc">Plataforma de e-commerce open source</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/prestashop.729163fd.svg.png" alt="PrestaShop" class="product-icon-dark">
+                        <img src="assets/products/lightmode/prestashop.729163fd.svg.png" alt="PrestaShop" class="product-icon-light">
+                    </div>
+                    <h4>PrestaShop</h4>
+                    <p data-i18n="host.apps.prestashop.desc">Solução completa de e-commerce</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/n8n.c2fc1434.svg.png" alt="n8n" class="product-icon-dark">
+                        <img src="assets/products/lightmode/n8n.c2fc1434.svg.png" alt="n8n" class="product-icon-light">
+                    </div>
+                    <h4>n8n</h4>
+                    <p data-i18n="host.apps.n8n.desc">Automação de workflows e integrações</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/opensupports.b56dfdd0.svg.png" alt="OpenSupports" class="product-icon-dark">
+                        <img src="assets/products/lightmode/opensupports.b56dfdd0.svg.png" alt="OpenSupports" class="product-icon-light">
+                    </div>
+                    <h4>OpenSupports</h4>
+                    <p data-i18n="host.apps.opensupports.desc">Sistema de suporte ao cliente</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/angular.3075084c.svg.png" alt="Angular" class="product-icon-dark">
+                        <img src="assets/products/lightmode/angular.3075084c.svg.png" alt="Angular" class="product-icon-light">
+                    </div>
+                    <h4>Angular</h4>
+                    <p data-i18n="host.apps.angular.desc">Framework JavaScript para aplicações web</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/metabase.0c88b686.svg.png" alt="Metabase" class="product-icon-dark">
+                        <img src="assets/products/lightmode/metabase.0c88b686.svg fill.png" alt="Metabase" class="product-icon-light">
+                    </div>
+                    <h4>Metabase</h4>
+                    <p data-i18n="host.apps.metabase.desc">Business intelligence e análise de dados</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/drupal.8e0a8e20.svg.png" alt="Drupal" class="product-icon-dark">
+                        <img src="assets/products/lightmode/drupal.8e0a8e20.svg.png" alt="Drupal" class="product-icon-light">
+                    </div>
+                    <h4>Drupal</h4>
+                    <p data-i18n="host.apps.drupal.desc">CMS enterprise-grade robusto</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/moodle.9eddefa0.svg.png" alt="Moodle" class="product-icon-dark">
+                        <img src="assets/products/lightmode/moodle.9eddefa0.svg.png" alt="Moodle" class="product-icon-light">
+                    </div>
+                    <h4>Moodle</h4>
+                    <p data-i18n="host.apps.moodle.desc">Plataforma de aprendizado online</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/cakephp.3b00d8c3.svg.png" alt="Cake PHP" class="product-icon-dark">
+                        <img src="assets/products/lightmode/cakephp.3b00d8c3.svg.png" alt="Cake PHP" class="product-icon-light">
+                    </div>
+                    <h4>Cake PHP</h4>
+                    <p data-i18n="host.apps.cakephp.desc">Framework PHP rápido e flexível</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/html.05531684.svg.png" alt="HTML" class="product-icon-dark">
+                        <img src="assets/products/lightmode/html.05531684.svg fill.png" alt="HTML" class="product-icon-light">
+                    </div>
+                    <h4>HTML</h4>
+                    <p data-i18n="host.apps.html.desc">Hospedagem para sites estáticos</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/laravel.0939426e.svg.png" alt="Laravel" class="product-icon-dark">
+                        <img src="assets/products/lightmode/laravel.0939426e.svg.png" alt="Laravel" class="product-icon-light">
+                    </div>
+                    <h4>Laravel</h4>
+                    <p data-i18n="host.apps.laravel.desc">Framework PHP elegante e moderno</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/nodejs.f22eb213.svg.png" alt="Node.js" class="product-icon-dark">
+                        <img src="assets/products/lightmode/nodejs.f22eb213.svg.png" alt="Node.js" class="product-icon-light">
+                    </div>
+                    <h4>Node.js</h4>
+                    <p data-i18n="host.apps.nodejs.desc">Runtime JavaScript no servidor</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/python.b26465e3.svg.png" alt="Python" class="product-icon-dark">
+                        <img src="assets/products/lightmode/python.b26465e3.svg.png" alt="Python" class="product-icon-light">
+                    </div>
+                    <h4>Python</h4>
+                    <p data-i18n="host.apps.python.desc">Ambiente Python para aplicações</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/nextcloud.208884e6.svg.png" alt="Nextcloud" class="product-icon-dark">
+                        <img src="assets/products/lightmode/nextcloud.208884e6.svg.png" alt="Nextcloud" class="product-icon-light">
+                    </div>
+                    <h4>Nextcloud</h4>
+                    <p data-i18n="host.apps.nextcloud.desc">Solução de armazenamento na nuvem</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/react.33b347f8.svg.png" alt="React" class="product-icon-dark">
+                        <img src="assets/products/lightmode/react.33b347f8.svg.png" alt="React" class="product-icon-light">
+                    </div>
+                    <h4>React</h4>
+                    <p data-i18n="host.apps.react.desc">Biblioteca JavaScript para interfaces</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/rails.380eb091.svg.png" alt="Rails" class="product-icon-dark">
+                        <img src="assets/products/lightmode/rails.380eb091.svg.png" alt="Rails" class="product-icon-light">
+                    </div>
+                    <h4>Rails</h4>
+                    <p data-i18n="host.apps.rails.desc">Framework Ruby on Rails</p>
+                </div>
+                <div class="host-app-card fade-in-up">
+                    <div class="host-app-icon">
+                        <img src="assets/products/magento2.d2029263.svg.png" alt="Magento 2" class="product-icon-dark">
+                        <img src="assets/products/lightmode/magento2.d2029263.svg.png" alt="Magento 2" class="product-icon-light">
+                    </div>
+                    <h4>Magento 2</h4>
+                    <p data-i18n="host.apps.magento.desc">Plataforma de e-commerce enterprise</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SFTP Server Section -->
+    <section class="section-padding bg-darker host-sftp-section">
+        <div class="container">
+            <div class="host-sftp-layout">
+                <div class="host-sftp-visual fade-in">
+                    <img src="assets/host/conection.png" alt="SFTP Server" data-i18n-alt="host.sftp.image.alt">
+                </div>
+                <div class="host-sftp-content fade-in">
+                    <span class="label-purple host-sftp-label" data-i18n="host.sftp.label">SEGURANÇA AVANÇADA</span>
+                    <h2 class="section-subtitle host-sftp-title" data-i18n="host.sftp.title">Servidor com conexão via SFTP</h2>
+                    <p class="text-gray host-sftp-desc" data-i18n="host.sftp.desc">Acesse seus arquivos com segurança através de conexão SFTP, garantindo proteção total dos seus dados e conformidade com os melhores padrões de segurança.</p>
+                    <ul class="host-sftp-features">
+                        <li><i class="fa-solid fa-check"></i> <span data-i18n="host.sftp.feature1">Segurança e Criptografia</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-i18n="host.sftp.feature2">Facilidade de Configuração de Firewall (Porta Única)</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-i18n="host.sftp.feature3">Autenticação via Chaves SSH</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-i18n="host.sftp.feature4">Conformidade (Compliance)</span></li>
+                    </ul>
+                    <a href="https://cloud.kavicki.com/register" class="btn-primary host-sftp-cta" data-i18n="host.sftp.cta">COMECE AGORA</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hosting Plans Section -->
+    <section class="section-padding host-plans-section">
+        <div class="container">
+            <div class="host-plans-header center-text fade-in">
+                <h2 class="section-subtitle" data-i18n="host.plans.title">Hospedagem de qualidade</h2>
+                <p class="text-gray" data-i18n="host.plans.subtitle">Com preços justos, escolha o plano que mais combina com o seu negócio</p>
+            </div>
+            <div class="host-plans-grid">
+                <div class="host-plan-card fade-in-up">
+                    <h3 data-i18n="host.plans.blog.title">Blog</h3>
+                    <div class="host-plan-price">
+                        <span class="host-plan-currency" data-i18n="host.plans.currency">R$</span>
+                        <span class="host-plan-amount" data-i18n="host.plans.blog.price">79,90</span>
+                        <span class="host-plan-period" data-i18n="host.plans.period">/mês</span>
+                    </div>
+                    <p class="host-plan-desc" data-i18n="host.plans.blog.desc">Para você que publica muito</p>
+                    <ul class="host-plan-features">
+                        <li><i class="fa-solid fa-check"></i> <span data-i18n="host.plans.blog.feature1">Cloud compartilhado</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-i18n="host.plans.blog.feature2">Suporte 24/7</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-i18n="host.plans.blog.feature3">SSL gratuito</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-i18n="host.plans.blog.feature4">Backup automático</span></li>
+                    </ul>
+                </div>
+                <div class="host-plan-card host-plan-popular fade-in-up">
+                    <span class="host-plan-badge" data-i18n="host.plans.popular">MAIS POPULAR</span>
+                    <h3 data-i18n="host.plans.static.title">Site estático</h3>
+                    <div class="host-plan-price">
+                        <span class="host-plan-currency" data-i18n="host.plans.currency">R$</span>
+                        <span class="host-plan-amount" data-i18n="host.plans.static.price">59</span>
+                        <span class="host-plan-period" data-i18n="host.plans.period">/mês</span>
+                    </div>
+                    <p class="host-plan-desc" data-i18n="host.plans.static.desc">Ideal para começar</p>
+                    <ul class="host-plan-features">
+                        <li><i class="fa-solid fa-check"></i> <span data-i18n="host.plans.static.feature1">Hospedagem estática</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-i18n="host.plans.static.feature2">CDN global</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-i18n="host.plans.static.feature3">SSL gratuito</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-i18n="host.plans.static.feature4">Deploy automático</span></li>
+                    </ul>
+                </div>
+                <div class="host-plan-card fade-in-up">
+                    <h3 data-i18n="host.plans.store.title">Loja Virtual</h3>
+                    <div class="host-plan-price">
+                        <span class="host-plan-currency" data-i18n="host.plans.currency">R$</span>
+                        <span class="host-plan-amount" data-i18n="host.plans.store.price">189,90</span>
+                        <span class="host-plan-period" data-i18n="host.plans.period">/mês</span>
+                    </div>
+                    <p class="host-plan-desc" data-i18n="host.plans.store.desc">Para gestores de lojas virtuais</p>
+                    <ul class="host-plan-features">
+                        <li><i class="fa-solid fa-check"></i> <span data-i18n="host.plans.store.feature1">E-commerce completo</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-i18n="host.plans.store.feature2">Gateway de pagamento</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-i18n="host.plans.store.feature3">SSL dedicado</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-i18n="host.plans.store.feature4">Suporte prioritário</span></li>
+                    </ul>
+                </div>
+                <div class="host-plan-card fade-in-up">
+                    <h3 data-i18n="host.plans.webapp.title">Web App</h3>
+                    <div class="host-plan-price">
+                        <span class="host-plan-currency" data-i18n="host.plans.currency">R$</span>
+                        <span class="host-plan-amount" data-i18n="host.plans.webapp.price">329,90</span>
+                        <span class="host-plan-period" data-i18n="host.plans.period">/mês</span>
+                    </div>
+                    <p class="host-plan-desc" data-i18n="host.plans.webapp.desc">Para desenvolvimento web</p>
+                    <ul class="host-plan-features">
+                        <li><i class="fa-solid fa-check"></i> <span data-i18n="host.plans.webapp.feature1">Servidor dedicado</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-i18n="host.plans.webapp.feature2">Escalabilidade</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-i18n="host.plans.webapp.feature3">API completa</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-i18n="host.plans.webapp.feature4">Monitoramento 24/7</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="host-plans-cta center-text fade-in">
+                <a href="https://api.whatsapp.com/send/?phone=553195826780&text=Oi%2C+tudo+bem%3F+Quero+fazer+um+or%C3%A7amento.&type=phone_number&app_absent=0" class="btn-primary" data-i18n="host.plans.cta">FALE COM A GENTE</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="main-footer">
+        <div class="container">
+            <div class="footer-header">
+                <h4>Kavicki.</h4>
+                <p class="text-gray" data-i18n="footer.subtitle">Fale sobre o seu projeto e vamos construir algo incrível juntos.</p>
+            </div>
+
+            <div class="footer-layout">
+                <div class="footer-form">
+                    <form id="contactForm">
+                        <input type="text" id="formName" name="name" placeholder="Nome" class="input-field" data-i18n-placeholder="form.name" required>
+                        <input type="email" id="formEmail" name="email" placeholder="Email" class="input-field" data-i18n-placeholder="form.email" required>
+                        <input type="text" id="formSubject" name="subject" placeholder="Como podemos ajudar?" class="input-field" data-i18n-placeholder="form.help" required>
+                        <textarea id="formMessage" name="message" placeholder="Mensagem" rows="4" class="input-field" data-i18n-placeholder="form.message"></textarea>
+                        <button type="submit" class="btn-submit"><span data-i18n="form.submit">Enviar</span> <i class="fa-solid fa-paper-plane"></i></button>
+                        <div id="formMessageFeedback" class="form-feedback" style="display: none;"></div>
+                    </form>
+                </div>
+
+                <div class="footer-social">
+                    <h4 data-i18n="footer.connect">Conecte-se</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com/kavicki_ux"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                        <a href="https://api.whatsapp.com/send/?phone=553195826780&text=Oi%2C+tudo+bem%3F+Quero+fazer+um+or%C3%A7amento.&type=phone_number&app_absent=0"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://www.linkedin.com/company/kavickiux"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    </div>
+                    <div class="footer-copy">
+                        <p class="address">São Paulo, SP - Brasil</p>
+                        <p class="mail-contact">ola@kavicki.com</p>
+                        <p class="copyright" data-i18n="footer.copyright">© 2025 Kavicki. Todos os direitos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

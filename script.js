@@ -140,6 +140,101 @@ document.addEventListener('DOMContentLoaded', () => {
                 subtitle: 'Fale sobre o seu projeto e vamos construir algo incrível juntos.',
                 connect: 'Conecte-se',
                 copyright: '© 2026 Kavicki. Todos os direitos reservados.'
+            },
+            host: {
+                hero: {
+                    title1: 'Infraestrutura',
+                    title2: 'de ponta de',
+                    title3: 'forma simples',
+                    subtitle: 'Host completo com email em um cloud dedicado para o seu negócio',
+                    cta: 'FALE COM A GENTE',
+                    badge1: 'cloudz PARTNER CERTIFIED',
+                    badge2: 'cloudz LGPD ready!',
+                    alt: 'Host & Infraestrutura'
+                },
+                apps: {
+                    label: 'VERSATILIDADE E SIMPLICIDADE',
+                    title: 'Construa o que precisar',
+                    subtitle: '23 tipos de aplicações com plug and play e configuração automática',
+                    wordpress: { desc: 'Plataforma de gerenciamento de conteúdo mais popular do mundo' },
+                    mautic: { desc: 'Automação de marketing e email marketing profissional' },
+                    woocommerce: { desc: 'E-commerce completo integrado ao Wordpress' },
+                    joomla: { desc: 'Sistema de gerenciamento de conteúdo flexível e poderoso' },
+                    php: { desc: 'Ambiente PHP completo para suas aplicações' },
+                    jenkins: { desc: 'Automação de CI/CD para desenvolvimento' },
+                    opencart: { desc: 'Plataforma de e-commerce open source' },
+                    prestashop: { desc: 'Solução completa de e-commerce' },
+                    n8n: { desc: 'Automação de workflows e integrações' },
+                    opensupports: { desc: 'Sistema de suporte ao cliente' },
+                    angular: { desc: 'Framework JavaScript para aplicações web' },
+                    metabase: { desc: 'Business intelligence e análise de dados' },
+                    drupal: { desc: 'CMS enterprise-grade robusto' },
+                    moodle: { desc: 'Plataforma de aprendizado online' },
+                    cakephp: { desc: 'Framework PHP rápido e flexível' },
+                    html: { desc: 'Hospedagem para sites estáticos' },
+                    laravel: { desc: 'Framework PHP elegante e moderno' },
+                    nodejs: { desc: 'Runtime JavaScript no servidor' },
+                    python: { desc: 'Ambiente Python para aplicações' },
+                    nextcloud: { desc: 'Solução de armazenamento na nuvem' },
+                    react: { desc: 'Biblioteca JavaScript para interfaces' },
+                    rails: { desc: 'Framework Ruby on Rails' },
+                    magento: { desc: 'Plataforma de e-commerce enterprise' }
+                },
+                sftp: {
+                    label: 'SEGURANÇA AVANÇADA',
+                    title: 'Servidor com conexão via SFTP',
+                    desc: 'Acesse seus arquivos com segurança através de conexão SFTP, garantindo proteção total dos seus dados e conformidade com os melhores padrões de segurança.',
+                    feature1: 'Segurança e Criptografia',
+                    feature2: 'Facilidade de Configuração de Firewall (Porta Única)',
+                    feature3: 'Autenticação via Chaves SSH',
+                    feature4: 'Conformidade (Compliance)',
+                    cta: 'COMECE AGORA',
+                    image: { alt: 'SFTP Server' }
+                },
+                plans: {
+                    title: 'Hospedagem de qualidade',
+                    subtitle: 'Com preços justos, escolha o plano que mais combina com o seu negócio',
+                    currency: 'R$',
+                    period: '/mês',
+                    popular: 'MAIS POPULAR',
+                    blog: {
+                        title: 'Blog',
+                        price: '79,90',
+                        desc: 'Para você que publica muito',
+                        feature1: 'Cloud compartilhado',
+                        feature2: 'Suporte 24/7',
+                        feature3: 'SSL gratuito',
+                        feature4: 'Backup automático'
+                    },
+                    static: {
+                        title: 'Site estático',
+                        price: '59',
+                        desc: 'Ideal para começar',
+                        feature1: 'Hospedagem estática',
+                        feature2: 'CDN global',
+                        feature3: 'SSL gratuito',
+                        feature4: 'Deploy automático'
+                    },
+                    store: {
+                        title: 'Loja Virtual',
+                        price: '189,90',
+                        desc: 'Para gestores de lojas virtuais',
+                        feature1: 'E-commerce completo',
+                        feature2: 'Gateway de pagamento',
+                        feature3: 'SSL dedicado',
+                        feature4: 'Suporte prioritário'
+                    },
+                    webapp: {
+                        title: 'Web App',
+                        price: '329,90',
+                        desc: 'Para desenvolvimento web',
+                        feature1: 'Servidor dedicado',
+                        feature2: 'Escalabilidade',
+                        feature3: 'API completa',
+                        feature4: 'Monitoramento 24/7'
+                    },
+                    cta: 'FALE COM A GENTE'
+                }
             }
         },
         en: {
@@ -277,6 +372,101 @@ document.addEventListener('DOMContentLoaded', () => {
                 subtitle: 'Tell us about your project and let\'s build something amazing together.',
                 connect: 'Connect',
                 copyright: '© 2026 Kavicki. All rights reserved.'
+            },
+            host: {
+                hero: {
+                    title1: 'Infrastructure',
+                    title2: 'cutting-edge in',
+                    title3: 'a simple way',
+                    subtitle: 'Complete host with email on a dedicated cloud for your business',
+                    cta: 'TALK TO US',
+                    badge1: 'cloudz PARTNER CERTIFIED',
+                    badge2: 'cloudz LGPD ready!',
+                    alt: 'Host & Infrastructure'
+                },
+                apps: {
+                    label: 'VERSATILITY AND SIMPLICITY',
+                    title: 'Build what you need',
+                    subtitle: '23 types of applications with plug and play and automatic configuration',
+                    wordpress: { desc: 'World\'s most popular content management platform' },
+                    mautic: { desc: 'Marketing automation and professional email marketing' },
+                    woocommerce: { desc: 'Complete e-commerce integrated with Wordpress' },
+                    joomla: { desc: 'Flexible and powerful content management system' },
+                    php: { desc: 'Complete PHP environment for your applications' },
+                    jenkins: { desc: 'CI/CD automation for development' },
+                    opencart: { desc: 'Open source e-commerce platform' },
+                    prestashop: { desc: 'Complete e-commerce solution' },
+                    n8n: { desc: 'Workflow automation and integrations' },
+                    opensupports: { desc: 'Customer support system' },
+                    angular: { desc: 'JavaScript framework for web applications' },
+                    metabase: { desc: 'Business intelligence and data analysis' },
+                    drupal: { desc: 'Robust enterprise-grade CMS' },
+                    moodle: { desc: 'Online learning platform' },
+                    cakephp: { desc: 'Fast and flexible PHP framework' },
+                    html: { desc: 'Hosting for static sites' },
+                    laravel: { desc: 'Elegant and modern PHP framework' },
+                    nodejs: { desc: 'JavaScript runtime on server' },
+                    python: { desc: 'Python environment for applications' },
+                    nextcloud: { desc: 'Cloud storage solution' },
+                    react: { desc: 'JavaScript library for interfaces' },
+                    rails: { desc: 'Ruby on Rails framework' },
+                    magento: { desc: 'Enterprise e-commerce platform' }
+                },
+                sftp: {
+                    label: 'ADVANCED SECURITY',
+                    title: 'Server with SFTP connection',
+                    desc: 'Access your files securely through SFTP connection, ensuring total protection of your data and compliance with the best security standards.',
+                    feature1: 'Security and Encryption',
+                    feature2: 'Easy Firewall Configuration (Single Port)',
+                    feature3: 'SSH Key Authentication',
+                    feature4: 'Compliance',
+                    cta: 'GET STARTED NOW',
+                    image: { alt: 'SFTP Server' }
+                },
+                plans: {
+                    title: 'Quality hosting',
+                    subtitle: 'With fair prices, choose the plan that best suits your business',
+                    currency: '$',
+                    period: '/month',
+                    popular: 'MOST POPULAR',
+                    blog: {
+                        title: 'Blog',
+                        price: '79.90',
+                        desc: 'For those who publish a lot',
+                        feature1: 'Shared cloud',
+                        feature2: '24/7 support',
+                        feature3: 'Free SSL',
+                        feature4: 'Automatic backup'
+                    },
+                    static: {
+                        title: 'Static site',
+                        price: '59',
+                        desc: 'Ideal to get started',
+                        feature1: 'Static hosting',
+                        feature2: 'Global CDN',
+                        feature3: 'Free SSL',
+                        feature4: 'Automatic deploy'
+                    },
+                    store: {
+                        title: 'Online store',
+                        price: '189.90',
+                        desc: 'For online store managers',
+                        feature1: 'Complete e-commerce',
+                        feature2: 'Payment gateway',
+                        feature3: 'Dedicated SSL',
+                        feature4: 'Priority support'
+                    },
+                    webapp: {
+                        title: 'Web App',
+                        price: '329.90',
+                        desc: 'For web development',
+                        feature1: 'Dedicated server',
+                        feature2: 'Scalability',
+                        feature3: 'Complete API',
+                        feature4: '24/7 monitoring'
+                    },
+                    cta: 'TALK TO US'
+                }
             }
         }
     };
