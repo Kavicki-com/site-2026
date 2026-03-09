@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavicki - Apresentação Comercial</title>
+    <link rel="icon" type="image/png" href="assets/favicon.ico.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --bg-darker: #050505;
+            --text-main: #ffffff;
+            --text-gray: #a0a0a0;
+            --purple-accent: #8A2BE2;
+            --gradient: linear-gradient(135deg, #8A2BE2, #4B0082);
+            --gold-accent: #ffd700;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Manrope', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow: hidden;
+            /* Evita scroll na janela principal */
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: translateX(50px) scale(0.98);
+            transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+            pointer-events: none;
+            padding: 5%;
+            box-sizing: border-box;
+            background-color: var(--bg-darker);
+            overflow-y: auto;
+            /* Permite scroll interno se a tela for muito pequena */
+            overflow-x: hidden;
+        }
+
+        /* Estilização da barra de rolagem (opcional para manter o visual limpo) */
+        .slide::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .slide::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .slide::-webkit-scrollbar-thumb {
+            background: rgba(138, 43, 226, 0.3);
+            border-radius: 10px;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+            pointer-events: auto;
+            z-index: 10;
+        }
+
+        /* Tipografia Base */
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        h1 span {
+            color: var(--purple-accent);
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-size: 1.05rem;
+            color: var(--text-gray);
+            text-align: center;
+            max-width: 900px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .commercial-highlight {
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.15rem;
+            margin-top: 10px;
+        }
+
+        .label {
+            background: rgba(138, 43, 226, 0.2);
+            color: #d1a3ff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--gradient);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 15px;
+            border: none;
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4);
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        /* Grids Desktop */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            width: 100%;
+            max-width: 1000px;
+            margin-top: 15px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+            max-width: 1100px;
+            margin-top: 15px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            width: 100%;
+            max-width: 1000px;
+            margin-top: 15px;
+        }
+
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 15px;
+        }
+
+        .services-grid .card {
+            flex: 1 1 250px;
+            max-width: 300px;
+            padding: 15px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: left;
+        }
+
+        .card h4 {
+            font-size: 1.2rem;
+            margin: 0 0 8px 0;
+            color: #fff;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            text-align: left;
+            margin: 0;
+        }
+
+        /* Marcas */
+        .marquee-container {
+            width: 100%;
+            max-width: 1200px;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            margin-top: 40px;
+            padding: 20px 0;
+            mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
+            -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        .marquee-track {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+        }
+
+        .marquee-container:hover .marquee-track {
+            animation-play-state: paused;
+        }
+
+        .marquee-track img {
+            height: 124px;
+            min-height: 124px;
+            width: auto;
+            margin: 0 50px;
+            vertical-align: middle;
+            filter: grayscale(100%) brightness(1.5);
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            object-fit: contain;
+        }
+
+        .marquee-track img:hover {
+            filter: grayscale(0%) brightness(1.2);
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Componentes */
+        .testimonial-text {
+            font-size: 1.05rem;
+            font-style: italic;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: var(--gold-accent);
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        .team-card {
+            text-align: center;
+        }
+
+        .team-card img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--purple-accent);
+            margin-bottom: 8px;
+        }
+
+        .team-card h4 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 1rem;
+            margin: 0 0 3px 0;
+        }
+
+        .team-card span {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            display: block;
+        }
+
+        .portfolio-item {
+            text-align: center;
+            width: 100%;
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .portfolio-item p {
+            margin-top: 10px;
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: #fff;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            transition: all 0.3s ease;
+            font-size: 1.05rem;
+        }
+
+        .contact-btn i {
+            font-size: 1.3rem;
+        }
+
+        .contact-btn:hover {
+            background: rgba(138, 43, 226, 0.2);
+            border-color: var(--purple-accent);
+            transform: translateY(-3px);
+        }
+
+        /* Controles Estilizados (Modernos com ícones) */
+        .controls {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-nav {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .btn-nav:hover {
+            background: var(--purple-accent);
+            border-color: var(--purple-accent);
+            transform: scale(1.1);
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: var(--gradient);
+            z-index: 100;
+            transition: width 0.4s ease;
+        }
+
+        .logo-corner {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            height: 30px;
+            z-index: 100;
+        }
+
+        /* ========================================= */
+        /* MEDIA QUERIES PARA RESPONSIVIDADE         */
+        /* ========================================= */
+
+        /* 1366px - Laptops padrão */
+        @media (max-width: 1366px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+
+            .grid-4 {
+                gap: 10px;
+            }
+
+            .portfolio-img {
+                height: 160px;
+            }
+        }
+
+        /* 1024px - Tablets Landscape e Telas menores */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .grid-4,
+            .grid-3 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .marquee-track img {
+                height: 100px;
+                min-height: 100px;
+                margin: 0 30px;
+            }
+
+            .services-grid .card {
+                flex: 1 1 45%;
+                max-width: 100%;
+            }
+        }
+
+        /* 768px - Tablets Portrait */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .grid-3 {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .slide {
+                justify-content: flex-start;
+                padding: 100px 5% 80px 5%;
+            }
+
+            .logo-corner {
+                top: 20px;
+                left: 20px;
+                height: 25px;
+            }
+
+            .marquee-track img {
+                height: 100px;
+                min-height: 100px;
+                margin: 0 25px;
+            }
+
+            /* Ajuste no tamanho das logos */
+
+            .controls {
+                bottom: 20px;
+                right: 20px;
+                gap: 10px;
+            }
+
+            .btn-nav {
+                width: 45px;
+                height: 45px;
+                font-size: 1rem;
+            }
+        }
+
+        /* 420px - Smartphones */
+        @media (max-width: 420px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .label {
+                font-size: 0.7rem;
+            }
+
+            .grid-4 {
+                grid-template-columns: 1fr;
+            }
+
+            /* Equipe vira lista horizontal em mobile e aumenta a foto */
+            .team-card {
+                display: flex;
+                align-items: center;
+                text-align: left;
+                background: rgba(255, 255, 255, 0.03);
+                padding: 12px;
+                border-radius: 12px;
+            }
+
+            .team-card img {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 0;
+                margin-right: 15px;
+            }
+
+            /* Aumentado de 60px para 80px */
+            .team-card div {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .team-card h4 {
+                margin: 0;
+                font-size: 1.1rem;
+            }
+
+            .services-grid .card {
+                flex: 1 1 100%;
+            }
+
+            /* Portfólio sem aspect-ratio esmagador, com altura fixa maior */
+            .portfolio-img {
+                height: 220px;
+            }
+
+            /* Removido aspect-ratio 16/9 para que as imagens fiquem grandes e verticais */
+
+            .contact-links {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .contact-btn {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .marquee-track img {
+                height: 90px;
+                min-height: 90px;
+                margin: 0 20px;
+            }
+
+            /* Aumentado de 60px para 90px */
+
+            .controls {
+                bottom: 15px;
+                right: 15px;
+            }
+
+            .btn-nav {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="assets/logokavickilight.png" alt="Kavicki Logo" class="logo-corner" onerror="this.style.display='none'">
+    <div class="progress-bar" id="progress"></div>
+
+    <div class="slider-container" id="slider">
+
+        <div class="slide active">
+            <span class="label">Kavicki - Experience Design & AI</span>
+            <h1>Design que converte e<br><span>escala o seu negócio.</span></h1>
+            <p>Mais do que interfaces bonitas, desenhamos soluções criativas e tecnológicas focadas em rentabilidade.
+                Unimos visão de futuro, metodologias ágeis e UX estratégico para ajudar a sua marca a liderar o mercado
+                e maximizar os seus lucros.</p>
+            <a href="#contatos" class="cta-button" onclick="goToSlide(9)">Transforme a sua visão em resultados</a>
+        </div>
+
+        <div class="slide">
+            <span class="label">Resultados Comprovados</span>
+            <h2>Mais de 10 anos a gerar valor</h2>
+            <p>Temos o orgulho de ajudar marcas a surgirem, reinventarem-se e, acima de tudo, <strong>aumentarem seu
+                    faturamento</strong>. Colocamos o seu cliente no centro da estratégia, otimizando jornadas para
+                reduzir o abandono e fidelizar usuários.</p>
+            <div class="grid-2" style="text-align: center;">
+                <div class="card" style="border-color: var(--purple-accent); text-align: center;">
+                    <h1 style="color: var(--purple-accent); margin:0;">250+</h1>
+                    <p style="text-align: center; font-size: 1.1rem; color: #fff; font-weight: 600;">Marcas que
+                        escalaram conosco</p>
+                </div>
+                <div class="card" style="border-color: var(--purple-accent); text-align: center;">
+                    <h1 style="color: var(--purple-accent); margin:0;">750+</h1>
+                    <p style="text-align: center; font-size: 1.1rem; color: #fff; font-weight: 600;">Projetos de sucesso
+                        entregues</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <span class="label">Parceiros Estratégicos</span>
+            <h2>Quem confia no nosso ecossistema</h2>
+            <p class="commercial-highlight">Líderes de mercado já transformaram as suas métricas comerciais através do
+                nosso design.</p>
+            <div class="marquee-container">
+                <div class="marquee-track">
+                    <img src="assets/samsunglogo.png" alt="Samsung">
+                    <img src="assets/vivologo.png" alt="Vivo">
+                    <img src="assets/batavologo.png" alt="Batavo">
+                    <img src="assets/castrolandalogo.png" alt="Castrolanda">
+                    <img src="assets/frisialogo.png" alt="Frisia">
+                    <img src="assets/agrobeelogo.png" alt="Agrobee">
+                    <img src="assets/celenalogo.png" alt="Celena">
+                    <img src="assets/verdelumelogo.png" alt="Verdelume">
+                    <img src="assets/propolislogo.png" alt="Propolis">
+                    <img src="assets/samsunglogo.png" alt="Samsung">
+                    <img src="assets/vivologo.png" alt="Vivo">
+                    <img src="assets/batavologo.png" alt="Batavo">
+                    <img src="assets/castrolandalogo.png" alt="Castrolanda">
+                    <img src="assets/frisialogo.png" alt="Frisia">
+                    <img src="assets/agrobeelogo.png" alt="Agrobee">
+                    <img src="assets/celenalogo.png" alt="Celena">
+                    <img src="assets/verdelumelogo.png" alt="Verdelume">
+                    <img src="assets/propolislogo.png" alt="Propolis">
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <span class="label">A nossa Oferta de Valor</span>
+            <h2>Soluções focadas na Conversão</h2>
+            <div class="services-grid">
+                <div class="card">
+                    <h4>Consultoria Digital</h4>
+                    <p>Orientação estratégica para produtos digitais, garantindo viabilidade, escalabilidade e sucesso.
+                    </p>
+                </div>
+                <div class="card">
+                    <h4>QA & Quality Assurance</h4>
+                    <p>Análise minuciosa de qualidade de apps, busca por bugs e melhorias de performance contínua.</p>
+                </div>
+                <div class="card">
+                    <h4>UX Design Estratégico</h4>
+                    <p>Arquitetura desenhada para reduzir o atrito e acelerar a jornada de compra do usuário.</p>
+                </div>
+                <div class="card">
+                    <h4>UI & Design Systems</h4>
+                    <p>Interfaces apelativas e escaláveis que transmitem confiança e reforçam a identidade do negócio.
+                    </p>
+                </div>
+                <div class="card">
+                    <h4>Research & Dados</h4>
+                    <p>Decisões baseadas em testes de usabilidade que garantem assertividade absoluta no investimento.
+                    </p>
+                </div>
+                <div class="card">
+                    <h4>Motion Design</h4>
+                    <p>Animações que prendem a atenção e aumentam significativamente o tempo de tela do usuário.</p>
+                </div>
+                <div class="card">
+                    <h4>Branding Posicionado</h4>
+                    <p>Estratégia e posicionamento criados para destacar a sua marca da concorrência no digital.</p>
+                </div>
+                <div class="card">
+                    <h4>Campanhas & Comunicação</h4>
+                    <p>Estratégias de comunicação direta e engajamento com foco total em campanhas de E-mail e WhatsApp.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <span class="label">Vantagem Competitiva</span>
+            <h2>Acelerados por Inteligência Artificial</h2>
+            <p><strong>Não apenas desenhamos, escalamos rapidamente.</strong> Utilizamos o poder da IA generativa e
+                automações inteligentes para reduzir prazos de entrega (Time-to-Market) e otimizar custos operacionais.
+            </p>
+            <div class="grid-3">
+                <div class="card" style="text-align:center; border-top: 3px solid var(--purple-accent);">
+                    <h4>Automação de<br>Design Ops</h4>
+                    <p style="text-align:center; margin-top:5px; font-size:0.85rem;">Processos mais rápidos e baratos.
+                    </p>
+                </div>
+                <div class="card" style="text-align:center; border-top: 3px solid var(--purple-accent);">
+                    <h4>Prototipagem<br>Acelerada</h4>
+                    <p style="text-align:center; margin-top:5px; font-size:0.85rem;">Valide ideias antes do código.</p>
+                </div>
+                <div class="card" style="text-align:center; border-top: 3px solid var(--purple-accent);">
+                    <h4>Análise de Dados<br>Preditiva</h4>
+                    <p style="text-align:center; margin-top:5px; font-size:0.85rem;">Antecipe tendências de consumo.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <span class="label">Estudos de Caso</span>
+            <h2>Produtos Digitais que Lideram</h2>
+            <p>Conheça alguns dos aplicativos mobile que desenvolvemos para impulsionar a operação de grandes empresas.
+            </p>
+            <div class="grid-3">
+                <div class="portfolio-item"><img src="assets/portfolio/agrobee.png" alt="Agrobee" class="portfolio-img">
+                    <p><strong>Agrobee</strong></p>
+                </div>
+                <div class="portfolio-item"><img src="assets/portfolio/o1.png" alt="o1 Percent" class="portfolio-img">
+                    <p><strong>o1 Percent</strong></p>
+                </div>
+                <div class="portfolio-item"><img src="assets/portfolio/farmnote.png" alt="Farmnote"
+                        class="portfolio-img">
+                    <p><strong>Farmnote</strong></p>
+                </div>
+                <div class="portfolio-item"><img src="assets/portfolio/led.png" alt="Led Telecom" class="portfolio-img">
+                    <p><strong>Led Telecom</strong></p>
+                </div>
+                <div class="portfolio-item"><img src="assets/portfolio/walltoall.png" alt="Wall to all"
+                        class="portfolio-img">
+                    <p><strong>Wall to All</strong></p>
+                </div>
+                <div class="portfolio-item"><img src="assets/portfolio/kw.png" alt="Clube do KW" class="portfolio-img">
+                    <p><strong>Clube do KW</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <span class="label">A Prova do Valor</span>
+            <h2>ROI Comprovado pelos Clientes</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Design moderno e funcional. A experiência do usuário e os resultados
+                        melhoraram significativamente."</p>
+                    <h4 style="margin-top:10px;">Romualdo Júnior</h4><span>CRM Coordinator, Frísia</span>
+                </div>
+                <div class="card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Estratégia bem definida e execução impecável. Resultados comerciais
+                        mensuráveis logo desde o início."</p>
+                    <h4 style="margin-top:10px;">Isabela Santiago</h4><span>CEO, HomeyCleaning</span>
+                </div>
+                <div class="card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Transformaram a nossa visão num produto altamente rentável. O
+                        investimento valeu cada centavo."</p>
+                    <h4 style="margin-top:10px;">Ricardo Alves</h4><span>Operations Manager</span>
+                </div>
+                <div class="card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Equipe muito bem capacitada! Trouxeram inovações tecnológicas que
+                        impulsionaram a nossa operação."</p>
+                    <h4 style="margin-top:10px;">Rivaldo Mecenas</h4><span>Tech Lead, Dasa</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <span class="label">Segurança Enterprise</span>
+            <h2>Infraestrutura e Performance</h2>
+            <p>A performance afeta diretamente as vendas. Oferecemos alojamento cloud de alta disponibilidade e adequado
+                à LGPD.</p>
+            <div class="grid-2">
+                <div class="card">
+                    <h4 style="color: var(--purple-accent);">Blindagem e Proteção (SFTP)</h4>
+                    <p>Faça a gestão dos seus dados com máxima segurança via conexão SFTP e Chaves SSH, assegurando o
+                        compliance.</p>
+                </div>
+                <div class="card">
+                    <h4 style="color: var(--purple-accent);">Escalabilidade sob Medida</h4>
+                    <p>Mais de 23 integrações. De Landing Pages a Lojas Virtuais de alto tráfego (WooCommerce/Magento) e
+                        Web Apps.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <span class="label">O Capital Humano</span>
+            <h2>Os Arquitetos do seu Sucesso</h2>
+            <div class="grid-4">
+                <div class="team-card"><img src="assets/team/JorgeKavicki.png" alt="Jorge">
+                    <div>
+                        <h4>Jorge Kavicki</h4><span>Product Designer / CEO</span>
+                    </div>
+                </div>
+                <div class="team-card"><img src="assets/team/AllanAlves.png" alt="Allan">
+                    <div>
+                        <h4>Allan Alves</h4><span>Product Designer</span>
+                    </div>
+                </div>
+                <div class="team-card"><img src="assets/team/MarllonLavrinha.png" alt="Marllon"
+                        onerror="this.src='https://ui-avatars.com/api/?name=Marllon+Lavrinha&background=8A2BE2&color=fff'">
+                    <div>
+                        <h4>Marllon Lavrinha</h4><span>AI Engineer</span>
+                    </div>
+                </div>
+                <div class="team-card"><img src="assets/team/ErnandesCamara.png" alt="Ernandes">
+                    <div>
+                        <h4>Ernandes Camara</h4><span>UI/UX Designer Jr</span>
+                    </div>
+                </div>
+                <div class="team-card"><img src="assets/team/CleytonCarvalho.png" alt="Cleyton">
+                    <div>
+                        <h4>Cleyton Carvalho</h4><span>Gestor de Marketing</span>
+                    </div>
+                </div>
+                <div class="team-card"><img src="assets/team/MiguelSilva.png" alt="Miguel">
+                    <div>
+                        <h4>Miguel Silva</h4><span>Full Stack Developer</span>
+                    </div>
+                </div>
+                <div class="team-card"><img src="assets/team/VictorFigueroa.png" alt="Victor">
+                    <div>
+                        <h4>Victor Figueroa</h4><span>Diretor de Arte</span>
+                    </div>
+                </div>
+                <div class="team-card"><img src="assets/team/GabrielFernandes.png" alt="Gabriel">
+                    <div>
+                        <h4>Gabriel Fernandes</h4><span>AI Engineer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="contatos">
+            <span class="label">Pronto para começar?</span>
+            <h2>Chegou o momento de escalar.</h2>
+            <p class="commercial-highlight">Operamos a nível global. Traga o seu desafio comercial e vamos construir uma
+                máquina de gerar resultados.</p>
+
+            <div
+                style="margin-top: 30px; text-align: center; background: rgba(255,255,255,0.03); padding: 40px; border-radius: 15px; display: inline-block; border: 1px solid rgba(138, 43, 226, 0.3); width: 100%; max-width: 900px; box-sizing: border-box;">
+                <p style="font-size: 1.2rem; color: #a0a0a0; margin-top:0;">Agende já a sua consultoria estratégica
+                    conosco:</p>
+
+                <div class="contact-links">
+                    <a href="https://api.whatsapp.com/send/?phone=553195826780" target="_blank" class="contact-btn">
+                        <i class="fa-brands fa-whatsapp"></i> +55 31 9582-6780
+                    </a>
+
+                    <a href="https://api.whatsapp.com/send/?phone=5521979137098" target="_blank" class="contact-btn">
+                        <i class="fa-brands fa-whatsapp"></i> +55 21 97913-7098
+                    </a>
+
+                    <a href="https://instagram.com/kavicki_ux" target="_blank" class="contact-btn">
+                        <i class="fa-brands fa-instagram"></i> @kavicki_ux
+                    </a>
+
+                    <a href="https://www.linkedin.com/company/kavickiux" target="_blank" class="contact-btn">
+                        <i class="fa-brands fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+        <button class="btn-nav" onclick="prevSlide()"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="btn-nav" onclick="nextSlide()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const progressBar = document.getElementById('progress');
+
+        function updateSlide() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                    // Reset scroll for small screens
+                    slide.scrollTop = 0;
+                }
+            });
+            progressBar.style.width = ((currentSlide + 1) / slides.length) * 100 + '%';
+        }
+
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+
+        function goToSlide(index) {
+            if (index >= 0 && index < slides.length) {
+                currentSlide = index;
+                updateSlide();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'Space') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+
+        // Touch swipe support for mobile
+        let touchstartX = 0;
+        let touchendX = 0;
+
+        document.getElementById('slider').addEventListener('touchstart', e => {
+            touchstartX = e.changedTouches[0].screenX;
+        });
+
+        document.getElementById('slider').addEventListener('touchend', e => {
+            touchendX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchendX < touchstartX - 50) nextSlide();
+            if (touchendX > touchstartX + 50) prevSlide();
+        }
+
+        updateSlide();
+    </script>
+</body>
+
+</html>

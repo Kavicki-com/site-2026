@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // ============================================
     // SISTEMA DE TRADUÇÃO PT/EN
     // ============================================
-    
+
     const translations = {
         pt: {
             nav: {
@@ -234,6 +234,206 @@ document.addEventListener('DOMContentLoaded', () => {
                         feature4: 'Monitoramento 24/7'
                     },
                     cta: 'FALE COM A GENTE'
+                }
+            },
+            outsourcing: {
+                title: "Kavicki - Outsourcing de Design para Agências",
+                description: "Terceirize suas demandas de design com a Kavicki. UX/UI, Motion Design, Social Media e Aplicativos. Soluções sob medida para agências.",
+                nav: {
+                    problem: "O Problema",
+                    services: "Serviços",
+                    portfolio: "Portfólio",
+                    pricing: "Preços",
+                    faq: "FAQ",
+                    contact: "Contato"
+                },
+                hero: {
+                    badge: "Outsourcing de Design",
+                    title1: "Sua agência está",
+                    title2: "sobrecarregada?",
+                    subtitle: "Excesso de demandas, dificuldade de contratar CLT, PJtização e prazos apertados. A gente resolve. Terceirize suas entregas com um time especialista em design.",
+                    cta1: "Fale com a gente",
+                    cta2: "Ver planos",
+                    brands: "Marcas atendidas",
+                    years: "Anos no mercado",
+                    projects: "Projetos entregues"
+                },
+                challenge: {
+                    label: "O Desafio",
+                    title: "Sua agência sofre com isso?",
+                    demand: {
+                        title: "Excesso de demandas",
+                        desc: "Volume de jobs que ultrapassa a capacidade do time interno, gerando atrasos e retrabalho."
+                    },
+                    turnover: {
+                        title: "PJtização e turnover",
+                        desc: "Dificuldade de manter designers CLT qualificados, com rotatividade constante e custos altos."
+                    },
+                    deadlines: {
+                        title: "Prazos impossíveis",
+                        desc: "Clientes exigentes, deadlines apertados e a pressão de entregar tudo com qualidade."
+                    },
+                    costs: {
+                        title: "Custo operacional alto",
+                        desc: "Computadores, softwares, benefícios e encargos trabalhistas pesando no caixa da agência."
+                    }
+                },
+                solution: {
+                    title: "A Solução",
+                    desc: "Temos um time multidisciplinar pronto para absorver suas demandas com agilidade, qualidade e custo previsível.",
+                    item1: "Equipe especializada e dedicada",
+                    item2: "Entregas rápidas com padrão de agência",
+                    item3: "Sem encargos trabalhistas",
+                    item4: "Escalabilidade sob demanda",
+                    item5: "White-label — sua marca, nossa execução",
+                    cta: "Quero saber mais"
+                },
+                services: {
+                    label: "O que oferecemos",
+                    title: "Serviços especializados",
+                    subtitle: "Cobertura completa das necessidades criativas da sua agência, do digital ao impresso.",
+                    uxui: {
+                        title: "UX/UI Design",
+                        desc: "Interfaces intuitivas e atraentes para web e mobile. Design systems, protótipos e testes de usabilidade."
+                    },
+                    motion: {
+                        title: "Motion Design",
+                        desc: "Vídeos, animações e edições que prendem a atenção. Reels, stories, vinhetas e conteúdo audiovisual."
+                    },
+                    social: {
+                        title: "Social Media",
+                        desc: "Artes para redes sociais, carrosséis, stories, cards e materiais impressos com identidade visual consistente."
+                    },
+                    apps: {
+                        title: "Aplicativos",
+                        desc: "Design e desenvolvimento de aplicativos móveis com foco em experiência do usuário e performance."
+                    }
+                },
+                portfolio: {
+                    label: "Portfólio",
+                    title: "Nossos Projetos",
+                    apps: "Apps",
+                    social: "Social Media",
+                    videos: "Vídeos",
+                    sites: "Sites"
+                },
+                trust: {
+                    label: "Confiança",
+                    title: "Empresas que confiam na gente"
+                },
+                pricing: {
+                    label: "Investimento",
+                    title: "Planos e Preços",
+                    subtitle: "Pacotes flexíveis para atender sua agência do jeito certo. Escale sua operação sem complicação.",
+                    video: "Vídeo",
+                    static: "Artes Estáticas",
+                    sites: "Sites",
+                    apps: "Aplicativos",
+                    from: "a partir de",
+                    popular: "Mais Popular",
+                    complete: "Mais Completo",
+                    consult: "Sob consulta",
+                    cta: "Contratar",
+                    ctaConsult: "Solicitar orçamento",
+                    plans: {
+                        basic: {
+                            title: "Básico",
+                            desc: "10 a 15 vídeos mensais com edição simples"
+                        },
+                        intermediate: {
+                            title: "Intermediário",
+                            desc: "2 vídeos complexos + 10 vídeos com edição simples"
+                        },
+                        premium: {
+                            title: "Premium",
+                            desc: "10 a 15 vídeos mensais com animação e edição complexa"
+                        },
+                        digital: {
+                            title: "Digital",
+                            desc: "20 artes para redes sociais"
+                        },
+                        print: {
+                            title: "Impressos",
+                            desc: "5 formatos de material impresso"
+                        },
+                        presentation: {
+                            title: "Apresentação",
+                            desc: "10 a 15 slides profissionais"
+                        },
+                        lp: {
+                            title: "Landing Page",
+                            desc: "Landing page de alta conversão"
+                        },
+                        institutional: {
+                            title: "Site Institucional",
+                            desc: "Site completo para sua empresa"
+                        },
+                        webapp: {
+                            title: "Web App",
+                            desc: "Aplicação web sob medida"
+                        },
+                        mobile: {
+                            title: "Aplicativos Móveis",
+                            desc: "Desenvolvimento completo de aplicativos iOS e Android. Design, prototipagem, desenvolvimento e publicação nas lojas."
+                        }
+                    },
+                    features: {
+                        v1015: "10 a 15 vídeos/mês",
+                        vSimple: "Edição simples",
+                        vCuts: "Cortes e legendas",
+                        vSocial: "Formato para redes sociais",
+                        v2Complex: "2 vídeos com edição complexa",
+                        v10Simple: "10 vídeos com edição simples",
+                        vMotionB: "Motion graphics básico",
+                        vAudio: "Trilha sonora inclusa",
+                        vMotionA: "Animação e motion avançado",
+                        vEffects: "Edição complexa e efeitos",
+                        vStoryboard: "Storyboard e direção criativa",
+                        art20: "20 artes/mês",
+                        stories: "Stories",
+                        carousels: "Carrosséis",
+                        feed: "Cards para feed",
+                        visit: "Cartão de visita",
+                        flyer: "Flyer",
+                        folder: "Folder",
+                        poster: "Cartaz",
+                        slide1015: "10 a 15 slides",
+                        pptpdf: "Formato PPT/PDF",
+                        premium: "Design premium",
+                        icons: "Ícones e infográficos",
+                        sec612: "6 a 12 seções",
+                        responsive: "Design responsivo",
+                        privacy: "Política de privacidade",
+                        lgpd: "Conformidade LGPD",
+                        pag410: "4 a 10 páginas",
+                        scope: "Escopo personalizado",
+                        dedicated: "UX/UI dedicado",
+                        fullstack: "Desenvolvimento full-stack",
+                        iosandroid: "iOS & Android",
+                        stores: "Publicação nas lojas",
+                        support: "Suporte pós-lançamento"
+                    }
+                },
+                faq: {
+                    label: "Dúvidas Frequentes",
+                    title: "FAQ",
+                    q1: "Como funciona o outsourcing de design?",
+                    a1: "Você nos envia os briefings e demandas, e o nosso time de designers cuida de toda a execução. Trabalhamos como uma extensão da sua agência, com entregas no prazo e no padrão de qualidade que seus clientes esperam.",
+                    q2: "Os projetos são entregues com marca branca (white-label)?",
+                    a2: "Sim! Todas as entregas são 100% white-label. Seus clientes não saberão que o trabalho foi terceirizado. É a sua marca, a nossa execução.",
+                    q3: "Qual o prazo médio de entrega?",
+                    a3: "O prazo varia de acordo com a complexidade do projeto, mas em geral entregamos peças para social media em 24-48h, vídeos em 3-5 dias úteis e projetos maiores como sites em 7-15 dias úteis.",
+                    q4: "Como é feito o pagamento?",
+                    a4: "Trabalhamos com pacotes mensais fixos. O pagamento é feito via boleto, PIX ou transferência bancária, sempre no início do mês de trabalho.",
+                    q5: "Posso cancelar ou trocar de plano a qualquer momento?",
+                    a5: "Sim, não temos fidelidade. Você pode alterar o plano, aumentar ou reduzir o volume de demandas, ou cancelar com aviso prévio de 30 dias.",
+                    q6: "Os sites incluem política de privacidade e LGPD?",
+                    a6: "Sim! Todos os sites que desenvolvemos já incluem página de política de privacidade e estão em conformidade com a LGPD (Lei Geral de Proteção de Dados), sem custo adicional.",
+                    q7: "Vocês atendem agências de qualquer tamanho?",
+                    a7: "Sim! Atendemos desde freelancers e agências boutique até grandes agências com alto volume de demandas. Nossa estrutura é escalável para se adaptar à sua necessidade."
+                },
+                footer: {
+                    subtitle: "Design sob medida para agências que precisam escalar."
                 }
             }
         },
@@ -467,6 +667,206 @@ document.addEventListener('DOMContentLoaded', () => {
                     },
                     cta: 'TALK TO US'
                 }
+            },
+            outsourcing: {
+                title: "Kavicki - Design Outsourcing for Agencies",
+                description: "Outsource your design demands with Kavicki. UX/UI, Motion Design, Social Media and Applications. Tailored solutions for agencies.",
+                nav: {
+                    problem: "The Problem",
+                    services: "Services",
+                    portfolio: "Portfolio",
+                    pricing: "Pricing",
+                    faq: "FAQ",
+                    contact: "Contact"
+                },
+                hero: {
+                    badge: "Design Outsourcing",
+                    title1: "Is your agency",
+                    title2: "overwhelmed?",
+                    subtitle: "Excess demands, difficulty hiring full-time, freelancer churn and tight deadlines. We solve it. Outsource your deliveries with a specialist design team.",
+                    cta1: "Talk to us",
+                    cta2: "View plans",
+                    brands: "Brands served",
+                    years: "Years active",
+                    projects: "Projects delivered"
+                },
+                challenge: {
+                    label: "The Challenge",
+                    title: "Does your agency suffer from this?",
+                    demand: {
+                        title: "Overload of demands",
+                        desc: "Workload that exceeds the internal team's capacity, causing delays and rework."
+                    },
+                    turnover: {
+                        title: "Freelancer churn & turnover",
+                        desc: "Difficulty in maintaining qualified full-time designers, with constant turnover and high costs."
+                    },
+                    deadlines: {
+                        title: "Impossible deadlines",
+                        desc: "Demanding clients, tight deadlines and the pressure to deliver everything with quality."
+                    },
+                    costs: {
+                        title: "High operational cost",
+                        desc: "Computers, software, benefits and labor charges weighing on the agency's cash flow."
+                    }
+                },
+                solution: {
+                    title: "The Solution",
+                    desc: "We have a multidisciplinary team ready to absorb your demands with agility, quality and predictable cost.",
+                    item1: "Specialized and dedicated team",
+                    item2: "Fast deliveries with agency standard",
+                    item3: "No labor charges",
+                    item4: "Scalability on demand",
+                    item5: "White-label — your brand, our execution",
+                    cta: "I want to know more"
+                },
+                services: {
+                    label: "What we offer",
+                    title: "Specialized services",
+                    subtitle: "Full coverage of your agency's creative needs, from digital to print.",
+                    uxui: {
+                        title: "UX/UI Design",
+                        desc: "Intuitive and attractive interfaces for web and mobile. Design systems, prototypes and usability testing."
+                    },
+                    motion: {
+                        title: "Motion Design",
+                        desc: "Videos, animations and edits that grab attention. Reels, stories, vignettes and audiovisual content."
+                    },
+                    social: {
+                        title: "Social Media",
+                        desc: "Social media art, carousels, stories, cards and printed materials with consistent visual identity."
+                    },
+                    apps: {
+                        title: "Applications",
+                        desc: "Design and development of mobile applications with a focus on user experience and performance."
+                    }
+                },
+                portfolio: {
+                    label: "Portfolio",
+                    title: "Our Projects",
+                    apps: "Apps",
+                    social: "Social Media",
+                    videos: "Videos",
+                    sites: "Sites"
+                },
+                trust: {
+                    label: "Trust",
+                    title: "Companies that trust us"
+                },
+                pricing: {
+                    label: "Investment",
+                    title: "Plans and Pricing",
+                    subtitle: "Flexible packages to serve your agency the right way. Scale your operation without complication.",
+                    video: "Video",
+                    static: "Static Arts",
+                    sites: "Sites",
+                    apps: "Applications",
+                    from: "starting from",
+                    popular: "Most Popular",
+                    complete: "Most Complete",
+                    consult: "On consultation",
+                    cta: "Hire",
+                    ctaConsult: "Request quote",
+                    plans: {
+                        basic: {
+                            title: "Basic",
+                            desc: "10 to 15 monthly videos with simple editing"
+                        },
+                        intermediate: {
+                            title: "Intermediate",
+                            desc: "2 complex videos + 10 videos with simple editing"
+                        },
+                        premium: {
+                            title: "Premium",
+                            desc: "10 to 15 monthly videos with animation and complex editing"
+                        },
+                        digital: {
+                            title: "Digital",
+                            desc: "20 social media designs"
+                        },
+                        print: {
+                            title: "Prints",
+                            desc: "5 printed material formats"
+                        },
+                        presentation: {
+                            title: "Presentation",
+                            desc: "10 to 15 professional slides"
+                        },
+                        lp: {
+                            title: "Landing Page",
+                            desc: "High conversion landing page"
+                        },
+                        institutional: {
+                            title: "Institutional Site",
+                            desc: "Complete site for your company"
+                        },
+                        webapp: {
+                            title: "Web App",
+                            desc: "Tailor-made web application"
+                        },
+                        mobile: {
+                            title: "Mobile Apps",
+                            desc: "Complete development of iOS and Android applications. Design, prototyping, development and publication in stores."
+                        }
+                    },
+                    features: {
+                        v1015: "10 to 15 videos/month",
+                        vSimple: "Simple editing",
+                        vCuts: "Cuts and captions",
+                        vSocial: "Format for social networks",
+                        v2Complex: "2 videos with complex editing",
+                        v10Simple: "10 videos with simple editing",
+                        vMotionB: "Basic motion graphics",
+                        vAudio: "Soundtrack included",
+                        vMotionA: "Advanced animation and motion",
+                        vEffects: "Complex editing and effects",
+                        vStoryboard: "Storyboard and creative direction",
+                        art20: "20 designs/month",
+                        stories: "Stories",
+                        carousels: "Carousels",
+                        feed: "Feed cards",
+                        visit: "Business card",
+                        flyer: "Flyer",
+                        folder: "Folder",
+                        poster: "Poster",
+                        slide1015: "10 to 15 slides",
+                        pptpdf: "PPT/PDF format",
+                        premium: "Premium design",
+                        icons: "Icons and infographics",
+                        sec612: "6 to 12 sections",
+                        responsive: "Responsive design",
+                        privacy: "Privacy policy",
+                        lgpd: "LGPD compliance",
+                        pag410: "4 to 10 pages",
+                        scope: "Custom scope",
+                        dedicated: "Dedicated UX/UI",
+                        fullstack: "Full-stack development",
+                        iosandroid: "iOS & Android",
+                        stores: "Publication in stores",
+                        support: "Post-launch support"
+                    }
+                },
+                faq: {
+                    label: "Frequently Asked Questions",
+                    title: "FAQ",
+                    q1: "How does design outsourcing work?",
+                    a1: "You send us the briefings and demands, and our design team takes care of the entire execution. We work as an extension of your agency, with on-time deliveries and the quality standard that your clients expect.",
+                    q2: "Are projects delivered as white-label?",
+                    a2: "Yes! All deliveries are 100% white-label. Your clients won't know that the work was outsourced. It's your brand, our execution.",
+                    q3: "What is the average delivery time?",
+                    a3: "The term varies according to the complexity of the project, but in general we deliver pieces for social media in 24-48h, videos in 3-5 business days and larger projects like sites in 7-15 business days.",
+                    q4: "How is the payment made?",
+                    a4: "We work with fixed monthly packages. Payment is made via bank slipt, PIX or bank transfer, always at the beginning of the working month.",
+                    q5: "Can I cancel or change plans at any time?",
+                    a5: "Yes, we don't have loyalty. You can change the plan, increase or reduce the volume of demands, or cancel with 30 days notice.",
+                    q6: "Do websites include privacy policy and LGPD?",
+                    a6: "Yes! All websites we develop already include a privacy policy page and are in compliance with the LGPD (General Data Protection Law), at no additional cost.",
+                    q7: "Do you serve agencies of any size?",
+                    a7: "Yes! We serve from freelancers and boutique agencies to large agencies with a high volume of demands. Our structure is scalable to adapt to your needs."
+                },
+                footer: {
+                    subtitle: "Tailored design for agencies that need to scale."
+                }
             }
         }
     };
@@ -484,22 +884,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const t = translations[lang];
-        
+
         // Atualizar atributo lang do HTML
         document.documentElement.setAttribute('lang', lang === 'pt' ? 'pt-BR' : 'en');
-        
+
         // Atualizar elementos com data-i18n
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');
             const value = getTranslationValue(t, key);
-            
+
             if (value !== undefined) {
                 if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                     element.placeholder = value;
                 } else if (element.tagName === 'SPAN') {
                     // Para spans, sempre atualizar o texto diretamente
-                    element.textContent = value.includes('\\n') 
-                        ? value.replace(/\\n/g, ' ') 
+                    element.textContent = value.includes('\\n')
+                        ? value.replace(/\\n/g, ' ')
                         : value;
                 } else if (element.children.length > 0) {
                     // Elemento tem filhos (como ícones), preservar e atualizar apenas o texto
@@ -509,16 +909,16 @@ document.addEventListener('DOMContentLoaded', () => {
                         // Se há um span filho com data-i18n, ele será processado separadamente
                         return;
                     }
-                    
+
                     // Procurar nós de texto existentes
-                    const textNodes = Array.from(element.childNodes).filter(node => 
+                    const textNodes = Array.from(element.childNodes).filter(node =>
                         node.nodeType === Node.TEXT_NODE && node.textContent.trim()
                     );
-                    
+
                     if (textNodes.length > 0) {
                         // Atualizar primeiro nó de texto
-                        textNodes[0].textContent = value.includes('\\n') 
-                            ? value.replace(/\\n/g, ' ') 
+                        textNodes[0].textContent = value.includes('\\n')
+                            ? value.replace(/\\n/g, ' ')
                             : value + ' ';
                     } else {
                         // Se não há nó de texto, inserir antes do primeiro filho
@@ -529,7 +929,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 } else {
                     // Elemento sem filhos, atualizar conteúdo
-                    if (value.includes('\\n')) {
+                    if (element.tagName === 'META') {
+                        element.setAttribute('content', value);
+                    } else if (value.includes('\\n')) {
                         element.innerHTML = value.split('\\n').join('<br>');
                     } else {
                         element.textContent = value;
@@ -559,8 +961,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Atualizar bandeira do idioma
         const languageFlag = document.getElementById('languageFlag');
         if (languageFlag) {
-            languageFlag.src = lang === 'pt' 
-                ? 'assets/flags/Flag_of_Brazil.svg' 
+            languageFlag.src = lang === 'pt'
+                ? 'assets/flags/Flag_of_Brazil.svg'
                 : 'assets/flags/Flag_of_the_United_States.svg';
             languageFlag.alt = lang === 'pt' ? 'Português' : 'English';
         }
@@ -591,15 +993,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // ============================================
     // FIM DO SISTEMA DE TRADUÇÃO
     // ============================================
-    
+
     // 0. Theme Toggle
     const themeToggle = document.getElementById('themeToggle');
     const themeIcon = document.getElementById('themeIcon');
     const htmlElement = document.documentElement;
-    
+
     // Função para aplicar o tema
     const logoImg = document.getElementById('logoImg');
-    
+
     function applyTheme(theme) {
         htmlElement.setAttribute('data-theme', theme);
         if (theme === 'light') {
@@ -617,11 +1019,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         localStorage.setItem('theme', theme);
     }
-    
+
     // Carregar tema salvo ou usar dark como padrão
     const savedTheme = localStorage.getItem('theme') || 'dark';
     applyTheme(savedTheme);
-    
+
     // Alternar tema ao clicar no botão
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
@@ -630,17 +1032,17 @@ document.addEventListener('DOMContentLoaded', () => {
             applyTheme(newTheme);
         });
     }
-    
+
     // 0. Menu Hambúrguer
     const menuToggle = document.querySelector('.menu-toggle');
     const menuItems = document.querySelector('.menu-items');
-    
+
     if (menuToggle && menuItems) {
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
             menuItems.classList.toggle('active');
         });
-        
+
         // Fechar menu ao clicar em um link
         const menuLinks = menuItems.querySelectorAll('a');
         menuLinks.forEach(link => {
@@ -650,7 +1052,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-    
+
     // 1. Cursor Follower
     const cursorDot = document.querySelector('.cursor-dot');
     const cursorCircle = document.querySelector('.cursor-circle');
@@ -659,10 +1061,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('mousemove', (e) => {
         const x = e.clientX;
         const y = e.clientY;
-        
+
         cursorDot.style.left = `${x}px`;
         cursorDot.style.top = `${y}px`;
-        
+
         cursorCircle.animate({
             left: `${x}px`,
             top: `${y}px`
@@ -702,8 +1104,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const counters = document.querySelectorAll('.counter');
             counters.forEach(counter => {
                 const target = +counter.getAttribute('data-target');
-                const duration = 2000; 
-                const increment = target / (duration / 16); 
+                const duration = 2000;
+                const increment = target / (duration / 16);
 
                 let current = 0;
                 const updateCounter = () => {
@@ -722,7 +1124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const statsSection = document.querySelector('.stats-flex');
-    if(statsSection) statsObserver.observe(statsSection);
+    if (statsSection) statsObserver.observe(statsSection);
 
     // 4. Globe 3D with Drag Rotation
     const globeCanvas = document.getElementById('globe-canvas');
@@ -730,19 +1132,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, globeCanvas.clientWidth / globeCanvas.clientHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer({ canvas: globeCanvas, alpha: true, antialias: true });
-        
+
         renderer.setSize(globeCanvas.clientWidth, globeCanvas.clientHeight);
         renderer.setPixelRatio(window.devicePixelRatio);
 
         // Create globe
         const geometry = new THREE.SphereGeometry(2, 64, 64);
-        
+
         // Load Earth textures
         const textureLoader = new THREE.TextureLoader();
-        
+
         // Try multiple texture sources for better compatibility
         const textureBaseUrl = 'https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/';
-        
+
         // Earth texture (diffuse map) - with atmosphere
         const earthTexture = textureLoader.load(
             textureBaseUrl + 'earth_atmos_2048.jpg',
@@ -755,7 +1157,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log('Using fallback Earth texture');
             }
         );
-        
+
         // Normal map for terrain detail
         const normalTexture = textureLoader.load(
             textureBaseUrl + 'earth_normal_2048.jpg',
@@ -765,7 +1167,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Normal map is optional, continue without it if it fails
             }
         );
-        
+
         // Specular map for water reflections
         const specularTexture = textureLoader.load(
             textureBaseUrl + 'earth_specular_2048.jpg',
@@ -775,16 +1177,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Specular map is optional, continue without it if it fails
             }
         );
-        
+
         // Create Earth material with realistic textures
-        const material = new THREE.MeshPhongMaterial({ 
+        const material = new THREE.MeshPhongMaterial({
             map: earthTexture,
             normalMap: normalTexture,
             specularMap: specularTexture,
             shininess: 30,
             transparent: false
         });
-        
+
         const globe = new THREE.Mesh(geometry, material);
         scene.add(globe);
 
@@ -896,7 +1298,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const container = globeCanvas.parentElement;
             const width = container.clientWidth;
             const height = container.clientHeight;
-            
+
             camera.aspect = width / height;
             camera.updateProjectionMatrix();
             renderer.setSize(width, height);
@@ -912,11 +1314,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
     const dotsContainer = document.querySelector('.carousel-dots');
-    
+
     if (carousel && prevBtn && nextBtn) {
         const reviews = carousel.querySelectorAll('.review-box');
         const totalItems = reviews.length;
-        
+
         function getItemsPerView() {
             if (window.innerWidth <= 560) {
                 return 1; // Mobile: 1 card
@@ -926,11 +1328,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 return 3; // Desktop: 3 cards
             }
         }
-        
+
         function getTotalSlides() {
             return Math.ceil(totalItems / getItemsPerView());
         }
-        
+
         let currentIndex = 0;
 
         // Create dots (one per slide, not per item)
@@ -946,14 +1348,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             return dotsContainer.querySelectorAll('.carousel-dot');
         }
-        
+
         let dots = createDots();
 
         function updateCarousel() {
             const itemsPerView = getItemsPerView();
             const gap = 40;
             const wrapper = document.querySelector('.testimonials-carousel-wrapper');
-            
+
             let slideWidth;
             if (itemsPerView === 3 && reviews.length > 0) {
                 // For 3 items: use wrapper width to ensure all 3 cards fit
@@ -999,7 +1401,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Fallback
                 slideWidth = wrapper ? wrapper.getBoundingClientRect().width : carousel.offsetWidth;
             }
-            
+
             const translateX = currentIndex * slideWidth;
             carousel.style.transform = `translateX(-${translateX}px)`;
             dots.forEach((dot, index) => {
@@ -1079,30 +1481,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const rect = servicesSection.getBoundingClientRect();
         const windowHeight = window.innerHeight;
-        
+
         // Verifica se a seção está visível na tela
         const isVisible = rect.bottom > 0 && rect.top < windowHeight;
-        
+
         if (isVisible) {
             // Calcula a posição relativa da seção em relação à viewport
             const sectionTop = rect.top;
             const sectionHeight = rect.height;
             const scrollProgress = Math.max(0, Math.min(1, (windowHeight - sectionTop) / (windowHeight + sectionHeight)));
-            
+
             // Aplica parallax apenas nos service-cards
             const serviceCards = document.querySelectorAll('#servicos .service-card');
             serviceCards.forEach((card, index) => {
                 // Cada card se move com uma velocidade diferente baseada no seu índice
                 const speed = (index + 1) * 0.12; // Velocidades diferentes: 0.12, 0.24, 0.36, 0.48, 0.60
                 const offset = scrollProgress * 80 * speed;
-                
+
                 // Armazena o offset para uso no hover
                 parallaxOffsets.set(card, offset);
-                
+
                 // Aplica o movimento apenas quando o card está visível
                 const cardRect = card.getBoundingClientRect();
                 const cardVisible = cardRect.top < windowHeight && cardRect.bottom > 0;
-                
+
                 if (cardVisible && !card.matches(':hover')) {
                     card.style.transform = `translateY(${offset}px)`;
                 }
@@ -1124,14 +1526,14 @@ document.addEventListener('DOMContentLoaded', () => {
     serviceCards.forEach(card => {
         card.style.transition = 'transform 0.3s ease-out, border-color 0.3s, background-color 0.3s';
         card.style.willChange = 'transform';
-        
+
         // Adiciona efeito hover com parallax
-        card.addEventListener('mouseenter', function() {
+        card.addEventListener('mouseenter', function () {
             const offset = parallaxOffsets.get(this) || 0;
             this.style.transform = `translateY(${offset}px) translateX(10px)`;
         });
-        
-        card.addEventListener('mouseleave', function() {
+
+        card.addEventListener('mouseleave', function () {
             const offset = parallaxOffsets.get(this) || 0;
             this.style.transform = `translateY(${offset}px)`;
         });
@@ -1140,16 +1542,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Adiciona o evento de scroll
     window.addEventListener('scroll', requestExpertiseParallaxTick);
     window.addEventListener('resize', requestExpertiseParallaxTick);
-    
+
     // Executa uma vez ao carregar
     updateExpertiseParallax();
 
-    
+
 
     // ============================================
     // FORMULÁRIO DE CONTATO COM EMAILJS
     // ============================================
-    
+
     // CONFIGURAÇÃO NECESSÁRIA:
     // 1. Criar conta gratuita em https://www.emailjs.com/
     // 2. Criar um serviço de email (Gmail, Outlook, etc.)
@@ -1160,10 +1562,10 @@ document.addEventListener('DOMContentLoaded', () => {
         TEMPLATE_ID: 'template_m6iy2oh',      // Substituir pelo Template ID do EmailJS
         PUBLIC_KEY: 'hMLKX6IzN3SvJM-DV'         // Substituir pela Public Key do EmailJS
     };
-    
+
     const contactForm = document.getElementById('contactForm');
     const formFeedback = document.getElementById('formMessageFeedback');
-    
+
     // Função para inicializar EmailJS
     function initEmailJS() {
         if (typeof emailjs !== 'undefined' && EMAILJS_CONFIG.PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
@@ -1172,7 +1574,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return false;
     }
-    
+
     // Tentar inicializar quando o script carregar
     if (typeof emailjs !== 'undefined') {
         initEmailJS();
@@ -1184,11 +1586,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    
+
     if (contactForm) {
-        contactForm.addEventListener('submit', async function(e) {
+        contactForm.addEventListener('submit', async function (e) {
             e.preventDefault();
-            
+
             // Coletar dados do formulário
             const formData = {
                 from_name: document.getElementById('formName').value.trim(),
@@ -1228,8 +1630,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 // Verificar se as credenciais foram configuradas
-                if (EMAILJS_CONFIG.SERVICE_ID === 'YOUR_SERVICE_ID' || 
-                    EMAILJS_CONFIG.TEMPLATE_ID === 'YOUR_TEMPLATE_ID' || 
+                if (EMAILJS_CONFIG.SERVICE_ID === 'YOUR_SERVICE_ID' ||
+                    EMAILJS_CONFIG.TEMPLATE_ID === 'YOUR_TEMPLATE_ID' ||
                     EMAILJS_CONFIG.PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
                     throw new Error('EmailJS não configurado. Por favor, configure as credenciais no código.');
                 }

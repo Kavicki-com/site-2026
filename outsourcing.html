@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="outsourcing.title">Kavicki - Outsourcing de Design para Agências</title>
+    <meta name="description" data-i18n="outsourcing.description"
+        content="Terceirize suas demandas de design com a Kavicki. UX/UI, Motion Design, Social Media e Aplicativos. Soluções sob medida para agências.">
+    <link rel="icon" type="image/png" href="assets/favicon.ico.png">
+
+    <script>
+        // Aplicar tema e idioma antes do carregamento completo para evitar flash
+        (function () {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            // Aplicar logo correto baseado no tema
+            const logoImg = document.getElementById('logoImg');
+            if (logoImg) {
+                logoImg.src = savedTheme === 'light' ? 'assets/logokavickilight.png' : 'assets/logokavicki.png';
+            }
+            // Aplicar idioma salvo
+            const savedLanguage = localStorage.getItem('language') || 'pt';
+            document.documentElement.setAttribute('lang', savedLanguage === 'pt' ? 'pt-BR' : 'en');
+            // Aplicar bandeira correta baseado no idioma
+            const languageFlag = document.getElementById('languageFlag');
+            if (languageFlag) {
+                languageFlag.src = savedLanguage === 'pt'
+                    ? 'assets/flags/Flag_of_Brazil.svg'
+                    : 'assets/flags/Flag_of_the_United_States.svg';
+                languageFlag.alt = savedLanguage === 'pt' ? 'Português' : 'English';
+            }
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="outsourcing.css">
+</head>
+
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-circle"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"><a href="index.html"><img src="assets/logokavicki.png" alt="Kavicki" id="logoImg"></a></div>
+        <button class="menu-toggle" aria-label="Menu" data-i18n-aria-label="nav.menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="menu-items">
+            <a href="#problema" data-i18n="outsourcing.nav.problem">O Problema</a>
+            <a href="#servicos-out" data-i18n="outsourcing.nav.services">Serviços</a>
+            <a href="#portfolio-out" data-i18n="outsourcing.nav.portfolio">Portfólio</a>
+            <a href="#precos" data-i18n="outsourcing.nav.pricing">Preços</a>
+            <a href="#faq" data-i18n="outsourcing.nav.faq">FAQ</a>
+            <a href="#contato-out" class="btn-talk" data-i18n="outsourcing.nav.contact">Contato</a>
+        </div>
+        <div class="navbar-controls">
+            <button class="language-toggle" aria-label="Alternar idioma" id="languageToggle"
+                data-i18n-aria-label="nav.language">
+                <img id="languageFlag" src="assets/flags/Flag_of_Brazil.svg" alt="Idioma">
+            </button>
+            <button class="theme-toggle" aria-label="Alternar tema" id="themeToggle" data-i18n-aria-label="nav.theme">
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- HERO SECTION -->
+    <!-- ============================================ -->
+    <header id="home" class="out-hero">
+        <div class="out-hero-bg">
+            <div class="out-hero-gradient"></div>
+            <div class="out-hero-grid-lines"></div>
+        </div>
+        <div class="container relative-box">
+            <div class="out-hero-content">
+                <span class="out-hero-badge fade-in" data-i18n="outsourcing.hero.badge">
+                    <i class="fa-solid fa-handshake"></i> Outsourcing de Design
+                </span>
+                <h1 class="out-hero-title">
+                    <span class="block-reveal" data-i18n="outsourcing.hero.title1">Sua agência está</span>
+                    <span class="block-reveal italic-accent" data-i18n="outsourcing.hero.title2">sobrecarregada?</span>
+                </h1>
+                <p class="out-hero-sub fade-in" data-i18n="outsourcing.hero.subtitle">
+                    Excesso de demandas, dificuldade de contratar CLT, PJtização e prazos apertados.
+                    A gente resolve. Terceirize suas entregas com um time especialista em design.
+                </p>
+                <div class="out-hero-cta fade-in">
+                    <a href="https://api.whatsapp.com/send/?phone=553195826780&text=Oi%2C+tudo+bem%3F+Tenho+interesse+no+outsourcing+de+design.&type=phone_number&app_absent=0"
+                        class="btn-primary" data-i18n="outsourcing.hero.cta1"><i class="fa-brands fa-whatsapp"></i> Fale
+                        com a gente</a>
+                    <a href="#precos" class="btn-outline" data-i18n="outsourcing.hero.cta2">Ver planos</a>
+                </div>
+                <div class="out-hero-stats fade-in">
+                    <div class="out-hero-stat">
+                        <strong>250+</strong>
+                        <span data-i18n="outsourcing.hero.brands">Marcas atendidas</span>
+                    </div>
+                    <div class="out-hero-stat">
+                        <strong>10+</strong>
+                        <span data-i18n="outsourcing.hero.years">Anos no mercado</span>
+                    </div>
+                    <div class="out-hero-stat">
+                        <strong>750+</strong>
+                        <span data-i18n="outsourcing.hero.projects">Projetos entregues</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- PROBLEMA + SOLUÇÃO -->
+    <!-- ============================================ -->
+    <section id="problema" class="section-padding bg-darker">
+        <div class="container">
+            <div class="out-problem-grid">
+                <div class="out-problem-left fade-in">
+                    <span class="label-purple" data-i18n="outsourcing.challenge.label">O Desafio</span>
+                    <h2 class="section-subtitle" data-i18n="outsourcing.challenge.title">Sua agência sofre com isso?
+                    </h2>
+                    <div class="out-pain-list">
+                        <div class="out-pain-item">
+                            <div class="out-pain-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                            <div>
+                                <h4 data-i18n="outsourcing.challenge.demand.title">Excesso de demandas</h4>
+                                <p data-i18n="outsourcing.challenge.demand.desc">Volume de jobs que ultrapassa a
+                                    capacidade do time interno, gerando atrasos e
+                                    retrabalho.</p>
+                            </div>
+                        </div>
+                        <div class="out-pain-item">
+                            <div class="out-pain-icon"><i class="fa-solid fa-user-slash"></i></div>
+                            <div>
+                                <h4 data-i18n="outsourcing.challenge.turnover.title">PJtização e turnover</h4>
+                                <p data-i18n="outsourcing.challenge.turnover.desc">Dificuldade de manter designers CLT
+                                    qualificados, com rotatividade constante e custos
+                                    altos.</p>
+                            </div>
+                        </div>
+                        <div class="out-pain-item">
+                            <div class="out-pain-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div>
+                                <h4 data-i18n="outsourcing.challenge.deadlines.title">Prazos impossíveis</h4>
+                                <p data-i18n="outsourcing.challenge.deadlines.desc">Clientes exigentes, deadlines
+                                    apertados e a pressão de entregar tudo com qualidade.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="out-pain-item">
+                            <div class="out-pain-icon"><i class="fa-solid fa-coins"></i></div>
+                            <div>
+                                <h4 data-i18n="outsourcing.challenge.costs.title">Custo operacional alto</h4>
+                                <p data-i18n="outsourcing.challenge.costs.desc">Computadores, softwares, benefícios e
+                                    encargos trabalhistas pesando no caixa da
+                                    agência.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="out-solution-right fade-in">
+                    <div class="out-solution-card">
+                        <div class="out-solution-glow"></div>
+                        <i class="fa-solid fa-rocket out-solution-icon"></i>
+                        <h3 data-i18n="outsourcing.solution.title">A Solução</h3>
+                        <p data-i18n="outsourcing.solution.desc">Temos um time multidisciplinar pronto para absorver
+                            suas demandas com agilidade, qualidade e
+                            custo previsível.</p>
+                        <ul class="out-solution-list">
+                            <li data-i18n="outsourcing.solution.item1"><i class="fa-solid fa-check"></i> Equipe
+                                especializada e dedicada</li>
+                            <li data-i18n="outsourcing.solution.item2"><i class="fa-solid fa-check"></i> Entregas
+                                rápidas com padrão de agência</li>
+                            <li data-i18n="outsourcing.solution.item3"><i class="fa-solid fa-check"></i> Sem encargos
+                                trabalhistas</li>
+                            <li data-i18n="outsourcing.solution.item4"><i class="fa-solid fa-check"></i> Escalabilidade
+                                sob demanda</li>
+                            <li data-i18n="outsourcing.solution.item5"><i class="fa-solid fa-check"></i> White-label —
+                                sua marca, nossa execução</li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send/?phone=553195826780&text=Oi%2C+tudo+bem%3F+Tenho+interesse+no+outsourcing+de+design.&type=phone_number&app_absent=0"
+                            class="btn-primary mt-small" data-i18n="outsourcing.solution.cta">Quero saber mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SERVIÇOS -->
+    <!-- ============================================ -->
+    <section id="servicos-out" class="section-padding">
+        <div class="container">
+            <div class="center-text mb-large">
+                <span class="label-purple" data-i18n="outsourcing.services.label">O que oferecemos</span>
+                <h2 class="section-subtitle" data-i18n="outsourcing.services.title">Serviços especializados</h2>
+                <p class="text-gray" style="max-width: 600px; margin: 0 auto;"
+                    data-i18n="outsourcing.services.subtitle">Cobertura completa das necessidades
+                    criativas da sua agência, do digital ao impresso.</p>
+            </div>
+            <div class="out-services-grid">
+                <div class="out-service-card fade-in-up">
+                    <div class="out-service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                    <h4 data-i18n="outsourcing.services.uxui.title">UX/UI Design</h4>
+                    <p data-i18n="outsourcing.services.uxui.desc">Interfaces intuitivas e atraentes para web e mobile.
+                        Design systems, protótipos e testes de
+                        usabilidade.</p>
+                    <div class="out-service-tags">
+                        <span>Figma</span><span>Protótipos</span><span>Design System</span>
+                    </div>
+                </div>
+                <div class="out-service-card fade-in-up">
+                    <div class="out-service-icon"><i class="fa-solid fa-film"></i></div>
+                    <h4 data-i18n="outsourcing.services.motion.title">Motion Design</h4>
+                    <p data-i18n="outsourcing.services.motion.desc">Vídeos, animações e edições que prendem a atenção.
+                        Reels, stories, vinhetas e conteúdo
+                        audiovisual.</p>
+                    <div class="out-service-tags">
+                        <span>After Effects</span><span>Premiere</span><span>Reels</span>
+                    </div>
+                </div>
+                <div class="out-service-card fade-in-up">
+                    <div class="out-service-icon"><i class="fa-solid fa-palette"></i></div>
+                    <h4 data-i18n="outsourcing.services.social.title">Social Media</h4>
+                    <p data-i18n="outsourcing.services.social.desc">Artes para redes sociais, carrosséis, stories, cards
+                        e materiais impressos com identidade visual
+                        consistente.</p>
+                    <div class="out-service-tags">
+                        <span>Instagram</span><span>Carrossel</span><span>Stories</span>
+                    </div>
+                </div>
+                <div class="out-service-card fade-in-up">
+                    <div class="out-service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <h4 data-i18n="outsourcing.services.apps.title">Aplicativos</h4>
+                    <p data-i18n="outsourcing.services.apps.desc">Design e desenvolvimento de aplicativos móveis com
+                        foco em experiência do usuário e performance.
+                    </p>
+                    <div class="out-service-tags">
+                        <span>iOS</span><span>Android</span><span>React Native</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PORTFÓLIO -->
+    <!-- ============================================ -->
+    <section id="portfolio-out" class="section-padding bg-darker">
+        <div class="container">
+            <div class="center-text mb-large">
+                <span class="label-purple" data-i18n="outsourcing.portfolio.label">Portfólio</span>
+                <h2 class="section-subtitle" data-i18n="outsourcing.portfolio.title">Nossos Projetos</h2>
+            </div>
+
+            <!-- Tabs -->
+            <div class="out-portfolio-tabs">
+                <button class="out-tab active" data-tab="apps" data-i18n="outsourcing.portfolio.apps"><i
+                        class="fa-solid fa-mobile-screen-button"></i>
+                    Apps</button>
+                <button class="out-tab" data-tab="social" data-i18n="outsourcing.portfolio.social"><i
+                        class="fa-solid fa-palette"></i> Social Media</button>
+                <button class="out-tab" data-tab="videos" data-i18n="outsourcing.portfolio.videos"><i
+                        class="fa-solid fa-film"></i> Vídeos</button>
+                <button class="out-tab" data-tab="sites" data-i18n="outsourcing.portfolio.sites"><i
+                        class="fa-solid fa-globe"></i> Sites</button>
+            </div>
+
+            <!-- Tab: Apps -->
+            <div class="out-tab-content active" id="tab-apps">
+                <div class="out-portfolio-grid">
+                    <div class="out-portfolio-item fade-in-up">
+                        <div class="media-box"><img src="assets/portfolio/agrobee.png" alt="Agrobee"></div>
+                        <div class="project-info">
+                            <h4>Agrobee</h4><span>App Mobile</span>
+                        </div>
+                    </div>
+                    <div class="out-portfolio-item fade-in-up">
+                        <div class="media-box"><img src="assets/portfolio/o1.png" alt="o1 Percent"></div>
+                        <div class="project-info">
+                            <h4>o1 Percent</h4><span>App Mobile</span>
+                        </div>
+                    </div>
+                    <div class="out-portfolio-item fade-in-up">
+                        <div class="media-box"><img src="assets/portfolio/farmnote.png" alt="Farmnote"></div>
+                        <div class="project-info">
+                            <h4>Farmnote</h4><span>App Mobile</span>
+                        </div>
+                    </div>
+                    <div class="out-portfolio-item fade-in-up">
+                        <div class="media-box"><img src="assets/portfolio/led.png" alt="Led Telecom"></div>
+                        <div class="project-info">
+                            <h4>Led Telecom</h4><span>App Mobile</span>
+                        </div>
+                    </div>
+                    <div class="out-portfolio-item fade-in-up">
+                        <div class="media-box"><img src="assets/portfolio/walltoall.png" alt="Wall to All"></div>
+                        <div class="project-info">
+                            <h4>Wall to All</h4><span>App Mobile</span>
+                        </div>
+                    </div>
+                    <div class="out-portfolio-item fade-in-up">
+                        <div class="media-box"><img src="assets/portfolio/kw.png" alt="Clube do KW"></div>
+                        <div class="project-info">
+                            <h4>Clube do KW</h4><span>App Mobile</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Social Media -->
+            <div class="out-tab-content" id="tab-social">
+                <div class="out-portfolio-grid">
+                    <div class="out-portfolio-item fade-in-up">
+                        <div class="media-box"><img src="assets/projetos/social-media/samsung.webp" alt="Samsung"></div>
+                        <div class="project-info">
+                            <h4>Samsung</h4><span>Social Media</span>
+                        </div>
+                    </div>
+                    <div class="out-portfolio-item fade-in-up">
+                        <div class="media-box"><img src="assets/projetos/social-media/vivo.webp" alt="Vivo"></div>
+                        <div class="project-info">
+                            <h4>Vivo</h4><span>Social Media</span>
+                        </div>
+                    </div>
+                    <div class="out-portfolio-item fade-in-up">
+                        <div class="media-box"><img src="assets/projetos/social-media/catho.webp" alt="Catho"></div>
+                        <div class="project-info">
+                            <h4>Catho</h4><span>Social Media</span>
+                        </div>
+                    </div>
+                    <div class="out-portfolio-item fade-in-up">
+                        <div class="media-box"><img src="assets/projetos/social-media/comite-olimpico1.webp"
+                                alt="Comitê Olímpico"></div>
+                        <div class="project-info">
+                            <h4>Comitê Olímpico</h4><span>Social Media</span>
+                        </div>
+                    </div>
+                    <div class="out-portfolio-item fade-in-up">
+                        <div class="media-box"><img src="assets/projetos/social-media/comite-olimpico2.webp"
+                                alt="Comitê Olímpico"></div>
+                        <div class="project-info">
+                            <h4>Comitê Olímpico</h4><span>Social Media</span>
+                        </div>
+                    </div>
+                    <div class="out-portfolio-item fade-in-up">
+                        <div class="media-box"><img src="assets/projetos/social-media/yamaha.webp" alt="Yamaha"></div>
+                        <div class="project-info">
+                            <h4>Yamaha</h4><span>Social Media</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Vídeos -->
+            <div class="out-tab-content" id="tab-videos">
+                <div class="out-portfolio-grid out-portfolio-grid-videos">
+                    <div class="out-portfolio-item out-video-item fade-in-up">
+                        <div class="out-video-box">
+                            <iframe src="https://www.youtube.com/embed/14ciIRS25rk?si=H06jaMw2r0uheapz"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="out-portfolio-item out-video-item fade-in-up">
+                        <div class="out-video-box">
+                            <iframe src="https://www.youtube.com/embed/SV45GvAwqCY?si=xiHp2FD5Q_kqLoiq"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="out-portfolio-item out-video-item fade-in-up">
+                        <div class="out-video-box">
+                            <iframe src="https://www.youtube.com/embed/BhJ29YlQkHI?si=dR_9cmAs0c3r05u2"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Sites -->
+            <div class="out-tab-content" id="tab-sites">
+                <div class="out-portfolio-grid">
+                    <div class="out-portfolio-item fade-in-up">
+                        <div class="media-box"><img src="assets/projetos/sites/Gymapp.gif" alt="Gymapp"></div>
+                        <div class="project-info">
+                            <h4>Gymapp</h4><span>Site</span>
+                        </div>
+                    </div>
+                    <div class="out-portfolio-item fade-in-up">
+                        <div class="media-box"><img src="assets/projetos/sites/Rações Batavo.gif" alt="Rações Batavo">
+                        </div>
+                        <div class="project-info">
+                            <h4>Rações Batavo</h4><span>Site</span>
+                        </div>
+                    </div>
+                    <div class="out-portfolio-item fade-in-up">
+                        <div class="media-box"><img src="assets/projetos/sites/llord.gif" alt="Llord"></div>
+                        <div class="project-info">
+                            <h4>Llord</h4><span>Site</span>
+                        </div>
+                    </div>
+                    <div class="out-portfolio-item fade-in-up">
+                        <div class="media-box"><img src="assets/projetos/sites/softaic.gif" alt="Softaic"></div>
+                        <div class="project-info">
+                            <h4>Softaic</h4><span>Site</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- EMPRESAS QUE ATUAMOS -->
+    <!-- ============================================ -->
+    <section class="section-padding">
+        <div class="container center-text mb-large">
+            <span class="label-purple" data-i18n="outsourcing.trust.label">Confiança</span>
+            <h2 class="section-subtitle" data-i18n="outsourcing.trust.title">Empresas que confiam na gente</h2>
+        </div>
+        <div class="marquee-container" style="position: relative;">
+            <div class="marquee-track">
+                <img src="assets/agrobeelogo.png" alt="Agrobee" class="marquee-logo">
+                <img src="assets/batavologo.png" alt="Batavo" class="marquee-logo">
+                <img src="assets/castrolandalogo.png" alt="Castrolanda" class="marquee-logo">
+                <img src="assets/celenalogo.png" alt="Celena" class="marquee-logo">
+                <img src="assets/frisialogo.png" alt="Frisia" class="marquee-logo">
+                <img src="assets/propolislogo.png" alt="Propolis" class="marquee-logo">
+                <img src="assets/samsunglogo.png" alt="Samsung" class="marquee-logo">
+                <img src="assets/verdelumelogo.png" alt="Verdelume" class="marquee-logo">
+                <img src="assets/vivologo.png" alt="Vivo" class="marquee-logo">
+                <img src="assets/agrobeelogo.png" alt="Agrobee" class="marquee-logo">
+                <img src="assets/batavologo.png" alt="Batavo" class="marquee-logo">
+                <img src="assets/castrolandalogo.png" alt="Castrolanda" class="marquee-logo">
+                <img src="assets/celenalogo.png" alt="Celena" class="marquee-logo">
+                <img src="assets/frisialogo.png" alt="Frisia" class="marquee-logo">
+                <img src="assets/propolislogo.png" alt="Propolis" class="marquee-logo">
+                <img src="assets/samsunglogo.png" alt="Samsung" class="marquee-logo">
+                <img src="assets/verdelumelogo.png" alt="Verdelume" class="marquee-logo">
+                <img src="assets/vivologo.png" alt="Vivo" class="marquee-logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- TABELA DE PREÇOS — VÍDEO -->
+    <!-- ============================================ -->
+    <section id="precos" class="section-padding bg-gradient">
+        <div class="container">
+            <div class="center-text mb-large">
+                <span class="label-purple" data-i18n="outsourcing.pricing.label">Investimento</span>
+                <h2 class="section-subtitle" data-i18n="outsourcing.pricing.title">Planos e Preços</h2>
+                <p class="text-gray" style="max-width: 650px; margin: 0 auto;" data-i18n="outsourcing.pricing.subtitle">
+                    Pacotes flexíveis para atender sua
+                    agência do jeito certo. Escale sua operação sem complicação.</p>
+            </div>
+
+            <!-- VÍDEO -->
+            <div class="out-pricing-category">
+                <div class="out-pricing-category-header">
+                    <i class="fa-solid fa-video"></i>
+                    <h3 data-i18n="outsourcing.pricing.video">Vídeo</h3>
+                </div>
+                <div class="out-pricing-grid">
+                    <div class="out-pricing-card fade-in-up">
+                        <h4 data-i18n="outsourcing.pricing.plans.basic.title">Básico</h4>
+                        <div class="out-pricing-amount">
+                            <span class="out-pricing-from" data-i18n="outsourcing.pricing.from">a partir de</span>
+                            <span class="out-pricing-value">R$ 700<span class="out-pricing-detail">,00</span></span>
+                        </div>
+                        <p class="out-pricing-desc" data-i18n="outsourcing.pricing.plans.basic.desc">10 a 15 vídeos
+                            mensais com edição simples</p>
+
+                        <ul class="out-pricing-features">
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.v1015">10 a 15 vídeos/mês</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.vSimple">Edição simples</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.vCuts">Cortes e legendas</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.vSocial">Formato para redes sociais</span>
+                            </li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send/?phone=553195826780&text=Oi%2C+tenho+interesse+no+plano+B%C3%A1sico+de+V%C3%ADdeo.&type=phone_number&app_absent=0"
+                            class="btn-outline out-pricing-cta" data-i18n="outsourcing.pricing.cta">Contratar</a>
+                    </div>
+
+                    <div class="out-pricing-card out-pricing-popular fade-in-up">
+                        <div class="out-pricing-badge" data-i18n="outsourcing.pricing.popular">Mais Popular</div>
+                        <h4 data-i18n="outsourcing.pricing.plans.intermediate.title">Intermediário</h4>
+                        <div class="out-pricing-amount">
+                            <span class="out-pricing-from" data-i18n="outsourcing.pricing.from">a partir de</span>
+                            <span class="out-pricing-value">R$ 1.200<span class="out-pricing-detail">,00</span></span>
+                        </div>
+                        <p class="out-pricing-desc" data-i18n="outsourcing.pricing.plans.intermediate.desc">2 vídeos
+                            complexos + 10 vídeos com edição simples</p>
+
+                        <ul class="out-pricing-features">
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.v2Complex">2 vídeos com edição
+                                    complexa</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.v10Simple">10 vídeos com edição
+                                    simples</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.vMotionB">Motion graphics básico</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.vAudio">Trilha sonora inclusa</span></li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send/?phone=553195826780&text=Oi%2C+tenho+interesse+no+plano+Intermedi%C3%A1rio+de+V%C3%ADdeo.&type=phone_number&app_absent=0"
+                            class="btn-primary out-pricing-cta" data-i18n="outsourcing.pricing.cta">Contratar</a>
+                    </div>
+
+                    <div class="out-pricing-card fade-in-up">
+                        <h4 data-i18n="outsourcing.pricing.plans.premium.title">Premium</h4>
+                        <div class="out-pricing-amount">
+                            <span class="out-pricing-from" data-i18n="outsourcing.pricing.from">a partir de</span>
+                            <span class="out-pricing-value">R$ 2.500<span class="out-pricing-detail">,00</span></span>
+                        </div>
+                        <p class="out-pricing-desc" data-i18n="outsourcing.pricing.plans.premium.desc">10 a 15 vídeos
+                            mensais com animação e edição complexa</p>
+
+                        <ul class="out-pricing-features">
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.v1015">10 a 15 vídeos/mês</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.vMotionA">Animação e motion avançado</span>
+                            </li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.vEffects">Edição complexa e efeitos</span>
+                            </li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.vStoryboard">Storyboard e direção
+                                    criativa</span></li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send/?phone=553195826780&text=Oi%2C+tenho+interesse+no+plano+Premium+de+V%C3%ADdeo.&type=phone_number&app_absent=0"
+                            class="btn-outline out-pricing-cta" data-i18n="outsourcing.pricing.cta">Contratar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ARTES ESTÁTICAS -->
+            <div class="out-pricing-category">
+                <div class="out-pricing-category-header">
+                    <i class="fa-solid fa-image"></i>
+                    <h3 data-i18n="outsourcing.pricing.static">Artes Estáticas</h3>
+                </div>
+                <div class="out-pricing-grid">
+                    <div class="out-pricing-card fade-in-up">
+                        <h4 data-i18n="outsourcing.pricing.plans.digital.title">Digital</h4>
+                        <div class="out-pricing-amount">
+                            <span class="out-pricing-from" data-i18n="outsourcing.pricing.from">a partir de</span>
+                            <span class="out-pricing-value">R$ 500<span class="out-pricing-detail">,00</span></span>
+                        </div>
+                        <p class="out-pricing-desc" data-i18n="outsourcing.pricing.plans.digital.desc">20 artes para
+                            redes sociais</p>
+
+                        <ul class="out-pricing-features">
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.art20">20 artes/mês</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.stories">Stories</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.carousels">Carrosséis</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.feed">Cards para feed</span></li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send/?phone=553195826780&text=Oi%2C+tenho+interesse+no+plano+Digital+de+Artes.&type=phone_number&app_absent=0"
+                            class="btn-outline out-pricing-cta" data-i18n="outsourcing.pricing.cta">Contratar</a>
+                    </div>
+
+                    <div class="out-pricing-card fade-in-up">
+                        <h4 data-i18n="outsourcing.pricing.plans.print.title">Impressos</h4>
+                        <div class="out-pricing-amount">
+                            <span class="out-pricing-from" data-i18n="outsourcing.pricing.from">a partir de</span>
+                            <span class="out-pricing-value">R$ 400<span class="out-pricing-detail">,00</span></span>
+                        </div>
+                        <p class="out-pricing-desc" data-i18n="outsourcing.pricing.plans.print.desc">5 formatos de
+                            material impresso</p>
+
+                        <ul class="out-pricing-features">
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.visit">Cartão de visita</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.flyer">Flyer</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.folder">Folder</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.poster">Cartaz</span></li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send/?phone=553195826780&text=Oi%2C+tenho+interesse+no+plano+Impressos.&type=phone_number&app_absent=0"
+                            class="btn-outline out-pricing-cta" data-i18n="outsourcing.pricing.cta">Contratar</a>
+                    </div>
+
+                    <div class="out-pricing-card fade-in-up">
+                        <h4 data-i18n="outsourcing.pricing.plans.presentation.title">Apresentação</h4>
+                        <div class="out-pricing-amount">
+                            <span class="out-pricing-from" data-i18n="outsourcing.pricing.from">a partir de</span>
+                            <span class="out-pricing-value">R$ 700<span class="out-pricing-detail">,00</span></span>
+                        </div>
+                        <p class="out-pricing-desc" data-i18n="outsourcing.pricing.plans.presentation.desc">10 a 15
+                            slides profissionais</p>
+
+                        <ul class="out-pricing-features">
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.slide1015">10 a 15 slides</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.pptpdf">Formato PPT/PDF</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.premium">Design premium</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.icons">Ícones e infográficos</span></li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send/?phone=553195826780&text=Oi%2C+tenho+interesse+no+plano+de+Apresenta%C3%A7%C3%A3o.&type=phone_number&app_absent=0"
+                            class="btn-outline out-pricing-cta" data-i18n="outsourcing.pricing.cta">Contratar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SITES -->
+            <div class="out-pricing-category">
+                <div class="out-pricing-category-header">
+                    <i class="fa-solid fa-globe"></i>
+                    <h3 data-i18n="outsourcing.pricing.sites">Sites</h3>
+                </div>
+                <div class="out-pricing-grid">
+                    <div class="out-pricing-card fade-in-up">
+                        <h4 data-i18n="outsourcing.pricing.plans.lp.title">Landing Page</h4>
+                        <div class="out-pricing-amount">
+                            <span class="out-pricing-from" data-i18n="outsourcing.pricing.from">a partir de</span>
+                            <span class="out-pricing-value">R$ 600<span class="out-pricing-detail">,00</span></span>
+                        </div>
+                        <p class="out-pricing-desc" data-i18n="outsourcing.pricing.plans.lp.desc">Landing page de alta
+                            conversão</p>
+                        <ul class="out-pricing-features">
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.sec612">6 a 12 seções</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.responsive">Design responsivo</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.privacy">Política de privacidade</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.lgpd">Conformidade LGPD</span></li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send/?phone=553195826780&text=Oi%2C+tenho+interesse+em+Landing+Page.&type=phone_number&app_absent=0"
+                            class="btn-outline out-pricing-cta" data-i18n="outsourcing.pricing.cta">Contratar</a>
+                    </div>
+
+                    <div class="out-pricing-card out-pricing-popular fade-in-up">
+                        <div class="out-pricing-badge" data-i18n="outsourcing.pricing.complete">Mais Completo</div>
+                        <h4 data-i18n="outsourcing.pricing.plans.institutional.title">Site Institucional</h4>
+                        <div class="out-pricing-amount">
+                            <span class="out-pricing-from" data-i18n="outsourcing.pricing.from">a partir de</span>
+                            <span class="out-pricing-value">R$ 1.000<span class="out-pricing-detail">,00</span></span>
+                        </div>
+                        <p class="out-pricing-desc" data-i18n="outsourcing.pricing.plans.institutional.desc">Site
+                            completo para sua empresa</p>
+                        <ul class="out-pricing-features">
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.pag410">4 a 10 páginas</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.responsive">Design responsivo</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.privacy">Política de privacidade</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.lgpd">Conformidade LGPD</span></li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send/?phone=553195826780&text=Oi%2C+tenho+interesse+em+Site+Institucional.&type=phone_number&app_absent=0"
+                            class="btn-primary out-pricing-cta" data-i18n="outsourcing.pricing.cta">Contratar</a>
+                    </div>
+
+                    <div class="out-pricing-card fade-in-up">
+                        <h4 data-i18n="outsourcing.pricing.plans.webapp.title">Web App</h4>
+                        <div class="out-pricing-amount">
+                            <span class="out-pricing-from">&nbsp;</span>
+                            <span class="out-pricing-value out-pricing-consult"
+                                data-i18n="outsourcing.pricing.consult">Sob consulta</span>
+                        </div>
+                        <p class="out-pricing-desc" data-i18n="outsourcing.pricing.plans.webapp.desc">Aplicação web sob
+                            medida</p>
+                        <ul class="out-pricing-features">
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.scope">Escopo personalizado</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.dedicated">UX/UI dedicado</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.fullstack">Desenvolvimento full-stack</span>
+                            </li>
+                            <li><i class="fa-solid fa-check"></i> <span
+                                    data-i18n="outsourcing.pricing.features.lgpd">Conformidade LGPD</span></li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send/?phone=553195826780&text=Oi%2C+tenho+interesse+em+Web+App.&type=phone_number&app_absent=0"
+                            class="btn-outline out-pricing-cta" data-i18n="outsourcing.pricing.ctaConsult">Solicitar
+                            orçamento</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- APLICATIVOS -->
+            <div class="out-pricing-category">
+                <div class="out-pricing-category-header">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h3 data-i18n="outsourcing.pricing.apps">Aplicativos</h3>
+                </div>
+                <div class="out-pricing-grid out-pricing-single">
+                    <div class="out-pricing-card out-pricing-wide fade-in-up">
+                        <div class="out-pricing-wide-content">
+                            <div>
+                                <h4 data-i18n="outsourcing.pricing.plans.mobile.title">Aplicativos Móveis</h4>
+                                <p class="out-pricing-desc" data-i18n="outsourcing.pricing.plans.mobile.desc">
+                                    Desenvolvimento completo de aplicativos iOS e Android.
+                                    Design, prototipagem, desenvolvimento e publicação nas lojas.</p>
+                                <ul class="out-pricing-features out-pricing-features-row">
+                                    <li><i class="fa-solid fa-check"></i> <span
+                                            data-i18n="outsourcing.pricing.features.iosandroid">iOS & Android</span>
+                                    </li>
+                                    <li><i class="fa-solid fa-check"></i> <span
+                                            data-i18n="outsourcing.pricing.features.dedicated">UX/UI dedicado</span>
+                                    </li>
+                                    <li><i class="fa-solid fa-check"></i> <span
+                                            data-i18n="outsourcing.pricing.features.stores">Publicação nas lojas</span>
+                                    </li>
+                                    <li><i class="fa-solid fa-check"></i> <span
+                                            data-i18n="outsourcing.pricing.features.support">Suporte
+                                            pós-lançamento</span></li>
+                                </ul>
+                            </div>
+                            <div class="out-pricing-wide-right">
+                                <span class="out-pricing-value out-pricing-consult"
+                                    data-i18n="outsourcing.pricing.consult">Sob consulta</span>
+                                <a href="https://api.whatsapp.com/send/?phone=553195826780&text=Oi%2C+tenho+interesse+em+desenvolvimento+de+aplicativo.&type=phone_number&app_absent=0"
+                                    class="btn-primary out-pricing-cta"
+                                    data-i18n="outsourcing.pricing.ctaConsult">Solicitar orçamento</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FAQ -->
+    <!-- ============================================ -->
+    <section id="faq" class="section-padding bg-darker">
+        <div class="container">
+            <div class="center-text mb-large">
+                <span class="label-purple" data-i18n="outsourcing.faq.label">Dúvidas Frequentes</span>
+                <h2 class="section-subtitle" data-i18n="outsourcing.faq.title">FAQ</h2>
+            </div>
+            <div class="out-faq-container">
+                <div class="out-faq-item">
+                    <button class="out-faq-question" aria-expanded="false">
+                        <span data-i18n="outsourcing.faq.q1">Como funciona o outsourcing de design?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="out-faq-answer">
+                        <p data-i18n="outsourcing.faq.a1">Você nos envia os briefings e demandas, e o nosso time de
+                            designers cuida de toda a execução.
+                            Trabalhamos como uma extensão da sua agência, com entregas no prazo e no padrão de qualidade
+                            que seus clientes esperam.</p>
+                    </div>
+                </div>
+
+                <div class="out-faq-item">
+                    <button class="out-faq-question" aria-expanded="false">
+                        <span data-i18n="outsourcing.faq.q2">Os projetos são entregues com marca branca
+                            (white-label)?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="out-faq-answer">
+                        <p data-i18n="outsourcing.faq.a2">Sim! Todas as entregas são 100% white-label. Seus clientes não
+                            saberão que o trabalho foi
+                            terceirizado. É a sua marca, a nossa execução.</p>
+                    </div>
+                </div>
+
+                <div class="out-faq-item">
+                    <button class="out-faq-question" aria-expanded="false">
+                        <span data-i18n="outsourcing.faq.q3">Qual o prazo médio de entrega?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="out-faq-answer">
+                        <p data-i18n="outsourcing.faq.a3">O prazo varia de acordo com a complexidade do projeto, mas em
+                            geral entregamos peças para
+                            social media em 24-48h, vídeos em 3-5 dias úteis e projetos maiores como sites em 7-15 dias
+                            úteis.</p>
+                    </div>
+                </div>
+
+                <div class="out-faq-item">
+                    <button class="out-faq-question" aria-expanded="false">
+                        <span data-i18n="outsourcing.faq.q4">Como é feito o pagamento?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="out-faq-answer">
+                        <p data-i18n="outsourcing.faq.a4">Trabalhamos com pacotes mensais fixos. O pagamento é feito via
+                            boleto, PIX ou transferência
+                            bancária, sempre no início do mês de trabalho.</p>
+                    </div>
+                </div>
+
+                <div class="out-faq-item">
+                    <button class="out-faq-question" aria-expanded="false">
+                        <span data-i18n="outsourcing.faq.q5">Posso cancelar ou trocar de plano a qualquer
+                            momento?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="out-faq-answer">
+                        <p data-i18n="outsourcing.faq.a5">Sim, não temos fidelidade. Você pode alterar o plano, aumentar
+                            ou reduzir o volume de
+                            demandas, ou cancelar com aviso prévio de 30 dias.</p>
+                    </div>
+                </div>
+
+                <div class="out-faq-item">
+                    <button class="out-faq-question" aria-expanded="false">
+                        <span data-i18n="outsourcing.faq.q6">Os sites incluem política de privacidade e LGPD?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="out-faq-answer">
+                        <p data-i18n="outsourcing.faq.a6">Sim! Todos os sites que desenvolvemos já incluem página de
+                            política de privacidade e estão em
+                            conformidade com a LGPD (Lei Geral de Proteção de Dados), sem custo adicional.</p>
+                    </div>
+                </div>
+
+                <div class="out-faq-item">
+                    <button class="out-faq-question" aria-expanded="false">
+                        <span data-i18n="outsourcing.faq.q7">Vocês atendem agências de qualquer tamanho?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="out-faq-answer">
+                        <p data-i18n="outsourcing.faq.a7">Sim! Atendemos desde freelancers e agências boutique até
+                            grandes agências com alto volume de
+                            demandas. Nossa estrutura é escalável para se adaptar à sua necessidade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================ -->
+    <footer id="contato-out" class="main-footer">
+        <div class="container">
+            <div class="footer-header">
+                <h4>Kavicki.</h4>
+                <p class="text-gray" data-i18n="outsourcing.footer.subtitle">Design sob medida para agências que
+                    precisam escalar.</p>
+            </div>
+            <div class="footer-copy">
+                <p class="address">São Paulo, SP - Brasil</p>
+                <p class="mail-contact">design@kavicki.com</p>
+                <p class="copyright" data-i18n="footer.copyright">© 2026 Kavicki. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+    <script src="outsourcing.js"></script>
+</body>
+
+</html>
