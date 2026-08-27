@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nav: {
                 expertise: 'Expertise',
                 ai: 'AI Approach',
+                products: 'Produtos',
                 portfolio: 'Portfólio',
                 about: 'Sobre',
                 contact: 'Contato',
@@ -34,25 +35,41 @@ document.addEventListener('DOMContentLoaded', () => {
                 label: 'O que fazemos',
                 title: 'Expertise',
                 subtitle: 'Do diagnóstico à execução, cobrimos toda a jornada digital.',
+                consultoria: {
+                    title: 'Consultoria Digital',
+                    desc: 'Orientação estratégica para produtos digitais, garantindo viabilidade, escalabilidade e sucesso.'
+                },
+                chatbots: {
+                    title: 'Chatbots',
+                    desc: 'Assistentes de IA que atendem no WhatsApp, respondem com o conhecimento do seu negócio e capturam leads sozinhos.'
+                },
                 ux: {
-                    title: 'UX Design',
-                    desc: 'Arquitetura de informação, fluxos de navegação e wireframes focados na jornada do usuário.'
+                    title: 'UX Design Estratégico',
+                    desc: 'Arquitetura desenhada para reduzir o atrito e acelerar a jornada de compra do usuário.'
                 },
                 ui: {
-                    title: 'UI Design',
-                    desc: 'Interfaces visuais pixel-perfect, Design Systems escaláveis e protótipos de alta fidelidade.'
+                    title: 'UI & Design Systems',
+                    desc: 'Interfaces apelativas e escaláveis que transmitem confiança e reforçam a identidade do negócio.'
+                },
+                qa: {
+                    title: 'QA & Quality Assurance',
+                    desc: 'Análise minuciosa de qualidade de apps, busca por bugs e melhorias de performance contínua.'
                 },
                 research: {
-                    title: 'UX Research',
-                    desc: 'Testes de usabilidade, entrevistas com usuários e análise de dados para decisões assertivas.'
+                    title: 'Research & Dados',
+                    desc: 'Decisões baseadas em testes de usabilidade que garantem assertividade absoluta no investimento.'
                 },
                 motion: {
                     title: 'Motion Design',
-                    desc: 'Microinterações e animações que dão vida ao produto e aumentam o engajamento.'
+                    desc: 'Animações que prendem a atenção e aumentam significativamente o tempo de tela do usuário.'
                 },
                 branding: {
-                    title: 'Branding e Marca',
-                    desc: 'Estratégia visual, tom de voz e posicionamento de marca para o mundo digital.'
+                    title: 'Branding Posicionado',
+                    desc: 'Estratégia e posicionamento criados para destacar a sua marca da concorrência no digital.'
+                },
+                campanhas: {
+                    title: 'Campanhas & Comunicação',
+                    desc: 'Estratégias de comunicação direta e engajamento com foco total em campanhas de E-mail e WhatsApp.'
                 }
             },
             ai: {
@@ -64,6 +81,44 @@ document.addEventListener('DOMContentLoaded', () => {
                 item2: 'Prototipagem Acelerada',
                 item3: 'Análise de Dados Preditiva',
                 workflow: 'AI-Driven Workflow'
+            },
+            products: {
+                label: 'Nossos produtos',
+                title: 'Apps que criamos e operamos',
+                intro: 'Da concepção à App Store. Conheça os softwares próprios da Kavicki, que ajudam negócios reais a crescerem todos os dias.',
+                cta: {
+                    know: 'Saiba mais',
+                    access: 'Abrir web app'
+                },
+                kbot: {
+                    tag: 'Atendimento com IA',
+                    desc: 'Seu atendimento no automático. Crie assistentes de IA com a personalidade da sua marca, que conversam no WhatsApp, respondem com base no seu conteúdo e capturam leads sozinhos.',
+                    f1: 'Assistente de IA no WhatsApp',
+                    f2: 'Captura de leads automática',
+                    f3: 'Base de conhecimento da sua empresa',
+                    cta: 'Fale com um especialista'
+                },
+                krovo: {
+                    tag: 'Gestão de obras e reformas',
+                    desc: 'Sua obra na mão. Acompanhe progresso, custos, materiais e orçamento em tempo real — do primeiro dia à entrega, sem surpresas.',
+                    f1: 'Progresso e gastos em tempo real',
+                    f2: 'Controle de etapas, materiais e notas',
+                    f3: 'Orçamento sob controle, sem surpresas'
+                },
+                gymapp: {
+                    tag: 'Gestão de academias',
+                    desc: 'Dashboard financeiro em tempo real, controle de alunos, equipamentos e cobranças automáticas via WhatsApp. Tudo o que uma academia precisa, na palma da mão.',
+                    f1: 'Margem de lucro em tempo real',
+                    f2: 'Alertas automáticos de vencimento',
+                    f3: 'Manutenção preventiva de equipamentos'
+                },
+                llord: {
+                    tag: 'Gestão de imóveis',
+                    desc: 'Deixe as planilhas para trás. Controle aluguéis, contratos e finanças do seu portfólio imobiliário com a eficiência de uma grande imobiliária.',
+                    f1: 'Dashboard estratégico de KPIs',
+                    f2: 'Contratos e documentos na nuvem',
+                    f3: 'Comunicação direta via WhatsApp'
+                }
             },
             portfolio: {
                 title: 'Nossos projetos',
@@ -441,6 +496,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nav: {
                 expertise: 'Expertise',
                 ai: 'AI Approach',
+                products: 'Products',
                 portfolio: 'Portfolio',
                 about: 'About',
                 contact: 'Contact',
@@ -466,25 +522,41 @@ document.addEventListener('DOMContentLoaded', () => {
                 label: 'What we do',
                 title: 'Expertise',
                 subtitle: 'From diagnosis to execution, we cover the entire digital journey.',
+                consultoria: {
+                    title: 'Digital Consulting',
+                    desc: 'Strategic guidance for digital products, ensuring viability, scalability and success.'
+                },
+                chatbots: {
+                    title: 'Chatbots',
+                    desc: 'AI assistants that handle WhatsApp conversations, answer from your business knowledge and capture leads on their own.'
+                },
                 ux: {
-                    title: 'UX Design',
-                    desc: 'Information architecture, navigation flows and wireframes focused on the user journey.'
+                    title: 'Strategic UX Design',
+                    desc: 'Architecture designed to reduce friction and speed up the user\'s buying journey.'
                 },
                 ui: {
-                    title: 'UI Design',
-                    desc: 'Pixel-perfect visual interfaces, scalable Design Systems and high-fidelity prototypes.'
+                    title: 'UI & Design Systems',
+                    desc: 'Compelling, scalable interfaces that convey trust and reinforce the business identity.'
+                },
+                qa: {
+                    title: 'QA & Quality Assurance',
+                    desc: 'Thorough app quality analysis, bug hunting and continuous performance improvements.'
                 },
                 research: {
-                    title: 'UX Research',
-                    desc: 'Usability testing, user interviews and data analysis for assertive decisions.'
+                    title: 'Research & Data',
+                    desc: 'Decisions backed by usability testing that guarantee absolute accuracy in your investment.'
                 },
                 motion: {
                     title: 'Motion Design',
-                    desc: 'Micro-interactions and animations that bring the product to life and increase engagement.'
+                    desc: 'Animations that hold attention and significantly increase user screen time.'
                 },
                 branding: {
-                    title: 'Branding & Brand',
-                    desc: 'Visual strategy, tone of voice and brand positioning for the digital world.'
+                    title: 'Positioned Branding',
+                    desc: 'Strategy and positioning built to set your brand apart from the competition in digital.'
+                },
+                campanhas: {
+                    title: 'Campaigns & Communication',
+                    desc: 'Direct communication and engagement strategies focused entirely on Email and WhatsApp campaigns.'
                 }
             },
             ai: {
@@ -496,6 +568,44 @@ document.addEventListener('DOMContentLoaded', () => {
                 item2: 'Accelerated Prototyping',
                 item3: 'Predictive Data Analysis',
                 workflow: 'AI-Driven Workflow'
+            },
+            products: {
+                label: 'Our products',
+                title: 'Apps we built and operate',
+                intro: 'From concept to the App Store. Meet Kavicki\'s own software products, helping real businesses grow every day.',
+                cta: {
+                    know: 'Learn more',
+                    access: 'Open web app'
+                },
+                kbot: {
+                    tag: 'AI-powered customer service',
+                    desc: 'Support on autopilot. Build AI assistants with your brand\'s personality that chat on WhatsApp, answer from your own content and capture leads on their own.',
+                    f1: 'AI assistant on WhatsApp',
+                    f2: 'Automatic lead capture',
+                    f3: 'Your company\'s knowledge base',
+                    cta: 'Talk to a specialist'
+                },
+                krovo: {
+                    tag: 'Construction & renovation management',
+                    desc: 'Your build in your hand. Track progress, costs, materials and budget in real time — from day one to delivery, with no surprises.',
+                    f1: 'Real-time progress and spending',
+                    f2: 'Stages, materials and receipts control',
+                    f3: 'Budget under control, no surprises'
+                },
+                gymapp: {
+                    tag: 'Gym management',
+                    desc: 'Real-time financial dashboard, member and equipment control, plus automatic billing via WhatsApp. Everything a gym needs, in the palm of your hand.',
+                    f1: 'Real-time profit margin',
+                    f2: 'Automatic due-date alerts',
+                    f3: 'Preventive equipment maintenance'
+                },
+                llord: {
+                    tag: 'Property management',
+                    desc: 'Leave spreadsheets behind. Manage rentals, contracts and finances of your real-estate portfolio with the efficiency of a large agency.',
+                    f1: 'Strategic KPI dashboard',
+                    f2: 'Contracts and documents in the cloud',
+                    f3: 'Direct WhatsApp communication'
+                }
             },
             portfolio: {
                 title: 'Our projects',
@@ -1486,26 +1596,26 @@ document.addEventListener('DOMContentLoaded', () => {
         const isVisible = rect.bottom > 0 && rect.top < windowHeight;
 
         if (isVisible) {
-            // Calcula a posição relativa da seção em relação à viewport
-            const sectionTop = rect.top;
-            const sectionHeight = rect.height;
-            const scrollProgress = Math.max(0, Math.min(1, (windowHeight - sectionTop) / (windowHeight + sectionHeight)));
+            // Progresso centrado: 0 quando o centro da seção está no centro da tela,
+            // ~1 quando a seção entra por baixo e ~-1 quando sai por cima
+            const sectionCenter = rect.top + rect.height / 2;
+            const progress = Math.max(-1, Math.min(1, (windowHeight / 2 - sectionCenter) / windowHeight));
 
-            // Aplica parallax apenas nos service-cards
+            // Deslocamento base pequeno para um efeito suave
+            const MAX_TRAVEL = 14; // px
+
+            // Aplica parallax leve e uniforme nos service-cards
             const serviceCards = document.querySelectorAll('#servicos .service-card');
             serviceCards.forEach((card, index) => {
-                // Cada card se move com uma velocidade diferente baseada no seu índice
-                const speed = (index + 1) * 0.12; // Velocidades diferentes: 0.12, 0.24, 0.36, 0.48, 0.60
-                const offset = scrollProgress * 80 * speed;
+                // Variação mínima entre os cards para dar profundidade sem desalinhar.
+                // Mantém a diferença total bem abaixo do gap (20px) entre os cards.
+                const speed = 1 + index * 0.05; // 1.00 → ~1.35
+                const offset = progress * MAX_TRAVEL * speed;
 
                 // Armazena o offset para uso no hover
                 parallaxOffsets.set(card, offset);
 
-                // Aplica o movimento apenas quando o card está visível
-                const cardRect = card.getBoundingClientRect();
-                const cardVisible = cardRect.top < windowHeight && cardRect.bottom > 0;
-
-                if (cardVisible && !card.matches(':hover')) {
+                if (!card.matches(':hover')) {
                     card.style.transform = `translateY(${offset}px)`;
                 }
             });
@@ -1651,9 +1761,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Enviar email
                 await emailjs.send(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, templateParams);
 
-                // Sucesso
-                showFormFeedback(t.success, 'success');
+                // Sucesso — redireciona para a página de agradecimento
                 contactForm.reset();
+                window.location.href = 'obrigado.html';
+                return;
 
             } catch (error) {
                 console.error('Erro ao enviar email:', error);
@@ -1682,5 +1793,52 @@ document.addEventListener('DOMContentLoaded', () => {
                 formFeedback.style.display = 'none';
             }, 5000);
         }
+    }
+
+    // 7. Lightbox (projetos)
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxScroll = lightbox.querySelector('.lightbox-scroll');
+        const closeBtn = lightbox.querySelector('.lightbox-close');
+
+        const openLightbox = (src, alt) => {
+            lightboxImg.src = src;
+            lightboxImg.alt = alt || '';
+            lightbox.classList.add('open');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            if (lightboxScroll) lightboxScroll.scrollTop = 0;
+        };
+
+        const closeLightbox = () => {
+            lightbox.classList.remove('open');
+            lightbox.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            setTimeout(() => {
+                if (!lightbox.classList.contains('open')) lightboxImg.src = '';
+            }, 300);
+        };
+
+        document.querySelectorAll('[data-lightbox]').forEach(el => {
+            const src = el.getAttribute('data-lightbox');
+            const img = el.querySelector('img');
+            const alt = img ? img.getAttribute('alt') : '';
+            el.addEventListener('click', () => openLightbox(src, alt));
+            el.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openLightbox(src, alt);
+                }
+            });
+        });
+
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target === lightboxScroll) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+        });
     }
 });

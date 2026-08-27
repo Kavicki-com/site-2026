@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Obrigado! - Kavicki</title>
+    <link rel="icon" type="image/png" href="assets/favicon.ico.png">
+
+    <script>
+        // Aplicar tema antes do carregamento completo para evitar flash
+        (function () {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            const savedLanguage = localStorage.getItem('language') || 'pt';
+            document.documentElement.setAttribute('lang', savedLanguage === 'pt' ? 'pt-BR' : 'en');
+        })();
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W4MXZPZ');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="thankyou-body">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4MXZPZ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <nav class="navbar thankyou-nav">
+        <a href="index.html" class="logo"><img src="assets/logokavicki.png" alt="Kavicki" id="logoImg"></a>
+    </nav>
+
+    <main class="thankyou-main">
+        <div class="thankyou-card">
+            <div class="thankyou-check"><i class="fa-solid fa-check"></i></div>
+            <span class="label-purple" id="ty-label">Mensagem enviada</span>
+            <h1><span id="ty-title">Obrigado pelo contato!</span></h1>
+            <p id="ty-desc">Recebemos a sua mensagem com sucesso. Nossa equipe vai analisar tudo com carinho e
+                retornar para você em breve.</p>
+            <div class="thankyou-actions">
+                <a href="index.html" class="btn-primary" id="ty-home">Voltar ao início</a>
+                <a href="https://api.whatsapp.com/send/?phone=5521979137098&text=Oi%2C+tudo+bem%3F+Quero+fazer+um+or%C3%A7amento.&type=phone_number&app_absent=0"
+                    target="_blank" rel="noopener" class="btn-store">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span id="ty-wa">Falar no WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Ajusta logo pelo tema salvo e traduz para EN se necessário
+        (function () {
+            const theme = localStorage.getItem('theme') || 'dark';
+            const logo = document.getElementById('logoImg');
+            if (logo) logo.src = theme === 'light' ? 'assets/logokavickilight.png' : 'assets/logokavicki.png';
+
+            const lang = localStorage.getItem('language') || 'pt';
+            if (lang === 'en') {
+                document.title = 'Thank you! - Kavicki';
+                document.getElementById('ty-label').textContent = 'Message sent';
+                document.getElementById('ty-title').textContent = 'Thank you for reaching out!';
+                document.getElementById('ty-desc').textContent =
+                    'We received your message successfully. Our team will review everything and get back to you shortly.';
+                document.getElementById('ty-home').textContent = 'Back to home';
+                document.getElementById('ty-wa').textContent = 'Chat on WhatsApp';
+            }
+        })();
+    </script>
+</body>
+
+</html>

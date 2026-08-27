@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavicki - Criamos Apps, Sites e Produtos Digitais de Alta Performance</title>
+    <link rel="icon" type="image/png" href="assets/favicon.ico.png">
+
+    <script>
+        // Landing em português — aplica apenas o tema antes do carregamento (evita flash)
+        (function () {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            document.documentElement.setAttribute('lang', 'pt-BR');
+        })();
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W4MXZPZ');</script>
+    <!-- End Google Tag Manager -->
+
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "dghjjhko4b");
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4MXZPZ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-circle"></div>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo"><img src="assets/logokavicki.png" alt="Kavicki" id="logoImg"></a>
+        <div class="navbar-controls">
+            <button class="theme-toggle" aria-label="Alternar tema" id="themeToggle">
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-section">
+        <div class="hero-carousel-bg">
+            <div class="hero-carousel-track">
+                <span class="hero-carousel-text">kavicki.com</span>
+                <span class="hero-carousel-text">kavicki.com</span>
+                <span class="hero-carousel-text">kavicki.com</span>
+                <span class="hero-carousel-text">kavicki.com</span>
+                <span class="hero-carousel-text">kavicki.com</span>
+                <span class="hero-carousel-text">kavicki.com</span>
+                <span class="hero-carousel-text">kavicki.com</span>
+                <span class="hero-carousel-text">kavicki.com</span>
+            </div>
+        </div>
+        <div class="container relative-box">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="block-reveal" style="display:block">Criamos Apps, Sites</span>
+                    <span class="block-reveal" style="display:block">Produtos Digitais</span>
+                    <span class="block-reveal italic-accent">de Alta Performance</span>
+                </h1>
+                <p class="hero-sub fade-in">Estruturamos o ecossistema digital completo da sua empresa. Soluções
+                    tecnológicas e assertivas para escalar sua operação e liderar o seu segmento.</p>
+                <div class="hero-cta fade-in">
+                    <a id="wp_1"
+                        href="https://api.whatsapp.com/send/?phone=5521979137098&text=Oi%2C+tudo+bem%3F+Quero+fazer+um+or%C3%A7amento.&type=phone_number&app_absent=0"
+                        class="btn-primary"><i class="fa-brands fa-whatsapp"></i> Fale com a
+                        gente</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="marquee-container">
+            <div class="marquee-track">
+                <img src="assets/agrobeelogo.png" alt="Agrobee" class="marquee-logo">
+                <img src="assets/batavologo.png" alt="Batavo" class="marquee-logo">
+                <img src="assets/castrolandalogo.png" alt="Castrolanda" class="marquee-logo">
+                <img src="assets/celenalogo.png" alt="Celena" class="marquee-logo">
+                <img src="assets/frisialogo.png" alt="Frisia" class="marquee-logo">
+                <img src="assets/propolislogo.png" alt="Propolis" class="marquee-logo">
+                <img src="assets/samsunglogo.png" alt="Samsung" class="marquee-logo">
+                <img src="assets/verdelumelogo.png" alt="Verdelume" class="marquee-logo">
+                <img src="assets/vivologo.png" alt="Vivo" class="marquee-logo">
+                <img src="assets/agrobeelogo.png" alt="Agrobee" class="marquee-logo">
+                <img src="assets/batavologo.png" alt="Batavo" class="marquee-logo">
+                <img src="assets/castrolandalogo.png" alt="Castrolanda" class="marquee-logo">
+                <img src="assets/celenalogo.png" alt="Celena" class="marquee-logo">
+                <img src="assets/frisialogo.png" alt="Frisia" class="marquee-logo">
+                <img src="assets/propolislogo.png" alt="Propolis" class="marquee-logo">
+                <img src="assets/samsunglogo.png" alt="Samsung" class="marquee-logo">
+                <img src="assets/verdelumelogo.png" alt="Verdelume" class="marquee-logo">
+                <img src="assets/vivologo.png" alt="Vivo" class="marquee-logo">
+            </div>
+        </div>
+    </header>
+
+    <section class="section-padding intro-section">
+        <div class="container">
+            <h2 class="big-title fade-in">
+                TRANSFORMAMOS PRODUTOS DIGITAIS<br>
+                EM EXPERIÊNCIAS QUE GERAM<br>
+                FATURAMENTO.
+            </h2>
+            <div class="intro-grid" style="grid-template-columns: 1fr;">
+                <div class="intro-text fade-in" style="max-width: 900px;">
+                    <p>Deixamos o achismo de lado. Unimos design centrado no usuário, inteligência artificial e
+                        metodologias ágeis para criar soluções digitais de alto impacto que escalam a sua operação e
+                        potencializam as suas vendas.</p>
+                    <a href="#servicos" class="link-arrow"><span>Saiba como atuamos</span> <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="section-padding bg-darker">
+        <div class="container services-layout">
+            <div class="services-left sticky-col">
+                <span class="label-purple">O que fazemos</span>
+                <h3 class="section-subtitle">Expertise</h3>
+                <p class="text-gray">Do diagnóstico à execução, cobrimos toda a jornada
+                    digital.</p>
+            </div>
+
+            <div class="services-right">
+                <div class="service-card fade-in-up">
+                    <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h4>Consultoria Digital</h4>
+                    <p>Orientação estratégica para produtos digitais, garantindo
+                        viabilidade, escalabilidade e sucesso.</p>
+                </div>
+
+                <div class="service-card fade-in-up">
+                    <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
+                    <h4>Chatbots</h4>
+                    <p>Assistentes de IA que atendem no WhatsApp, respondem com o conhecimento do seu negócio e capturam
+                        leads sozinhos.</p>
+                </div>
+
+                <div class="service-card fade-in-up">
+                    <div class="card-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                    <h4>UX Design</h4>
+                    <p>Arquitetura de informação, fluxos de navegação e wireframes focados na jornada do usuário.</p>
+                </div>
+
+                <div class="service-card fade-in-up">
+                    <div class="card-icon"><i class="fa-solid fa-palette"></i></div>
+                    <h4>UI Design</h4>
+                    <p>Interfaces visuais pixel-perfect, Design Systems escaláveis e protótipos de alta fidelidade.</p>
+                </div>
+
+                <div class="service-card fade-in-up">
+                    <div class="card-icon"><i class="fa-solid fa-bug-slash"></i></div>
+                    <h4>QA & Quality Assurance</h4>
+                    <p>Análise minuciosa de qualidade de apps, busca por bugs e melhorias
+                        de performance contínua.</p>
+                </div>
+
+                <div class="service-card fade-in-up">
+                    <div class="card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <h4>UX Research</h4>
+                    <p>Testes de usabilidade, entrevistas com usuários e análise de dados para decisões assertivas.</p>
+                </div>
+
+                <div class="service-card fade-in-up">
+                    <div class="card-icon"><i class="fa-solid fa-film"></i></div>
+                    <h4>Motion Design</h4>
+                    <p>Microinterações e animações que dão vida ao produto e aumentam o engajamento.</p>
+                </div>
+
+                <div class="service-card fade-in-up">
+                    <div class="card-icon"><i class="fa-solid fa-fingerprint"></i></div>
+                    <h4>Branding e Marca</h4>
+                    <p>Estratégia visual, tom de voz e posicionamento de marca para o mundo digital.</p>
+                </div>
+
+                <div class="service-card fade-in-up">
+                    <div class="card-icon"><i class="fa-solid fa-bullhorn"></i></div>
+                    <h4>Campanhas & Comunicação</h4>
+                    <p>Estratégias de comunicação direta e engajamento com foco
+                        total em campanhas de E-mail e WhatsApp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ia" class="section-padding ai-section">
+        <div class="container ai-grid">
+            <div class="ai-content fade-in">
+                <span class="label-purple">Inovação & Tech</span>
+                <h2 class="ai-title"><span>Abordagem com</span> <br> <span class="text-gradient">Inteligência Artificial</span></h2>
+                <p class="ai-desc">Não apenas desenhamos, aceleramos. Utilizamos o poder da IA
+                    generativa e automações inteligentes para otimizar processos, gerar insights rápidos e garantir
+                    precisão máxima em cada entrega.</p>
+                <ul class="ai-list">
+                    <li><i class="fa-solid fa-check"></i> <span>Automação de Design Ops</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span>Prototipagem Acelerada</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span>Análise de Dados Preditiva</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="ai-visual fade-in">
+                <div class="glow-effect"></div>
+                <div class="ai-card-glass">
+                    <i class="fa-solid fa-robot icon-ai"></i>
+                    <span>AI-Driven Workflow</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section-padding">
+        <div class="container">
+            <div class="portfolio-header">
+                <h3 class="section-subtitle">Nossos projetos</h3>
+                <span class="scroll-hint">(Explore)</span>
+            </div>
+
+            <div class="cases-grid">
+                <div class="case-item fade-in-up" data-lightbox="assets/portfolio/cases/anhanguera.jpg"
+                    role="button" tabindex="0" aria-label="Ver case Anhanguera">
+                    <div class="case-thumb">
+                        <img src="assets/portfolio/cases/anhanguera-thumb.jpg" alt="Anhanguera" loading="lazy">
+                        <span class="case-zoom"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                    </div>
+                    <div class="project-info">
+                        <h4>Anhanguera</h4><span>UX/UI · Plataforma Web</span>
+                    </div>
+                </div>
+
+                <div class="case-item fade-in-up" data-lightbox="assets/portfolio/cases/agrobee.jpg"
+                    role="button" tabindex="0" aria-label="Ver case AgroBee">
+                    <div class="case-thumb">
+                        <img src="assets/portfolio/cases/agrobee-thumb.jpg" alt="AgroBee" loading="lazy">
+                        <span class="case-zoom"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                    </div>
+                    <div class="project-info">
+                        <h4>AgroBee</h4><span>UX/UI · App Mobile</span>
+                    </div>
+                </div>
+
+                <div class="case-item fade-in-up" data-lightbox="assets/portfolio/cases/captar.jpg"
+                    role="button" tabindex="0" aria-label="Ver case Captar Live">
+                    <div class="case-thumb">
+                        <img src="assets/portfolio/cases/captar-thumb.jpg" alt="Captar Live" loading="lazy">
+                        <span class="case-zoom"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                    </div>
+                    <div class="project-info">
+                        <h4>Captar Live</h4><span>UX/UI · App Mobile</span>
+                    </div>
+                </div>
+
+                <div class="case-item fade-in-up" data-lightbox="assets/portfolio/cases/flexo.jpg"
+                    role="button" tabindex="0" aria-label="Ver case Flexo Design System">
+                    <div class="case-thumb">
+                        <img src="assets/portfolio/cases/flexo-thumb.jpg" alt="Flexo Design System" loading="lazy">
+                        <span class="case-zoom"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                    </div>
+                    <div class="project-info">
+                        <h4>Flexo</h4><span>Design System</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="thumbs-grid">
+                <div class="thumb-item fade-in-up" data-lightbox="assets/portfolio/o1.png"
+                    role="button" tabindex="0" aria-label="Ver o1 Percent">
+                    <div class="thumb-box"><img src="assets/portfolio/o1.png" alt="o1 Percent" loading="lazy"></div>
+                    <div class="thumb-caption"><h4>o1 Percent</h4><span>App Mobile</span></div>
+                </div>
+                <div class="thumb-item fade-in-up" data-lightbox="assets/portfolio/farmnote.png"
+                    role="button" tabindex="0" aria-label="Ver Farmnote">
+                    <div class="thumb-box"><img src="assets/portfolio/farmnote.png" alt="Farmnote" loading="lazy"></div>
+                    <div class="thumb-caption"><h4>Farmnote</h4><span>App Mobile</span></div>
+                </div>
+                <div class="thumb-item fade-in-up" data-lightbox="assets/portfolio/led.png"
+                    role="button" tabindex="0" aria-label="Ver Led Telecom">
+                    <div class="thumb-box"><img src="assets/portfolio/led.png" alt="Led Telecom" loading="lazy"></div>
+                    <div class="thumb-caption"><h4>Led Telecom</h4><span>App Mobile</span></div>
+                </div>
+                <div class="thumb-item fade-in-up" data-lightbox="assets/portfolio/walltoall.png"
+                    role="button" tabindex="0" aria-label="Ver Wall to All">
+                    <div class="thumb-box"><img src="assets/portfolio/walltoall.png" alt="Wall to all" loading="lazy"></div>
+                    <div class="thumb-caption"><h4>Wall to All</h4><span>App Mobile</span></div>
+                </div>
+                <div class="thumb-item fade-in-up" data-lightbox="assets/portfolio/kw.png"
+                    role="button" tabindex="0" aria-label="Ver Clube do KW">
+                    <div class="thumb-box"><img src="assets/portfolio/kw.png" alt="Clube do KW" loading="lazy"></div>
+                    <div class="thumb-caption"><h4>Clube do KW</h4><span>App Mobile</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="produtos" class="section-padding bg-darker products-section landing-products">
+        <div class="container">
+            <div class="products-header fade-in">
+                <span class="label-purple">Nossos produtos</span>
+                <h3 class="section-subtitle">Apps que criamos e operamos</h3>
+                <p class="text-gray products-intro">Da concepção à App Store. Conheça os
+                    softwares próprios da Kavicki, que ajudam negócios reais a crescerem todos os dias.</p>
+            </div>
+
+            <div class="products-grid">
+                <article class="product-card fade-in-up">
+                    <div class="product-card-top">
+                        <div class="product-brand">
+                            <img src="assets/products/kbot/icon.png" alt="Kbot" class="product-icon">
+                            <div>
+                                <h4>Kbot</h4>
+                                <span class="product-tag">Atendimento com IA</span>
+                            </div>
+                        </div>
+                        <p class="product-desc">Seu atendimento no automático. Crie
+                            assistentes de IA com a personalidade da sua marca, que conversam no WhatsApp, respondem com
+                            base no seu conteúdo e capturam leads sozinhos.</p>
+                        <ul class="product-features">
+                            <li><i class="fa-solid fa-check"></i> <span>Assistente de IA no WhatsApp</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Captura de leads automática</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Base de conhecimento da sua empresa</span></li>
+                        </ul>
+                    </div>
+                    <div class="product-card-visual">
+                        <img src="assets/products/kbot/mockup.png" alt="Kbot em uso" loading="lazy">
+                    </div>
+                </article>
+
+                <article class="product-card fade-in-up">
+                    <div class="product-card-top">
+                        <div class="product-brand">
+                            <img src="assets/products/llord/icon.png" alt="llord" class="product-icon">
+                            <div>
+                                <h4>llord</h4>
+                                <span class="product-tag">Gestão de imóveis</span>
+                            </div>
+                        </div>
+                        <p class="product-desc">Deixe as planilhas para trás. Controle
+                            aluguéis, contratos e finanças do seu portfólio imobiliário com a eficiência de uma grande
+                            imobiliária.</p>
+                        <ul class="product-features">
+                            <li><i class="fa-solid fa-check"></i> <span>Dashboard estratégico de KPIs</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Contratos e documentos na nuvem</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Comunicação direta via WhatsApp</span></li>
+                        </ul>
+                    </div>
+                    <div class="product-card-visual product-card-visual--contain">
+                        <img src="assets/products/llord/mockup.png" alt="llord em uso" loading="lazy">
+                    </div>
+                    <div class="product-cta">
+                        <a href="https://llord.kavicki.com" target="_blank" rel="noopener" class="btn-primary">Saiba mais</a>
+                        <a href="https://apps.apple.com/us/app/llord/id6753878755" target="_blank" rel="noopener"
+                            class="btn-store">
+                            <i class="fa-brands fa-apple"></i>
+                            <span>App Store</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="product-card fade-in-up">
+                    <div class="product-card-top">
+                        <div class="product-brand">
+                            <img src="assets/products/gymapp/icon.png" alt="GymApp" class="product-icon">
+                            <div>
+                                <h4>GymApp</h4>
+                                <span class="product-tag">Gestão de academias</span>
+                            </div>
+                        </div>
+                        <p class="product-desc">Dashboard financeiro em tempo real,
+                            controle de alunos, equipamentos e cobranças automáticas via WhatsApp. Tudo o que uma
+                            academia precisa, na palma da mão.</p>
+                        <ul class="product-features">
+                            <li><i class="fa-solid fa-check"></i> <span>Margem de lucro em tempo real</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Alertas automáticos de vencimento</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Manutenção preventiva de equipamentos</span></li>
+                        </ul>
+                    </div>
+                    <div class="product-card-visual">
+                        <img src="assets/products/gymapp/mockup.png" alt="GymApp em uso" loading="lazy">
+                    </div>
+                    <div class="product-cta">
+                        <a href="https://gymapp.kavicki.com" target="_blank" rel="noopener" class="btn-primary">Saiba mais</a>
+                        <a href="https://apps.apple.com/us/app/gymap/id6757865765" target="_blank" rel="noopener"
+                            class="btn-store">
+                            <i class="fa-brands fa-apple"></i>
+                            <span>App Store</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="product-card fade-in-up">
+                    <div class="product-card-top">
+                        <div class="product-brand">
+                            <img src="assets/products/krovo/icon.png" alt="Krovo" class="product-icon">
+                            <div>
+                                <h4>Krovo</h4>
+                                <span class="product-tag">Gestão de obras e reformas</span>
+                            </div>
+                        </div>
+                        <p class="product-desc">Sua obra na mão. Acompanhe progresso,
+                            custos, materiais e orçamento em tempo real — do primeiro dia à entrega, sem surpresas.</p>
+                        <ul class="product-features">
+                            <li><i class="fa-solid fa-check"></i> <span>Progresso e gastos em tempo real</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Controle de etapas, materiais e notas</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Orçamento sob controle, sem surpresas</span></li>
+                        </ul>
+                    </div>
+                    <div class="product-card-visual">
+                        <img src="assets/products/krovo/mockup.png" alt="Krovo em uso" loading="lazy">
+                    </div>
+                    <div class="product-cta">
+                        <a href="https://krovo.kavicki.com" target="_blank" rel="noopener" class="btn-primary">Saiba mais</a>
+                        <a href="https://krovo.kavicki.com" target="_blank" rel="noopener" class="btn-store">
+                            <i class="fa-solid fa-globe"></i>
+                            <span>Abrir web app</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container international-layout">
+            <div class="int-content">
+                <span class="label-purple">Presença Internacional</span>
+                <h2 class="big-title"><span>Excelência validada no</span> <br> <span class="serif">Brasil e no
+                        mundo.</span></h2>
+                <p class="text-gray mt-small">Entregamos projetos de alta performance para empresas nos EUA, Portugal,
+                    França, Argentina e Colômbia.</p>
+                <a id="wp_2"
+                    href="https://api.whatsapp.com/send/?phone=5521979137098&text=Oi%2C+tudo+bem%3F+Quero+fazer+um+or%C3%A7amento.&type=phone_number&app_absent=0"
+                    class="btn-outline mt-small"><i class="fa-brands fa-whatsapp"></i>
+                    Fale com a gente</a>
+            </div>
+            <div class="int-visual">
+                <div class="globe-container">
+                    <canvas id="globe-canvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="section-padding bg-darker">
+        <div class="container">
+            <h3 class="section-subtitle center-text mb-large">Nossa Equipe</h3>
+            <div class="team-grid">
+                <div class="team-card"><img src="assets/team/JorgeKavicki.png" alt="Jorge Kavicki">
+                    <h4>Jorge Kavicki</h4><span>Product Designer/Founder</span>
+                </div>
+                <div class="team-card"><img src="assets/team/AllanAlves.png" alt="Allan Alves">
+                    <h4>Allan Alves</h4><span>Product Designer</span>
+                </div>
+                <div class="team-card"><img src="assets/team/MarllonLavrinha.png" alt="Marllon Lavrinha"
+                        onerror="this.src='https://ui-avatars.com/api/?name=Marllon+Lavrinha&background=8A2BE2&color=fff'">
+                    <h4>Marllon Lavrinha</h4><span>AI Engineer</span>
+                </div>
+                <div class="team-card"><img src="assets/team/ErnandesCamara.png" alt="Ernandes Camara">
+                    <h4>Ernandes Camara</h4><span>UI/UX Designer Jr</span>
+                </div>
+                <div class="team-card"><img src="assets/team/CleytonCarvalho.png" alt="Cleyton Carvalho">
+                    <h4>Cleyton Carvalho</h4><span>Gestor de Marketing</span>
+                </div>
+                <div class="team-card"><img src="assets/team/MiguelSilva.png" alt="Miguel Silva">
+                    <h4>Miguel Silva</h4><span>Full Stack Developer</span>
+                </div>
+                <div class="team-card"><img src="assets/team/VictorFigueroa.png" alt="Victor Figueroa">
+                    <h4>Victor Figueroa</h4><span>Diretor de Arte</span>
+                </div>
+                <div class="team-card"><img src="assets/team/GabrielFernandes.png" alt="Gabriel Fernandes">
+                    <h4>Gabriel Fernandes</h4><span>Full stack AI Engineer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-darker">
+        <div class="container">
+            <h3 class="section-subtitle center-text mb-large">O que nossos clientes
+                pensam de nós</h3>
+            <div class="testimonials-carousel-wrapper">
+                <div class="testimonials-carousel">
+                    <div class="review-box">
+                        <div class="stars">★★★★★</div>
+                        <p>"Ótimos com os prazos e design incrível."</p>
+                        <div class="author">
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjU1poGwJY2YMvGt3jlG7dMVyPVtBzcreFDLPcVxR3EuEegQBoW2=w72-h72-p-rp-mo-br100"
+                                alt="Ana">
+                            <div><strong> Ana Laura de Souza</strong><span>Founder Meowccino</span></div>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <div class="stars">★★★★★</div>
+                        <p>"Excelentes profissionais, muito feliz com os resultados!"
+                        </p>
+                        <div class="author">
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjUYRNiEQuuvqfhdwhGAvdvyvW4zKMtw9n8XtHq1xITEZFEzM_3Nvw=w72-h72-p-rp-mo-ba3-br100"
+                                alt="Mírian">
+                            <div><strong>Mírian Fonseca</strong><span>CEO Photosolar Energia</span></div>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <div class="stars">★★★★★</div>
+                        <p>"Excepcional profissional e uma grande pessoa."</p>
+                        <div class="author">
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjV5yPxS4pRW-th4vO4EDbdAuhTyN5IcOEyO7ocq4tu1Y7h2QiM4=w72-h72-p-rp-mo-ba2-br100"
+                                alt="Guilherme">
+                            <div><strong>Guilherme Souza</strong><span>CEO Agrobee</span></div>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <div class="stars">★★★★★</div>
+                        <p>"Design moderno e funcional. A experiência do usuário
+                            melhorou significativamente."</p>
+                        <div class="author">
+                            <img src="https://media.licdn.com/dms/image/v2/D4D03AQH0ci8Lhy9UvA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1710718233635?e=1769040000&v=beta&t=0A6UcMOYt0Ezb-IPhk6vheglpntE-jnsskI6ZHM9Ki0"
+                                alt="Roberto">
+                            <div><strong>Romualdo Júnior</strong><span>CRM Coordinator Frísia</span></div>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <div class="stars">★★★★★</div>
+                        <p>"Comunicação clara e entregas sempre no prazo. Recomendo sem
+                            hesitação."</p>
+                        <div class="author">
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjXcTsSog0hS5wk3PKO_c4f_cOuEK1ALajMt5N_Gp6nabEp0Zio=w72-h72-p-rp-mo-br100"
+                                alt="Marcelo">
+                            <div><strong>Marcelo Tonet</strong><span>Founder Mão Na Web</span></div>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <div class="stars">★★★★★</div>
+                        <p>"Transformaram nossa visão em realidade. O processo foi
+                            colaborativo e eficiente."</p>
+                        <div class="author">
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjX2dL6kqEx3NTb-kb9j3KDWoXuMsSl2DMzKqnSWfTblU7DYIqY72Q=w72-h72-p-rp-mo-ba2-br100"
+                                alt="Rodrigo">
+                            <div><strong>Rodrigo Menezes</strong><span>Founder RM Sistemas</span></div>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <div class="stars">★★★★★</div>
+                        <p>"Estratégia bem definida e execução impecável. Resultados
+                            mensuráveis desde o início."</p>
+                        <div class="author">
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjVPnQlAXQlp5FD-_9b3HlVugOySFLqImGMHpWKvWL2lQDN61D7E=w72-h72-p-rp-mo-br100"
+                                alt="Isabela">
+                            <div><strong>isabela Santiago</strong><span>CEO HomeyCleaning</span></div>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <div class="stars">★★★★★</div>
+                        <p>"Equipe muito bem capacitada e competente! Trouxeram
+                            soluções que não havíamos considerado."</p>
+                        <div class="author">
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjWkHFLJqnqrzUIHiRv4l9y9Q2HtuvpbAyJVY4IsPnzvuuIQs8Yw=w72-h72-p-rp-mo-br100"
+                                alt="Rivaldo">
+                            <div><strong>Rivaldo Mecenas</strong><span>Tech Lead Dasa</span></div>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <div class="stars">★★★★★</div>
+                        <p>"Qualidade excepcional em cada etapa do projeto. Parceiros
+                            de confiança."</p>
+                        <div class="author">
+                            <img src="https://randomuser.me/api/portraits/women/19.jpg" alt="Juliana">
+                            <div><strong>Juliana Ferreira</strong><span>Brand Manager</span></div>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <div class="stars">★★★★★</div>
+                        <p>"Metodologia ágil e resultados rápidos. O investimento
+                            valeu cada centavo."</p>
+                        <div class="author">
+                            <img src="https://randomuser.me/api/portraits/men/29.jpg" alt="Ricardo">
+                            <div><strong>Ricardo Alves</strong><span>Operations Manager</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev-btn" aria-label="Anterior">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next-btn" aria-label="Próximo">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="carousel-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="main-footer">
+        <div class="container">
+            <div class="footer-header">
+                <h4>Kavicki.</h4>
+                <p class="text-gray">Fale sobre o seu projeto e vamos construir algo
+                    incrível juntos.</p>
+            </div>
+
+            <div class="footer-layout">
+                <div class="footer-form">
+                    <form id="contactForm">
+                        <input type="text" id="formName" name="name" placeholder="Nome" class="input-field" required>
+                        <input type="email" id="formEmail" name="email" placeholder="Email" class="input-field" required>
+                        <input type="text" id="formSubject" name="subject" placeholder="Como podemos ajudar?"
+                            class="input-field" required>
+                        <textarea id="formMessage" name="message" placeholder="Mensagem" rows="4" class="input-field"></textarea>
+                        <button type="submit" class="btn-submit"><span>Enviar</span> <i
+                                class="fa-solid fa-paper-plane"></i></button>
+                        <div id="formMessageFeedback" class="form-feedback" style="display: none;"></div>
+                    </form>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Conecte-se</h4>
+                    <div class="social-links">
+                        <a
+                            href="https://api.whatsapp.com/send/?phone=5521979137098&text=Oi%2C+tudo+bem%3F+Quero+fazer+um+or%C3%A7amento.&type=phone_number&app_absent=0"><i
+                                class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                    <div class="footer-copy">
+                        <p class="address">São Paulo, SP - Brasil</p>
+                        <p class="mail-contact">design@kavicki.com</p>
+                        <p class="copyright">© 2026 Kavicki. Todos os direitos reservados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a id="wp_flut_1"
+        href="https://api.whatsapp.com/send/?phone=5521979137098&text=Oi%2C+tudo+bem%3F+Quero+fazer+um+or%C3%A7amento.&type=phone_number&app_absent=0"
+        class="whatsapp-float" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Visualização do projeto">
+        <button class="lightbox-close" type="button" aria-label="Fechar">&times;</button>
+        <div class="lightbox-scroll">
+            <img src="" alt="" class="lightbox-img" id="lightbox-img">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
