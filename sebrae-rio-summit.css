@@ -1,0 +1,592 @@
+/* Página do Sebrae Rio Summit. A base vem de style.css. */
+
+/* style.css esconde o cursor para o cursor próprio de script.js, que não roda aqui. */
+.summit,
+.summit * {
+    cursor: auto;
+}
+
+.summit a {
+    cursor: pointer;
+}
+
+.summit-hero,
+.app {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100svh;
+    overflow: hidden;
+}
+
+/* Foto de fundo: maior que a seção para o movimento não revelar a borda. */
+.app-foto {
+    position: absolute;
+    inset: -260px 0;
+}
+
+.app-foto img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+/* Apps sem foto de divulgação usam o próprio ícone, grande e desfocado. */
+.app-foto--icone img {
+    opacity: 0.45;
+    filter: blur(48px) saturate(1.3);
+}
+
+/* Véu sobre a foto, para o texto seguir legível. */
+.summit-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(70% 55% at var(--brilho-x, 72%) 50%,
+            color-mix(in srgb, var(--cor, var(--accent)) 34%, transparent),
+            transparent 72%),
+        linear-gradient(var(--veu, to right), rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.72) 45%, rgba(10, 10, 10, 0.1) 72%),
+        linear-gradient(to bottom, rgba(10, 10, 10, 0.78), rgba(10, 10, 10, 0.5) 50%, rgba(10, 10, 10, 0.78));
+}
+
+/* Nome gigante ao fundo: a camada que mais se move. */
+.app-marca {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -0.6em;
+    color: #fff;
+    font-size: 20vw;
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0.06;
+    pointer-events: none;
+}
+
+.summit-hero {
+    --brilho-x: 50%;
+}
+
+.summit-hero-inner {
+    position: relative;
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 48px 24px;
+    text-align: center;
+}
+
+.summit-logo {
+    display: block;
+    width: 64px;
+    height: auto;
+    margin: 0 auto 32px;
+}
+
+.summit-hero h1 {
+    margin-bottom: 20px;
+    font-size: clamp(2.5rem, 7vw, 4.75rem);
+    font-weight: 800;
+    line-height: 1.08;
+}
+
+.summit-hero h1 em {
+    display: block;
+    color: var(--accent-light);
+    font-family: var(--font-display);
+    font-weight: 400;
+}
+
+.summit-hero p {
+    max-width: 560px;
+    margin: 0 auto 32px;
+    color: var(--text-muted);
+    font-size: 1.15rem;
+}
+
+.app-inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 64px 24px;
+}
+
+.app:nth-of-type(odd) .app-copy {
+    order: 2;
+}
+
+.app:nth-of-type(odd) {
+    --brilho-x: 28%;
+    --veu: to left;
+}
+
+.app-icon {
+    display: block;
+    width: 88px;
+    height: 88px;
+    margin-bottom: 24px;
+    border-radius: 22px;
+}
+
+.app-tag {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--cor);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.app h2 {
+    margin-bottom: 16px;
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.app-copy p {
+    max-width: 480px;
+    margin-bottom: 28px;
+    color: #d1d5db;
+    font-size: 1.1rem;
+}
+
+.app-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.app-links .btn-store {
+    min-height: 48px;
+    color: var(--text-main);
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.24);
+}
+
+.app-status {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.app-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.summit button {
+    cursor: pointer;
+}
+
+/* Botão transparente sobre o mockup inteiro. */
+.app-demo {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 0 18px;
+    font-family: inherit;
+    background: none;
+    border: 0;
+}
+
+.app-demo:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
+.app-demo-dica {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    padding: 10px 18px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    background: var(--accent);
+    border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    transition: transform 0.2s ease;
+}
+
+.app-demo:hover .app-demo-dica {
+    transform: translateY(-4px);
+}
+
+/* Demo em tela cheia */
+.demo-aberta {
+    overflow: hidden;
+}
+
+.demo {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: #fff;
+    background: rgb(10, 10, 10);
+    border: 0;
+}
+
+.demo[open] {
+    display: flex;
+    flex-direction: column;
+}
+
+.demo::backdrop {
+    background: transparent;
+}
+
+.demo-topo {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: max(16px, env(safe-area-inset-top)) 24px 12px;
+}
+
+.demo-icone {
+    width: 44px;
+    height: 44px;
+    border-radius: 11px;
+}
+
+.demo-nome {
+    font-size: 1.2rem;
+}
+
+.demo-fechar {
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    color: #fff;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 0;
+    border-radius: 50%;
+}
+
+.demo-progresso {
+    display: flex;
+    gap: 6px;
+    width: min(420px, calc(100% - 48px));
+    margin: 0 auto 12px;
+}
+
+.demo-progresso span {
+    flex: 1;
+    height: 3px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 2px;
+}
+
+.demo-progresso span::after {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    content: '';
+}
+
+.demo-progresso .feita::after {
+    width: 100%;
+}
+
+.demo-progresso .atual::after {
+    width: 100%;
+    animation: demo-preencher var(--tempo) linear;
+}
+
+@keyframes demo-preencher {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.demo-palco {
+    display: flex;
+    flex: 1;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    padding: 4px 24px;
+}
+
+.demo-aparelho {
+    position: relative;
+    flex: none;
+    height: 100%;
+    aspect-ratio: 390 / 844;
+    overflow: hidden;
+    cursor: pointer;
+    background: #0b0b0b;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 40px;
+}
+
+.demo-aparelho img {
+    position: absolute;
+    inset: 9px;
+    width: calc(100% - 18px);
+    height: calc(100% - 18px);
+    object-fit: cover;
+    object-position: top;
+    border-radius: 31px;
+    opacity: 0;
+    transition: opacity 0.45s ease;
+}
+
+.demo-aparelho img.ativa {
+    opacity: 1;
+}
+
+/* Mesma proporção do mockup do Alento na página. */
+.demo[data-tipo='curto'] .demo-aparelho {
+    aspect-ratio: 375 / 671;
+}
+
+.demo[data-tipo='web'] .demo-aparelho {
+    width: min(100%, 1000px, calc((100dvh - 220px) * 1.333));
+    height: auto;
+    aspect-ratio: 1640 / 1230;
+    background: #f4f4f2;
+    border-radius: 16px;
+}
+
+.demo[data-tipo='web'] .demo-aparelho img {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0;
+    transition: opacity 0.45s ease, transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Capturas do site do Kbot têm alturas diferentes: aparecem inteiras, sem corte. */
+.demo[data-tipo='inteira'] .demo-aparelho img {
+    object-fit: contain;
+    object-position: center;
+}
+
+.demo-seta {
+    flex: none;
+    width: 52px;
+    height: 52px;
+    color: #fff;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 0;
+    border-radius: 50%;
+}
+
+.demo-legenda {
+    min-height: 3.4em;
+    padding: 14px 24px max(14px, env(safe-area-inset-bottom));
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .demo-aparelho img,
+    .app-demo-dica {
+        transition: none;
+    }
+
+    .demo-progresso .atual::after {
+        animation: none;
+    }
+}
+
+.app-phone {
+    width: 290px;
+    aspect-ratio: 390 / 844;
+    padding: 9px;
+    overflow: hidden;
+    background: #0b0b0b;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 42px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+}
+
+/* A captura do Alento é mais baixa que as outras: a moldura segue a proporção dela. */
+.app-phone--curto {
+    aspect-ratio: 375 / 671;
+}
+
+.app-phone img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 33px;
+}
+
+/* As artes têm margem transparente: passam da coluna para ocupar o mesmo peso visual. */
+.app-mockup {
+    display: block;
+    flex: none;
+    width: 125%;
+    max-width: 700px;
+    height: auto;
+}
+
+.app-mockup--small {
+    width: 100%;
+    max-width: 480px;
+}
+
+.app-figure {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+}
+
+/* O respiro embaixo mantém o link acima do botão flutuante no fim da página. */
+.summit-footer {
+    padding: 32px 24px 104px;
+    text-align: center;
+}
+
+.summit-footer a {
+    color: var(--text-muted);
+}
+
+.summit-hero h2 {
+    margin-bottom: 20px;
+    font-size: clamp(2.25rem, 6vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.summit-hero h2 em {
+    color: var(--accent-light);
+    font-family: var(--font-display);
+    font-weight: 400;
+}
+
+.summit-whatsapp {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    min-height: 52px;
+    padding: 14px 30px;
+    color: #06230f;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-decoration: none;
+    background: #25d366;
+    border-radius: 999px;
+}
+
+.whatsapp-float {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.2s ease;
+}
+
+.whatsapp-float--oculto {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .app-inner {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 40px 24px;
+        text-align: center;
+    }
+
+    .app:nth-of-type(odd) .app-copy {
+        order: 0;
+    }
+
+    .summit-bg {
+        background:
+            radial-gradient(90% 45% at 50% 68%,
+                color-mix(in srgb, var(--cor, var(--accent)) 34%, transparent),
+                transparent 72%),
+            linear-gradient(to bottom, rgba(10, 10, 10, 0.92), rgba(10, 10, 10, 0.8) 50%, rgba(10, 10, 10, 0.55) 70%, rgba(10, 10, 10, 0.8));
+    }
+
+    .app-marca {
+        top: 22%;
+        font-size: 30vw;
+    }
+
+    .demo-seta {
+        display: none;
+    }
+
+    .demo-palco {
+        padding: 4px 16px;
+    }
+
+    .demo[data-tipo='web'] .demo-aparelho {
+        width: 100%;
+    }
+
+    .app-icon {
+        width: 72px;
+        height: 72px;
+        margin: 0 auto 16px;
+        border-radius: 18px;
+    }
+
+    .app-copy p {
+        margin: 0 auto 20px;
+        font-size: 1rem;
+    }
+
+    .app-links {
+        justify-content: center;
+    }
+
+    .app-phone {
+        width: 190px;
+        padding: 6px;
+        border-radius: 30px;
+    }
+
+    .app-phone img {
+        border-radius: 24px;
+    }
+
+    .app-mockup {
+        flex: auto;
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .app-figure {
+        max-width: 220px;
+    }
+}
