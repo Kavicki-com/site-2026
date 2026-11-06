@@ -38,9 +38,10 @@
         },
         krovo: {
             nome: 'Krovo', icone: 'krovo/icon.png', tipo: 'web', telas: [
-                ['krovo/mockup.png', 'Sua obra inteira numa tela', 'none'],
-                ['krovo/mockup.png', 'Progresso, custos e o que falta pagar', 'scale(1.8) translate(-14%, 10%)'],
-                ['krovo/mockup.png', 'Etapas da obra com as datas de cada uma', 'scale(1.8) translate(-14%, -6%)']
+                ['krovo/demo-inicio.jpg', 'Sua obra inteira numa tela'],
+                ['krovo/demo-custos.jpg', 'Cada gasto registrado, com o que falta pagar'],
+                ['krovo/demo-etapas.jpg', 'Etapas da obra com as datas de cada uma'],
+                ['krovo/demo-materiais.jpg', 'Lista de materiais, com a nota fiscal lida por IA']
             ]
         },
         kbot: {
@@ -98,7 +99,6 @@
             var imagem = document.createElement('img');
             imagem.src = CAMINHO + tela[0];
             imagem.alt = tela[1];
-            if (tela[2]) imagem.dataset.foco = tela[2];
             aparelho.appendChild(imagem);
         });
     }
@@ -114,7 +114,6 @@
 
         aparelho.querySelectorAll('img').forEach(function (imagem, i) {
             imagem.classList.toggle('ativa', i === passo);
-            if (demo.tipo === 'web') imagem.style.transform = aparelho.children[passo].dataset.foco;
         });
         legenda.textContent = demo.telas[passo][1];
 
