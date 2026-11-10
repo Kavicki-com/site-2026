@@ -14,6 +14,14 @@
                 ['penduro/demo-qr.webp', 'Receba na hora pelo QR Code do Pix']
             ]
         },
+        cria: {
+            nome: 'Cria', icone: 'cria/icon.png', tipo: 'celular', telas: [
+                ['cria/tela.jpg', 'Seu plano em etapas, com o progresso de cada uma'],
+                ['cria/demo-formulario.jpg', 'Uma pergunta por vez, com o porquê e um exemplo'],
+                ['cria/demo-equilibrio.jpg', 'Descubra quanto precisa vender para pagar as contas'],
+                ['cria/demo-analise.jpg', 'Pontos de atenção e próximos passos do seu negócio']
+            ]
+        },
         yba: {
             nome: 'Yba', icone: 'yba/icon.png', tipo: 'celular', telas: [
                 ['yba/tela.png', 'Ache a feira perto de você'],
