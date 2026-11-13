@@ -32,3 +32,9 @@ yarn.lock
 
 
 
+
+# Pastas e pacotes de upload manual (cópias do site)
+backup-site-novembro/
+publicar-sebrae/
+publicar-site/
+publicar-site.zip
