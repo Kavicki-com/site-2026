@@ -14,6 +14,14 @@
                 ['penduro/demo-qr.webp', 'Receba na hora pelo QR Code do Pix']
             ]
         },
+        cria: {
+            nome: 'Cria', icone: 'cria/icon.png', tipo: 'celular', telas: [
+                ['cria/tela.jpg', 'Seu plano em etapas, com o progresso de cada uma'],
+                ['cria/demo-formulario.jpg', 'Uma pergunta por vez, com o porquê e um exemplo'],
+                ['cria/demo-equilibrio.jpg', 'Descubra quanto precisa vender para pagar as contas'],
+                ['cria/demo-analise.jpg', 'Pontos de atenção e próximos passos do seu negócio']
+            ]
+        },
         yba: {
             nome: 'Yba', icone: 'yba/icon.png', tipo: 'celular', telas: [
                 ['yba/tela.png', 'Ache a feira perto de você'],
@@ -59,6 +67,15 @@
                 ['alento/demo-assistente.png', 'Pergunte ao assistente sobre caixa, contas e impostos']
             ]
         },
+        'receita-certa': {
+            nome: 'Receita Certa', icone: 'receita-certa/icon.png', tipo: 'celular', telas: [
+                ['receita-certa/tela.jpg', 'Veja quanto sobrou na semana e o que subiu de preço'],
+                ['receita-certa/demo-receita.jpg', 'O custo de cada unidade e quanto cobrar em cada canal'],
+                ['receita-certa/demo-nota.jpg', 'Fotografe a nota e os preços dos ingredientes se atualizam'],
+                ['receita-certa/demo-mao-na-massa.jpg', 'Fale a receita enquanto cozinha, sem sujar o celular'],
+                ['receita-certa/demo-cardapio.jpg', 'Seu cardápio por link, com pedido pelo Pix']
+            ]
+        },
         churrapp: {
             nome: 'Churrapp', icone: 'churrapp/icon.png', tipo: 'celular', telas: [
                 ['churrapp/tela.webp', 'Diga quantos vêm e veja quanto comprar'],
@@ -78,6 +95,14 @@
                 ['vjez/demo-inicio.jpg', 'Uma trilha de lições, do alfabeto aos casos'],
                 ['vjez/demo-unidade.jpg', 'Cada unidade mostra o próximo passo'],
                 ['vjez/demo-licao.jpg', 'Lições curtas, explicadas em português']
+            ]
+        },
+        previni: {
+            nome: 'Previni', icone: 'previni/icon.png', tipo: 'celular', telas: [
+                ['previni/tela.jpg', 'Quantos dias sua casa aguenta com o que tem guardado'],
+                ['previni/demo-estoque.jpg', 'Anote a água, a comida e o que mais tiver em casa'],
+                ['previni/demo-guias.jpg', 'Guias simples para cada situação, mesmo sem internet'],
+                ['previni/demo-ajuda.jpg', 'Os telefones de emergência sempre à mão']
             ]
         }
     };
